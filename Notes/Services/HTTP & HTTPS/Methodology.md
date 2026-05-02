@@ -1,0 +1,79 @@
+- wafw00f firewall enum
+- ###### Enumerating endpoints
+	- [[Gobuster|Fuzzing Endpoints]]
+	- [[Gobuster File Extensions|Fuzzing File Extensions]]
+	- ENUMERATE ALL ENDPOINTS WITH ALL TOOLS!
+- ###### [[Subdomain Enum|Enumerating subdomains]]
+- robots.txt
+- sitemaps.xml
+- Enumerating server side language --> php?
+- Enumerating Technologies used by the website with [[whatweb]]
+- Usernames on website?
+	- [[Creating Wordlist]]
+- ###### Vulnerability Assessment
+	- Any Services or Web Application being utilized?
+	- Any Version Information?
+	- Any Public Exploits found?
+		- searchsploit
+		- Google
+		- GitHub
+		- How many found? --> Make a list.
+- ###### Windows Server?
+	- [[WebDAV]]
+- ###### Found Login Panel?
+	- Search for Default Credentials
+	- [[Bruteforcing HTTP|Bruteforcing GET & POST Request]]
+	- [[SQL Injection Login Bypass|Login Panel bypass possible?]]
+- ###### Found Upload Functionality
+	- [[File Upload Bypasses]]
+	- [[LFI in File Upload Bypass Network package|LFI in File Upload Package]]
+- ###### WordPress running?
+	- [[wpscan]]
+		- Any vulnerable Plugins? If yes, search up for exploits.
+		- WordPress Bruteforcing
+	- Exposed wp-config.php? [[WordPress Default Paths]]
+	- Exposed phpinfo.php?
+	- In CMS
+		- [[WordPress Plugin Relay Attack]]
+		- [[WordPress Malicious Plugin|Upload Malicious Plugin]]
+		- [[Upload Malicious Webshell]]
+- ###### Source Code Analysis
+	- Any hidden subdomains or endpoints found?
+	- Any credential leaks?
+	- Any sensitive information?
+- ###### Exposed API Endpoint?
+	- Check curl GET & POST Requests and analyze them
+		- Download Request? If yes, [[API Endpoint Reverse Shell|do this.]]
+		- Firewall activated? Could be bypassed with [[HTTP Header Manipulation]]
+- ###### Exposed Git Repository?
+	- [[Git Repo Download|Download Git Repository]]
+- ###### Analysing all fields for Web Misconfigurations
+	- SQLi
+		- [[SQL Injection Union Attack]]
+		- [[SQL Injection Blind SQLi]]
+		- If Windows Box:
+			- [[SQLI NTLM Theft with xp_dirtree|SQLi NTLM Theft with xp_dirtree (mssql)]]
+		- SQLi Reverse Shell
+			- [[SQLI Reverse Shell MSSQL Database|MSSQL Reverse Shell]]
+			- [[SQLi Reverse Shell MySQL|MySQL Reverse Shell]]
+			- [[SQLi Reverse Shell PostgreSQL|PostgreSQL Reverse Shell]]
+	- LFI / RFI?
+		- [[LFI]]
+			- [[LFI SSH Keys]]
+			- [[LFI PHP Wrappers and Code Execution|View .php files in LFI]]
+			- [[LFI PHP Wrappers and Code Execution|Get Command Execution using PHP Wrappers and LFI]]
+			- [[LFI Zip Wrappers]]
+			- [[Log Poisoning with LFI]]
+			- [[WordPress Default Paths|WordPress running? --> wp-config.php]]
+		- [[RFI]]
+	- [[SSTI]]
+	- [[Command Injection]]
+		- [[Command Injection Brace Expansion]]
+			- [[Command Injection Filter types]]
+	- [[PHP Session Hijacking]]
+
+## Advanced Web Methodology
+
+- [[Parameter Semantics]]
+- [[Authorization & Access Control]]
+- Vulnerability Scans (acunetix & nessus)

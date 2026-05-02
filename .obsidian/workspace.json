@@ -1,0 +1,236 @@
+{
+  "main": {
+    "id": "cb9010988db726d4",
+    "type": "split",
+    "children": [
+      {
+        "id": "a2127837192db3aa",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "756985f2bee05e5c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CTFs/TryHackMe/Linux/VulnNet Internal--badr.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "VulnNet Internal--badr"
+            }
+          },
+          {
+            "id": "4b61879f0b65d351",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Services/TeamCity/TeamCity.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "TeamCity"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "fde5f157bb7aa7f6",
+    "type": "split",
+    "children": [
+      {
+        "id": "73b678880862142f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "39dc50b4182ccccb",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "3760c2efe8e1eff9",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "305b436806489988",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "baeeaf1b01960644",
+    "type": "split",
+    "children": [
+      {
+        "id": "0954fdeba54edacb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f4df6bd0773f11d5",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Notes/General Methodologies/tar.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for tar"
+            }
+          },
+          {
+            "id": "198fb8f9f3f68e9b",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Notes/General Methodologies/tar.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from tar"
+            }
+          },
+          {
+            "id": "8785e0e5e33a2bc8",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "5ad8a48c72e2424a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Welcome.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Welcome"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "39dc50b4182ccccb",
+  "lastOpenFiles": [
+    "OSCP",
+    "Notes/Services/TeamCity/TeamCity.md",
+    "CTFs/TryHackMe/Linux/VulnNet Internal--badr.md",
+    "Notes/General Methodologies/Default Credentials.md",
+    "Notes/Services/SSH/Methodology.md",
+    "Notes/Services/TeamCity",
+    "Notes/General Methodologies/Ligolo-Ng/Ligolo-Ng Port Forwarding.md",
+    "Notes/Privilege Escalation/Linux/Methodology.md",
+    "Notes/Services/rsync/rsync.md",
+    "Notes/General Methodologies/Redis Enumeration.md",
+    "Notes/Services/rsync",
+    "Notes/Services/Redis/Methodology.md",
+    "Notes/General Methodologies/redis-cli.md",
+    "Notes/General Methodologies/Enumerating Redis Version.md",
+    "Notes/General Methodologies/Redis RCE with writable web-root.md",
+    "Notes/Services/mountd, NFS, NFC/Methodology.md",
+    "Notes/General Methodologies/Redis Authenticated RCE.md",
+    "Notes/General Methodologies/Redis Module Load.md",
+    "Notes/Services/RPC/Methodology.md",
+    "Notes/Services/SMB/Methodology.md",
+    "Notes/General Methodologies/Enumerating SMB Shares.md",
+    "Notes/General Methodologies/Creating Malicious Linux Binary.md",
+    "CTFs/TryHackMe/Linux/Res.md",
+    "Notes/General Methodologies/File Transfers.md",
+    "CTFs/TryHackMe/Linux/b3dr0ck.v7.md",
+    "Notes/General Methodologies/socat.md",
+    "Images/Pasted image 20260501003524.png",
+    "CTFs/TryHackMe/Linux/Spice Hut.md",
+    "OSCP/OSCP-Challenge-Labs/MEDTECH/Server/172.16.237.14.md",
+    "Images/Pasted image 20260501004833.png",
+    "Images/Pasted image 20260501004741.png",
+    "Images/Pasted image 20260501004638.png",
+    "Images/Pasted image 20260501004412.png",
+    "Images/Pasted image 20260501004108.png",
+    "CTFs/TryHackMe/Active Directory",
+    "CTFs/TryHackMe/Windows",
+    "CTFs/TryHackMe/Linux",
+    "CTFs/TryHackMe",
+    "Images/Pasted image 20260327130838.png",
+    "Images/Pasted image 20260327130836.png",
+    "Images/Pasted image 20260327103652.png",
+    "Images/Pasted image 20260327102643.png",
+    "Abschlussprojekt",
+    "Notes/Services/ike (isakmp)",
+    "Notes/Services/tftp",
+    "CTFs/HackTheBox/Linux"
+  ]
+}

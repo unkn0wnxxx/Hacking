@@ -1,0 +1,42 @@
+
+- Found Credentials?
+	- [[nxc spraying]]
+	- [[Notes/Services/RDP/Methodology|Connecting with RDP]]
+	- Access SMB Shares
+	- [[evil-winrm]]
+	- [[wmiexec]]
+	- [[psexec]]
+	- [[Windows Kerberoasting]]
+	- Only Usernames?
+		- Check if [[Active Directory ASREP-Roasting|ASREP-Roasting]] is possible
+- Shell on server with dual host? -->  [[Ligolo-Ng Pivoting]]
+- Got Shell?
+	- Run winPEAS! (.exe preferred over .bat or .ps1)
+	- Enumerate [[Windows AutoLogon Credentials Enum|AutoLogon Credentials.]]
+	- [[Enumerating internal machines]]
+- [[BloodHound Enumeration]] --> [[BloodHound HowTo Internal Enum]]
+	- When in internal server --> Download domain information:[[SharpHound]]
+	- [[Windows Permissions]]
+		- [[GenericAll]]
+		- GenericWrite
+		- [[WriteDACL]]
+		- AllowedToDelegate
+		- ForceChangePassword
+		- ResourceBasedConstrainedDelegationAttack
+		- [[GetChangesAll]]
+- Dumped Hashes?
+	- Connect with [[evil-winrm]]
+	- Connect with [[wmiexec]]
+	- Connect with [[psexec]]
+- Lateral Movement to internal server / next server
+	- with [[AD Lateral Movement WMIC and WinRS|WMI and WinRS]]
+	- with [[AD Lateral Movement psexec|psexec.]]
+	- with [[AD Lateral Movement Pass the Hash]]
+	- when owned NTLM Hash, but Kerberos Authentication is needed to authenticate into the next server use this --> [[AD Lateral Movement Overpass the Hash]] 
+	- [[AD Lateral Movement Pass the Ticket]]
+	- [[AD Lateral Movement DCOM]]
+
+#### Post Exploitation
+
+- [[Credential Dumping]]
+- [[File Transfers]]

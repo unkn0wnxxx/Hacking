@@ -1,0 +1,50 @@
+- LinPEAS
+- [[Creating Malicious Linux Binary]]
+- Enumerate user and groups
+	- Disk Group? Do [[Linux PrivEsc Disk Group|this.]]
+	- Docker Group? Do [[Linux Priv Esc Docker Group|this.]]
+	- lxd Group? Do [[Linux Priv Esc lxd|this.]]
+	- proxy Group? Do [[Linux PrivEsc Proxy Group|this.]]
+- Enumerating all directories in which usually sensitive information is stored.
+	- /opt, /mnt, /home, /var
+- Enumerating SUID Binaries
+	- gtfobins.github.io
+	- Unknown/Custom Binary? Do [[Unknown Custom Binary|this.]]
+- Found .zip,.kdbx files? Download them locally & bruteforce!
+- Enumerating [[Linux Binarys with Capabilities]]
+- sudo -l
+	- Any runnable binary? --> Google Exploits on it!
+	- Unknown/Custom Binary? Do [[Unknown Custom Binary|this.]]
+- Sudo Version (sudo -V)
+	- Below Version 1.8.28? Do this --> sudo -u#-1 /bin/bash
+	- sudo not available? --> [[doas]]
+- Any processes running?
+	- /etc/crontab
+	- ps -aux
+	- run pspy tool
+	- Wildcard Injection?
+		- [[Linux Wildcard Injection 7zip|7zip]]
+		- [[Linux Priv Esc Wildcard Injection Tar|tar]]
+- Any services running internally?
+	- Port Forwarding
+		- Ligolo-Ng
+		- ssh (if authenticated)
+		- If non-standard service, it could be an webserver use [[doas]] to start it, if not accessible.
+- module is missing --> [[Linux Priv Esc Shared Object Injection]]
+- Write perms on /etc/sudoers? Do [[Sudoers File Write|this.]]
+- Writable /etc/shadow file? Do [[Writable shadow file|this.]]
+- Writable Path in Crontab?
+	- find / -type d -user username 2>/dev/null
+		- If yes, do [[Linux Priv Esc Writable Path in Crontab|this.]]
+- [[Enumerating Writable Files.]]
+- Writable directory in webroot? Add wolfswebshell.php and view it in browser.
+- Enumerate writable system files.
+	- [[Linux Priv Esc Sys FIles]]
+- Found interesting script?
+	- Check for [[Linux Priv Esc Pattern Matching]]
+- uname -a 
+	- Found Linux Kernel Exploits?
+- Enumerating git repositories internally.
+	-  find / -iname ".git" 2>/dev/null
+		- git show commit code --> analyzing commits for sensitive information
+-  [[Post Exploitation Linux and FreeBSD]]
