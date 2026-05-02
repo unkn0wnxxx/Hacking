@@ -1,0 +1,17 @@
+# extended LDIF
+#
+# LDAPv3
+# base <DC_thm,DC=corp> with scope subtree
+# filter: (objectclass=*)
+# requesting: ALL
+#
+
+# search result
+search: 2
+result: 34 Invalid DN syntax
+text: 0000208F: NameErr: DSID-03100232, problem 2006 (BAD_NAME), data 8350, bes
+ t match of:
+	'DC_thm,DC=corp'
+
+
+# numResponses: 1

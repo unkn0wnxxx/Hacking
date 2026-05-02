@@ -1,0 +1,29 @@
+# Dirsearch started Sun Dec 21 23:46:50 2025 as: /usr/lib/python3/dist-packages/dirsearch/dirsearch.py -u http://192.168.153.41/test/
+
+403   247B   http://192.168.153.41/test/.ht_wsr.txt
+403   247B   http://192.168.153.41/test/.htaccess.bak1
+403   246B   http://192.168.153.41/test/.htaccess.orig
+403   248B   http://192.168.153.41/test/.htaccess_extra
+403   246B   http://192.168.153.41/test/.htaccess.save
+403   247B   http://192.168.153.41/test/.htaccess.sample
+403   248B   http://192.168.153.41/test/.htaccess_orig
+403   245B   http://192.168.153.41/test/.htaccessOLD
+403   246B   http://192.168.153.41/test/.htaccess_sc
+403   247B   http://192.168.153.41/test/.htaccessOLD2
+403   246B   http://192.168.153.41/test/.htaccessBAK
+403   241B   http://192.168.153.41/test/.htm
+403   241B   http://192.168.153.41/test/.html
+403   249B   http://192.168.153.41/test/.htpasswd_test
+403   245B   http://192.168.153.41/test/.htpasswds
+403   245B   http://192.168.153.41/test/.httr-oauth
+301   252B   http://192.168.153.41/test/albums    -> REDIRECTS TO: http://192.168.153.41/test/albums/
+301   249B   http://192.168.153.41/test/cache    -> REDIRECTS TO: http://192.168.153.41/test/cache/
+301   254B   http://192.168.153.41/test/cache_html    -> REDIRECTS TO: http://192.168.153.41/test/cache_html/
+200   405B   http://192.168.153.41/test/cache/
+200     1KB  http://192.168.153.41/test/favicon.ico
+301   254B   http://192.168.153.41/test/plugins    -> REDIRECTS TO: http://192.168.153.41/test/plugins/
+200   508B   http://192.168.153.41/test/plugins/
+200   109B   http://192.168.153.41/test/robots.txt
+301   251B   http://192.168.153.41/test/themes    -> REDIRECTS TO: http://192.168.153.41/test/themes/
+200   506B   http://192.168.153.41/test/themes/
+200   408B   http://192.168.153.41/test/uploaded/

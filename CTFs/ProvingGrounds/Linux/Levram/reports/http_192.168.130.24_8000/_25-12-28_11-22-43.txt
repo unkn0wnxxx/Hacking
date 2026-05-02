@@ -1,0 +1,5 @@
+# Dirsearch started Sun Dec 28 11:23:41 2025 as: /usr/lib/python3/dist-packages/dirsearch/dirsearch.py -u http://192.168.130.24:8000
+
+301     0B   http://192.168.130.24:8000/admin    -> REDIRECTS TO: /admin/
+302     0B   http://192.168.130.24:8000/admin/    -> REDIRECTS TO: /admin/login/?next=/admin/
+301     0B   http://192.168.130.24:8000/admin/login    -> REDIRECTS TO: /admin/login/

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="layout :: layout(~{::title}, ~{::section})">
+<head>
+    <title>Issue Tracker</title>
+</head>
+<body>
+
+    <section>
+		<div class="container mt-4">
+		
+			<div th:include="fragments.html :: session_buttons"></div>
+			<div style="clear:both;height:5px;"></div>
+			<a th:href="@{/user/list}" class="btn btn-primary">Back to Users</a>
+			
+			 <br><br>
+			
+			<div class="col-sm-6">
+				<form th:action="@{/user/}+${formAction}" th:object=${usersForm} method="POST">
+					<div class="card">
+						<div class="card-header">
+							<h3>Users Module</h3>
+						</div>
+						<div class="card-body">
+							<div class="form-group">
+								<label>Username</label>
+								<input th:field="*{username}" type="text" class="form-control"/>
+							</div>
+							<div class="form-group">
+								<label>Password</label>
+								<input th:field="*{password}" type="password" class="form-control"/>
+							</div>
+						</div>
+						<div class="card-footer">
+							<input th:field="*{UserId}" type="hidden"/>
+							<input type="submit" value="Save" class="btn btn-success">
+						</div>
+					
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+
+</body>
+</html>
+

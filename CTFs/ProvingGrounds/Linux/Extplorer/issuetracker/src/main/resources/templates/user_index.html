@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="layout :: layout(~{::title}, ~{::section})">
+<head>
+    <title>Issue Tracker</title>
+</head>
+<body>
+
+    <section>
+		<div class="container mt-4">
+			<div th:include="fragments.html :: session_buttons"></div>
+			<div style="clear:both;height:5px;"></div>
+			<a th:href="@{/user/add}" class="btn btn-primary">Add User</a>
+			<br><br>
+			<br><br>
+			<table class="table">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Username</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="user:${usersList}">
+					<td th:text="${user.userId}"></td>
+					<td th:text="${user.username}"></td>
+					<td>
+						<a th:href="@{/user/edit/}+${user.userId}" class="btn btn-warning">Edit</a>
+						<a th:onclick="confirmDelete('/user',[[${user.userId}]])" class="btn btn-danger">Delete</a>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+		</div>
+	</section>
+
+</body>
+</html>

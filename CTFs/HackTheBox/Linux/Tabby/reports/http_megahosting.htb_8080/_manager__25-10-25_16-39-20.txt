@@ -1,0 +1,25 @@
+# Dirsearch started Sat Oct 25 16:40:11 2025 as: /usr/lib/python3/dist-packages/dirsearch/dirsearch.py -u http://megahosting.htb:8080/manager/
+
+404   746B   http://megahosting.htb:8080/manager/%2e%2e;/test
+401     2KB  http://megahosting.htb:8080/manager/html
+404   756B   http://megahosting.htb:8080/manager/%2e%2e//google.com
+200     2KB  http://megahosting.htb:8080/manager/..;/
+302     0B   http://megahosting.htb:8080/manager/;login/    -> REDIRECTS TO: /manager/html
+400   804B   http://megahosting.htb:8080/manager/\..\..\..\..\..\..\..\..\..\etc\passwd
+302     0B   http://megahosting.htb:8080/manager/;json/    -> REDIRECTS TO: /manager/html
+302     0B   http://megahosting.htb:8080/manager/;admin/    -> REDIRECTS TO: /manager/html
+400   804B   http://megahosting.htb:8080/manager/a%5c.aspx
+401     2KB  http://megahosting.htb:8080/manager/html/
+401     2KB  http://megahosting.htb:8080/manager/html/config.rb
+401     2KB  http://megahosting.htb:8080/manager/html/js/misc/swfupload//swfupload.swf
+401     2KB  http://megahosting.htb:8080/manager/html/cgi-bin/
+401     2KB  http://megahosting.htb:8080/manager/html/js/misc/swfupload/swfupload.swf
+401     2KB  http://megahosting.htb:8080/manager/html/js/misc/swfupload/swfupload_f9.swf
+302     0B   http://megahosting.htb:8080/manager/images    -> REDIRECTS TO: /manager/images/
+302     0B   http://megahosting.htb:8080/manager/index.jsp    -> REDIRECTS TO: /manager/html
+401     2KB  http://megahosting.htb:8080/manager/jmxproxy
+401     2KB  http://megahosting.htb:8080/manager/status
+401     2KB  http://megahosting.htb:8080/manager/status/
+401     2KB  http://megahosting.htb:8080/manager/status/selfDiscovered/status
+401     2KB  http://megahosting.htb:8080/manager/status?full=true
+401     2KB  http://megahosting.htb:8080/manager/text

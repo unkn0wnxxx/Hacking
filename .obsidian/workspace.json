@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTFs/TryHackMe/Linux/VulnNet Internal--badr.md",
+                "file": "Notes/Services/rsync/rsync.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "VulnNet Internal--badr"
+              "title": "rsync"
             }
           },
           {
@@ -184,11 +184,12 @@
       "bases:Create new base": false
     }
   },
-  "active": "39dc50b4182ccccb",
+  "active": "756985f2bee05e5c",
   "lastOpenFiles": [
-    "OSCP",
+    "README.md",
     "Notes/Services/TeamCity/TeamCity.md",
     "CTFs/TryHackMe/Linux/VulnNet Internal--badr.md",
+    "OSCP",
     "Notes/General Methodologies/Default Credentials.md",
     "Notes/Services/SSH/Methodology.md",
     "Notes/Services/TeamCity",
@@ -230,7 +231,6 @@
     "Images/Pasted image 20260327102643.png",
     "Abschlussprojekt",
     "Notes/Services/ike (isakmp)",
-    "Notes/Services/tftp",
-    "CTFs/HackTheBox/Linux"
+    "Notes/Services/tftp"
   ]
 }

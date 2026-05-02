@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+set -e
+
+if [ "$(id -u)" -eq 0 ] || [ "$1" = "--resume" ]; then
+  exec /usr/lib/nmap/nmap "$@"
+else
+  exec /usr/lib/nmap/nmap --privileged "$@"
+fi

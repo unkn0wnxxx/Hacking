@@ -1,0 +1,10 @@
+WebServer$
+DatabaseServer$
+CitrixServer$
+FileServer$
+MailServer$
+BackupServer$
+ApplicationServer$
+PrintServer$
+ProxyServer$
+MonitoringServer$

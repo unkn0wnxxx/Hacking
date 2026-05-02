@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+	<html lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="layout(title, content)">
+	<head>
+    	<meta charset="UTF-8">
+    	<title th:replace="${title}">Layout Title</title>
+		<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+	</head>
+	<body>
+	    <section th:replace="${content}">
+        	<p>Layout contents</p>
+    	</section>
+    	
+		<script src="/js/jquery-3.4.1.js"></script>
+		<script src="/js/sweetalert.min.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+		<script src="/js/main.js"></script>
+	</body>
+</html>

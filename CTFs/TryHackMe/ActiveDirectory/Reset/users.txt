@@ -1,0 +1,65 @@
+Enterprise Read-only Domain Controllers
+Administrator
+Guest
+krbtgt
+Domain Admins
+Domain Users
+Domain Guests
+Domain Computers
+Domain Controllers
+Cert Publishers
+Schema Admins
+Enterprise Admins
+Group Policy Creator Owners
+Read-only Domain Controllers
+Cloneable Domain Controllers
+Protected Users
+Key Admins
+Enterprise Key Admins
+RAS and IAS Servers
+Allowed RODC Password Replication Group
+Denied RODC Password Replication Group
+HAYSTACK$
+DnsAdmins
+DnsUpdateProxy
+3091731410SA
+ERNESTO_SILVA
+TRACY_CARVER
+SHAWNA_BRAY
+CECILE_WONG
+CYRUS_WHITEHEAD
+DEANNE_WASHINGTON
+ELLIOT_CHARLES
+MICHEL_ROBINSON
+MITCHELL_SHAW
+FANNY_ALLISON
+JULIANNE_HOWE
+ROSLYN_MATHIS
+DANIEL_CHRISTENSEN
+MARCELINO_BALLARD
+CRUZ_HALL
+HOWARD_PAGE
+STEWART_SANTANA
+LINDSAY_SCHULTZ
+TABATHA_BRITT
+RICO_PEARSON
+DARLA_WINTERS
+ANDY_BLACKWELL
+LILY_ONEILL
+CHERYL_MULLINS
+LETHA_MAYO
+HORACE_BOYLE
+CHRISTINA_MCCORMICK
+3811465497SA
+MORGAN_SELLERS
+MARION_CLAY
+3966486072SA
+TED_JACOBSON
+AUGUSTA_HAMILTON
+TREVOR_MELTON
+LEANN_LONG
+RAQUEL_BENSON
+AN-173-distlist1
+Gu-gerardway-distlist1
+CH-ecu-distlist1
+AUTOMATE

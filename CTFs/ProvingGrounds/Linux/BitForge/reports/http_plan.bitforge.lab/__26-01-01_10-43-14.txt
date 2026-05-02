@@ -1,0 +1,50 @@
+# Dirsearch started Thu Jan  1 10:43:49 2026 as: /usr/lib/python3/dist-packages/dirsearch/dirsearch.py -u http://plan.bitforge.lab/
+
+403   199B   http://plan.bitforge.lab/.ht_wsr.txt
+403   199B   http://plan.bitforge.lab/.htaccess.bak1
+403   199B   http://plan.bitforge.lab/.htaccess.orig
+403   199B   http://plan.bitforge.lab/.htaccess.sample
+403   199B   http://plan.bitforge.lab/.htaccess.save
+403   199B   http://plan.bitforge.lab/.htaccess_orig
+403   199B   http://plan.bitforge.lab/.htaccess_extra
+403   199B   http://plan.bitforge.lab/.htaccess_sc
+403   199B   http://plan.bitforge.lab/.htaccessBAK
+403   199B   http://plan.bitforge.lab/.htaccessOLD2
+403   199B   http://plan.bitforge.lab/.htaccessOLD
+403   199B   http://plan.bitforge.lab/.html
+403   199B   http://plan.bitforge.lab/.htm
+403   199B   http://plan.bitforge.lab/.htpasswds
+403   199B   http://plan.bitforge.lab/.httr-oauth
+403   199B   http://plan.bitforge.lab/.htpasswd_test
+403   199B   http://plan.bitforge.lab/.php
+200   168B   http://plan.bitforge.lab/composer.json
+200    55KB  http://plan.bitforge.lab/composer.lock
+200     9KB  http://plan.bitforge.lab/config.inc
+200   214B   http://plan.bitforge.lab/database.inc
+200   432B   http://plan.bitforge.lab/debug.txt
+301   241B   http://plan.bitforge.lab/history    -> REDIRECTS TO: http://plan.bitforge.lab/history/
+301   242B   http://plan.bitforge.lab/includes    -> REDIRECTS TO: http://plan.bitforge.lab/includes/
+200   993B   http://plan.bitforge.lab/includes/
+200     2KB  http://plan.bitforge.lab/INSTALL.txt
+200    12KB  http://plan.bitforge.lab/LICENSE.txt
+301   243B   http://plan.bitforge.lab/phpmailer    -> REDIRECTS TO: http://plan.bitforge.lab/phpmailer/
+200    10KB  http://plan.bitforge.lab/README.txt
+403   199B   http://plan.bitforge.lab/server-status
+403   199B   http://plan.bitforge.lab/server-status/
+301   240B   http://plan.bitforge.lab/smarty    -> REDIRECTS TO: http://plan.bitforge.lab/smarty/
+301   237B   http://plan.bitforge.lab/sql    -> REDIRECTS TO: http://plan.bitforge.lab/sql/
+200   444B   http://plan.bitforge.lab/sql/
+200     1KB  http://plan.bitforge.lab/templates/
+301   243B   http://plan.bitforge.lab/templates    -> REDIRECTS TO: http://plan.bitforge.lab/templates/
+200   630B   http://plan.bitforge.lab/vendor/
+200     0B   http://plan.bitforge.lab/vendor/autoload.php
+200     0B   http://plan.bitforge.lab/vendor/composer/autoload_namespaces.php
+200     0B   http://plan.bitforge.lab/vendor/composer/autoload_files.php
+200     0B   http://plan.bitforge.lab/vendor/composer/autoload_psr4.php
+200     0B   http://plan.bitforge.lab/vendor/composer/autoload_classmap.php
+200     0B   http://plan.bitforge.lab/vendor/composer/autoload_real.php
+200     0B   http://plan.bitforge.lab/vendor/composer/autoload_static.php
+200     0B   http://plan.bitforge.lab/vendor/composer/ClassLoader.php
+200     1KB  http://plan.bitforge.lab/vendor/composer/LICENSE
+200    57KB  http://plan.bitforge.lab/vendor/composer/installed.json
+200     7B   http://plan.bitforge.lab/version.txt

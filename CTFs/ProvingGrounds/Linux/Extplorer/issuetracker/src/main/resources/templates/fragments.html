@@ -1,0 +1,20 @@
+
+ 		<div th:fragment="session_buttons">
+ 			<div sec:authorize="isAuthenticated()">
+ 				<div style="float:left">
+				<a th:href="@{/user/list}" class="btn btn-primary">Users</a>
+				<a th:href="@{/issue/list}" class="btn btn-primary">Issues</a>
+				</div>
+				<div style="float:right">
+	    	    <form th:action="@{/logout}" method="post">
+	            	<input type="submit" value="Sign Out"  class="btn btn-primary"/>
+	        	</form>
+	        	</div>
+	        </div>
+	        <div sec:authorize="isAnonymous()">
+	        	<a th:href="@{/login}" class="btn btn-primary" style="float:right">Sign In</a> 
+	        	<a th:href="@{/register}" class="btn btn-primary" style="float:right;margin-right:5px">Register</a>
+	        </div>
+        </div>
+
+        

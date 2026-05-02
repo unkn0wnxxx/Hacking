@@ -1,0 +1,32 @@
+# Dirsearch started Thu Jan  1 10:42:50 2026 as: /usr/lib/python3/dist-packages/dirsearch/dirsearch.py -u http://plan.bitforge.lab/www/
+
+403   199B   http://plan.bitforge.lab/www/.ht_wsr.txt
+403   199B   http://plan.bitforge.lab/www/.htaccess.bak1
+403   199B   http://plan.bitforge.lab/www/.htaccess.orig
+403   199B   http://plan.bitforge.lab/www/.htaccess.sample
+403   199B   http://plan.bitforge.lab/www/.htaccess.save
+403   199B   http://plan.bitforge.lab/www/.htaccess_extra
+403   199B   http://plan.bitforge.lab/www/.htaccess_sc
+403   199B   http://plan.bitforge.lab/www/.htaccess_orig
+403   199B   http://plan.bitforge.lab/www/.htaccessBAK
+403   199B   http://plan.bitforge.lab/www/.htaccessOLD
+403   199B   http://plan.bitforge.lab/www/.htaccessOLD2
+403   199B   http://plan.bitforge.lab/www/.htm
+403   199B   http://plan.bitforge.lab/www/.html
+403   199B   http://plan.bitforge.lab/www/.htpasswd_test
+403   199B   http://plan.bitforge.lab/www/.htpasswds
+403   199B   http://plan.bitforge.lab/www/.httr-oauth
+403   199B   http://plan.bitforge.lab/www/.php
+301   241B   http://plan.bitforge.lab/www/api    -> REDIRECTS TO: http://plan.bitforge.lab/www/api/
+200   424B   http://plan.bitforge.lab/www/api/
+200   437B   http://plan.bitforge.lab/www/assets/
+301   244B   http://plan.bitforge.lab/www/assets    -> REDIRECTS TO: http://plan.bitforge.lab/www/assets/
+200    15KB  http://plan.bitforge.lab/www/favicon.ico
+301   245B   http://plan.bitforge.lab/www/install    -> REDIRECTS TO: http://plan.bitforge.lab/www/install/
+200     3KB  http://plan.bitforge.lab/www/install/index.php?upgrade/
+200     3KB  http://plan.bitforge.lab/www/install/
+302     0B   http://plan.bitforge.lab/www/options.php    -> REDIRECTS TO: .
+302     0B   http://plan.bitforge.lab/www/restore.php    -> REDIRECTS TO: .
+302     0B   http://plan.bitforge.lab/www/status.php    -> REDIRECTS TO: .
+301   244B   http://plan.bitforge.lab/www/upload    -> REDIRECTS TO: http://plan.bitforge.lab/www/upload/
+200   434B   http://plan.bitforge.lab/www/upload/

@@ -1,0 +1,8 @@
+NOTICE
+======
+
+Due to customer complaints about using FTP we have now moved 'images' to 
+a hidden windows file share for upload and management 
+of images.
+
+- Dev Team

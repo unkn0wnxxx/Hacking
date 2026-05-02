@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="layout :: layout(~{::title}, ~{::section})">
+<head>
+    <title>Issue Tracker</title>
+</head>
+<body>
+
+    <section>
+		<div class="container mt-4">
+			
+			<div th:include="fragments.html :: session_buttons"></div>
+			<div style="clear:both;height:5px;"></div>
+			<a th:href="@{/issue/add}" class="btn btn-primary">New Issue</a>
+			<br><br>
+			<table class="table">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Message</th>
+					<th>Priority</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="issue:${issuesList}">
+					<td th:text="${issue.Id}"></td>
+					<td th:text="${issue.message}"></td>
+					<td th:text="${issue.priority}"></td>
+					<td>
+						<a th:href="@{/issue/edit/}+${issue.id}" class="btn btn-warning">Edit</a>
+						<a th:onclick="confirmDelete('/issue',[[${issue.id}]])" class="btn btn-danger">Delete</a>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+		</div>
+	</section>
+
+</body>
+</html>

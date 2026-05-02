@@ -1,0 +1,38 @@
+# Dirsearch started Tue Oct 21 09:25:37 2025 as: /usr/lib/python3/dist-packages/dirsearch/dirsearch.py -u http://10.129.55.138
+
+403   199B   http://10.129.55.138/.ht_wsr.txt
+403   199B   http://10.129.55.138/.htaccess.orig
+403   199B   http://10.129.55.138/.htaccess.bak1
+403   199B   http://10.129.55.138/.htaccess.sample
+403   199B   http://10.129.55.138/.htaccess.save
+403   199B   http://10.129.55.138/.htaccess_orig
+403   199B   http://10.129.55.138/.htaccess_extra
+403   199B   http://10.129.55.138/.htaccessBAK
+403   199B   http://10.129.55.138/.htaccess_sc
+403   199B   http://10.129.55.138/.htaccessOLD
+403   199B   http://10.129.55.138/.htaccessOLD2
+403   199B   http://10.129.55.138/.html
+403   199B   http://10.129.55.138/.htm
+403   199B   http://10.129.55.138/.htpasswd_test
+403   199B   http://10.129.55.138/.htpasswds
+403   199B   http://10.129.55.138/.httr-oauth
+403   199B   http://10.129.55.138/.php
+403   199B   http://10.129.55.138/%3f/
+200     1KB  http://10.129.55.138/404
+403   199B   http://10.129.55.138/admin%20/
+200   939B   http://10.129.55.138/contact.php
+301   234B   http://10.129.55.138/data    -> REDIRECTS TO: http://10.129.55.138/data/
+403   199B   http://10.129.55.138/data/
+403   199B   http://10.129.55.138/data/files/
+403   199B   http://10.129.55.138/login.wdm%20
+301   238B   http://10.129.55.138/messages    -> REDIRECTS TO: http://10.129.55.138/messages/
+403   199B   http://10.129.55.138/New%20Folder
+403   199B   http://10.129.55.138/New%20folder%20(2)
+403   199B   http://10.129.55.138/phpliteadmin%202.php
+301   237B   http://10.129.55.138/plugins    -> REDIRECTS TO: http://10.129.55.138/plugins/
+403   199B   http://10.129.55.138/plugins/
+403   199B   http://10.129.55.138/Read%20Me.txt
+403   199B   http://10.129.55.138/server-status/
+403   199B   http://10.129.55.138/server-status
+301   236B   http://10.129.55.138/themes    -> REDIRECTS TO: http://10.129.55.138/themes/
+403   199B   http://10.129.55.138/themes/

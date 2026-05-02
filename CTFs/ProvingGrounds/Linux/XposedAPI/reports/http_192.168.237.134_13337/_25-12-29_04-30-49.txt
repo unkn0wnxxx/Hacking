@@ -1,0 +1,6 @@
+# Dirsearch started Mon Dec 29 04:31:29 2025 as: /usr/lib/python3/dist-packages/dirsearch/dirsearch.py -u http://192.168.237.134:13337
+
+403    33B   http://192.168.237.134:13337/logs
+200   563B   http://192.168.237.134:13337/restart
+405   178B   http://192.168.237.134:13337/update
+200    38B   http://192.168.237.134:13337/version

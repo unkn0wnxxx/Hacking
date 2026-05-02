@@ -1,0 +1,7 @@
+# Dirsearch started Tue Oct 21 10:11:48 2025 as: /usr/lib/python3/dist-packages/dirsearch/dirsearch.py -u http://sea.htb/themes
+
+200     1KB  http://sea.htb/themes/404
+200     1KB  http://sea.htb/themes/admin/home
+200     1KB  http://sea.htb/themes/home
+200     1KB  http://sea.htb/themes/sitecore/content/home
+200     1KB  http://sea.htb/themes/sym/root/home/

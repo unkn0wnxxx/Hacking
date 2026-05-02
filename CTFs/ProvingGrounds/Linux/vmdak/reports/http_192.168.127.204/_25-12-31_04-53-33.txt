@@ -1,0 +1,28 @@
+# Dirsearch started Wed Dec 31 04:54:10 2025 as: /usr/lib/python3/dist-packages/dirsearch/dirsearch.py -u http://192.168.127.204
+
+301   315B   http://192.168.127.204/js    -> REDIRECTS TO: http://192.168.127.204/js/
+403   280B   http://192.168.127.204/.ht_wsr.txt
+403   280B   http://192.168.127.204/.htaccess.bak1
+403   280B   http://192.168.127.204/.htaccess.orig
+403   280B   http://192.168.127.204/.htaccess.sample
+403   280B   http://192.168.127.204/.htaccess_extra
+403   280B   http://192.168.127.204/.htaccess_orig
+403   280B   http://192.168.127.204/.htaccess_sc
+403   280B   http://192.168.127.204/.htaccess.save
+403   280B   http://192.168.127.204/.htaccessBAK
+403   280B   http://192.168.127.204/.htaccessOLD
+403   280B   http://192.168.127.204/.htaccessOLD2
+403   280B   http://192.168.127.204/.htm
+403   280B   http://192.168.127.204/.html
+403   280B   http://192.168.127.204/.htpasswds
+403   280B   http://192.168.127.204/.htpasswd_test
+403   280B   http://192.168.127.204/.httr-oauth
+403   280B   http://192.168.127.204/.php
+301   321B   http://192.168.127.204/__MACOSX    -> REDIRECTS TO: http://192.168.127.204/__MACOSX/
+301   316B   http://192.168.127.204/css    -> REDIRECTS TO: http://192.168.127.204/css/
+301   318B   http://192.168.127.204/fonts    -> REDIRECTS TO: http://192.168.127.204/fonts/
+301   316B   http://192.168.127.204/img    -> REDIRECTS TO: http://192.168.127.204/img/
+200   676B   http://192.168.127.204/js/
+200   336B   http://192.168.127.204/license.txt
+403   280B   http://192.168.127.204/server-status/
+403   280B   http://192.168.127.204/server-status

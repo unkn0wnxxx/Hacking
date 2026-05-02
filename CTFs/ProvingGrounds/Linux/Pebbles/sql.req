@@ -1,0 +1,16 @@
+POST /zm/index.php HTTP/1.1
+Host: 192.168.175.52
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0
+Accept: application/json
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+X-Requested-With: XMLHttpRequest
+X-Request: JSON
+Content-type: application/x-www-form-urlencoded; charset=utf-8
+Content-Length: 71
+Origin: http://192.168.175.52
+Connection: keep-alive
+Referer: http://192.168.175.52/zm/index.php?view=log
+Cookie: zmSkin=classic; zmCSS=classic; ZMSESSID=u8u3vev1u0cp8sab632cuflma2
+
+view=request&request=log&task=query&limit=100&minTime=1766266617.942895

@@ -1,0 +1,15 @@
+POST /phpmyadmin/index.php HTTP/1.1
+Host: supersecurehotel.htb
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 150
+Origin: null
+Connection: keep-alive
+Cookie: phpMyAdmin=6ak360ao9b65jj8plko6r71qo5lgfpbf; pma_lang=en; PHPSESSID=0h16l80acjtr1e8q87hanb6m67
+Upgrade-Insecure-Requests: 1
+Priority: u=0, i
+
+set_session=6ak360ao9b65jj8plko6r71qo5lgfpbf&pma_username=admin&pma_password=admin&server=1&target=index.php&lang=en&token=7%284%5D%7Dv%3EJnx%3F-bh3-

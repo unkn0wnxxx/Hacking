@@ -1,0 +1,22 @@
+# Dirsearch started Sat Oct 25 10:33:35 2025 as: /usr/lib/python3/dist-packages/dirsearch/dirsearch.py -u http://supersecurehotel.htb/phpmyadmin/libraries/
+
+403   285B   http://supersecurehotel.htb/phpmyadmin/libraries/.ht_wsr.txt
+403   285B   http://supersecurehotel.htb/phpmyadmin/libraries/.htaccess.bak1
+403   285B   http://supersecurehotel.htb/phpmyadmin/libraries/.htaccess.sample
+403   285B   http://supersecurehotel.htb/phpmyadmin/libraries/.htaccess_orig
+403   285B   http://supersecurehotel.htb/phpmyadmin/libraries/.htaccessOLD2
+403   285B   http://supersecurehotel.htb/phpmyadmin/libraries/.htm
+403   285B   http://supersecurehotel.htb/phpmyadmin/libraries/.html
+403   285B   http://supersecurehotel.htb/phpmyadmin/libraries/.htaccessOLD
+403   285B   http://supersecurehotel.htb/phpmyadmin/libraries/.htaccess.orig
+403   285B   http://supersecurehotel.htb/phpmyadmin/libraries/.htaccess.save
+403   285B   http://supersecurehotel.htb/phpmyadmin/libraries/.htpasswds
+403   285B   http://supersecurehotel.htb/phpmyadmin/libraries/.htaccess_sc
+403   285B   http://supersecurehotel.htb/phpmyadmin/libraries/.htaccessBAK
+403   285B   http://supersecurehotel.htb/phpmyadmin/libraries/.htpasswd_test
+403   285B   http://supersecurehotel.htb/phpmyadmin/libraries/.htaccess_extra
+403   285B   http://supersecurehotel.htb/phpmyadmin/libraries/.httr-oauth
+403   285B   http://supersecurehotel.htb/phpmyadmin/libraries/.php
+403   285B   http://supersecurehotel.htb/phpmyadmin/libraries/.php3
+301   351B   http://supersecurehotel.htb/phpmyadmin/libraries/classes    -> REDIRECTS TO: http://supersecurehotel.htb/phpmyadmin/libraries/classes/
+200     2KB  http://supersecurehotel.htb/phpmyadmin/libraries/classes/

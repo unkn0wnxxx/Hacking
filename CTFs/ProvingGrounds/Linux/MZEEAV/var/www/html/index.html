@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    
+    <style>
+    html { display: flex; justify-content: center;}
+    body {background-color: black; color: white;}
+    p { color: white; font-family: "Monospace";}
+    p2 { color: white; font-family: "Monospace"; text-align: center; font-size: 10px;}
+    </style>
+    
+        <title>MZEE-AV - Check your files</title>
+    </head>
+    <body>
+        <pre>
+  __  __ _______ ___     ___   __ 
+ |  \/  |_  / __| __|__ /_\ \ / / 
+ | |\/| |/ /| _|| _|___/ _ \ V /  
+ |_|  |_/___|___|___| /_/ \_\_/   
+                                  
+        </pre>
+<hr>
+        
+        <br>
+		  <!-- HTML5 Input Form Elements -->
+		  <input id="fileupload" type="file" name="fileupload" /> 
+		  <button id="upload-button" onclick="uploadFile()"> Upload </button>
+
+		  <!-- Ajax JavaScript File Upload Logic -->
+		  <script>
+		  async function uploadFile() {
+		  let formData = new FormData(); 
+		  formData.append("file", fileupload.files[0]);
+		  await fetch('/upload.php', {
+		    method: "POST", 
+		    body: formData
+		  }); 
+		  alert('The file has been uploaded successfully.');
+		  window.location = "listing.php";
+		  }
+		  </script>
+        <br>
+        
+        <p>Check your PE-files with the online AV engine.</p>
+        <br>
+        <br>
+        <hr>
+        <p2>by MZEE-AV 2022</p2>
+    </body>
+</html>
