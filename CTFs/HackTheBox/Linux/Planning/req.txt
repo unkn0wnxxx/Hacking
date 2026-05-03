@@ -1,0 +1,16 @@
+POST /login HTTP/1.1
+Host: grafana.planning.htb
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: application/json, text/plain, */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Referer: http://grafana.planning.htb/login
+content-type: application/json
+x-grafana-device-id: 6eb252382e526b5ca3bddf5f30beb9d4
+Content-Length: 38
+Origin: http://grafana.planning.htb
+Connection: keep-alive
+Cookie: redirect_to=%2Fpublic%2Femails%2F
+Priority: u=0
+
+{"user":"admin","password":"password"}
