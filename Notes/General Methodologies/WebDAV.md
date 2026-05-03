@@ -3,6 +3,14 @@
 
 ---
 
+## Default Credentials
+
+```
+wampp:xampp
+webdav:webdav
+jigsaw:jigsaw
+```
+
 WebDAV is a protocol used in IIS Windows http servers which allows files to get
 downloaded from this directory and modify and delete files.
 

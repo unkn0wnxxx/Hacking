@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Services/rsync/rsync.md",
+                "file": "CTFs/TryHackMe/Linux/Dav/Dav.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "rsync"
+              "title": "Dav"
             }
           },
           {
@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Services/TeamCity/TeamCity.md",
+                "file": "Notes/Privilege Escalation/Linux/Methodology.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "TeamCity"
+              "title": "Methodology"
             }
           }
         ]
@@ -186,16 +186,22 @@
   },
   "active": "756985f2bee05e5c",
   "lastOpenFiles": [
-    "README.md",
+    "Notes/Privilege Escalation/Linux/Methodology.md",
+    "CTFs/TryHackMe/Linux/Dav/Dav.md",
+    "Notes/General Methodologies/Linux Binarys with Capabilities.md",
+    "Notes/General Methodologies/WebDAV.md",
+    "Notes/Services/HTTP & HTTPS/Methodology.md",
+    "Notes/General Methodologies/Subdomain Enum.md",
     "Notes/Services/TeamCity/TeamCity.md",
+    "README.md",
+    "CTFs/TryHackMe/Linux/Dav",
+    "Notes/Services/rsync/rsync.md",
     "CTFs/TryHackMe/Linux/VulnNet Internal--badr.md",
     "OSCP",
     "Notes/General Methodologies/Default Credentials.md",
     "Notes/Services/SSH/Methodology.md",
     "Notes/Services/TeamCity",
     "Notes/General Methodologies/Ligolo-Ng/Ligolo-Ng Port Forwarding.md",
-    "Notes/Privilege Escalation/Linux/Methodology.md",
-    "Notes/Services/rsync/rsync.md",
     "Notes/General Methodologies/Redis Enumeration.md",
     "Notes/Services/rsync",
     "Notes/Services/Redis/Methodology.md",
@@ -210,12 +216,7 @@
     "Notes/General Methodologies/Enumerating SMB Shares.md",
     "Notes/General Methodologies/Creating Malicious Linux Binary.md",
     "CTFs/TryHackMe/Linux/Res.md",
-    "Notes/General Methodologies/File Transfers.md",
-    "CTFs/TryHackMe/Linux/b3dr0ck.v7.md",
-    "Notes/General Methodologies/socat.md",
     "Images/Pasted image 20260501003524.png",
-    "CTFs/TryHackMe/Linux/Spice Hut.md",
-    "OSCP/OSCP-Challenge-Labs/MEDTECH/Server/172.16.237.14.md",
     "Images/Pasted image 20260501004833.png",
     "Images/Pasted image 20260501004741.png",
     "Images/Pasted image 20260501004638.png",
@@ -230,7 +231,6 @@
     "Images/Pasted image 20260327103652.png",
     "Images/Pasted image 20260327102643.png",
     "Abschlussprojekt",
-    "Notes/Services/ike (isakmp)",
-    "Notes/Services/tftp"
+    "Notes/Services/ike (isakmp)"
   ]
 }
