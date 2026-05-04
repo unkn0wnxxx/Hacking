@@ -1,4 +1,4 @@
-- wafw00f firewall enum
+- [[wafw00f firewall enum]]
 - ###### Enumerating endpoints
 	- [[Gobuster|Fuzzing Endpoints]]
 	- [[Gobuster File Extensions|Fuzzing File Extensions]]
@@ -41,6 +41,7 @@
 	- Any hidden subdomains or endpoints found?
 	- Any credential leaks?
 	- Any sensitive information?
+	- Any encoded strings found? Do [[Encoding and Decoding|this.]]
 - ###### Exposed API Endpoint?
 	- Check curl GET & POST Requests and analyze them
 		- Download Request? If yes, [[API Endpoint Reverse Shell|do this.]]
@@ -71,7 +72,10 @@
 		- [[Command Injection Brace Expansion]]
 			- [[Command Injection Filter types]]
 	- [[PHP Session Hijacking]]
-
+- Browser says "This address is restricted" bc's port which is being used for an different port is used. Do [[Known Port being used for webpage|this.]]
+- Steganography
+	- [[Opening Files|Open Image]]
+	- [[Extract Information out of the picture]]
 ## Advanced Web Methodology
 
 - [[Parameter Semantics]]

