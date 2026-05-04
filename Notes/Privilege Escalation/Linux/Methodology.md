@@ -15,6 +15,7 @@
 - sudo -l
 	- Any runnable binary? --> Google Exploits on it!
 	- Unknown/Custom Binary? Do [[Unknown Custom Binary|this.]]
+	- Any runnable script with sudo permissions? Do [[Runnable Script with sudo permissions|this.]]
 - Sudo Version (sudo -V)
 	- Below Version 1.8.28? Do this --> sudo -u#-1 /bin/bash
 	- sudo not available? --> [[doas]]
