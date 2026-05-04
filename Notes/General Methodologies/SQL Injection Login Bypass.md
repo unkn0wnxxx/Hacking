@@ -4,8 +4,9 @@
 We can use an OR statement to make the sql query always true, so if the query breaks we get authenticated.
 
 ```
-jake' OR 1=1 --
-jake' OR 1=1 -- //
+' OR 1=1 --
+' OR 1=1 -- //
+' OR 1=1 -- -
 ```
 
 ```
