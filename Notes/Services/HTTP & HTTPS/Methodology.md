@@ -34,6 +34,7 @@
 	- Exposed wp-config.php? [[WordPress Default Paths]]
 	- Exposed phpinfo.php?
 	- In CMS
+		- [[WordPress CMS Priv Esc Semantics]]
 		- [[WordPress Plugin Relay Attack]]
 		- [[WordPress Malicious Plugin|Upload Malicious Plugin]]
 		- [[Upload Malicious Webshell]]

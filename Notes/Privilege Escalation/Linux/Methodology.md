@@ -22,6 +22,7 @@
 	- sudo not available? --> [[doas]]
 - Any processes running?
 	- /etc/crontab
+		- Found Script with module (import os)? Got [[Enumerating Writable Files.|write permissions]] on module? Do [[Writable Module Priv Esc|this.]]
 		- Executes an script inside home folder? --> Replace the script with malicious one.
 	- ps -aux
 	- run pspy tool
