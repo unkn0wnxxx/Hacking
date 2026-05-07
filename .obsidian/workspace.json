@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTFs/TryHackMe/Linux/Develpy/Develpy.md",
+                "file": "CTFs/TryHackMe/Linux/Jack/Jack.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Develpy"
+              "title": "Jack"
             }
           },
           {
@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Privilege Escalation/Linux/Methodology.md",
+                "file": "Notes/General Methodologies/Enumerating Writable Files..md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Methodology"
+              "title": "Enumerating Writable Files."
             }
           }
         ]
@@ -186,9 +186,19 @@
   },
   "active": "756985f2bee05e5c",
   "lastOpenFiles": [
+    "Notes/General Methodologies/Enumerating Writable Files..md",
+    "CTFs/TryHackMe/Linux/Jack/Jack.md",
     "Notes/Privilege Escalation/Linux/Methodology.md",
-    "Notes/General Methodologies/Command Injection.md",
+    "Notes/Services/HTTP & HTTPS/Methodology.md",
+    "Notes/General Methodologies/Linux Binarys with Capabilities.md",
+    "Upload Malicious Webshell.md",
+    "Notes/General Methodologies/WordPress Malicious Plugin.md",
+    "WordPress Plugin Relay Attack.md",
+    "Notes/General Methodologies/wpscan.md",
+    "Notes/General Methodologies/Creating Malicious Linux Binary.md",
     "CTFs/TryHackMe/Linux/Develpy/Develpy.md",
+    "CTFs/TryHackMe/Linux/Jack",
+    "Notes/General Methodologies/Command Injection.md",
     "sudo group.md",
     "CTFs/TryHackMe/Linux/Corridor/Corridor.md",
     "CTFs/TryHackMe/Linux/Develpy",
@@ -204,25 +214,15 @@
     "CTFs/TryHackMe/Linux/Brooklyn99",
     "Notes/General Methodologies/tar.md",
     "Notes/General Methodologies/Gobuster.md",
-    "Notes/Services/HTTP & HTTPS/Methodology.md",
-    "CTFs/TryHackMe/Linux/Jack/Jack-of-All-Trades.md",
+    "CTFs/TryHackMe/Linux/Jack-of-All-Trades/Jack-of-All-Trades.md",
     "CTFs/TryHackMe/Linux/Cyborg",
     "Notes/General Methodologies/Encoding and Decoding.md",
     "Notes/General Methodologies/Extract Information out of the picture.md",
     "Notes/General Methodologies/Known Port being used for webpage.md",
     "Images/Pasted image 20260504233834.png",
-    "Notes/General Methodologies/Runnable Script with sudo permissions.md",
-    "Notes/General Methodologies/Opening Files.md",
-    "Notes/General Methodologies/wafw00f firewall enum.md",
-    "Notes/General Methodologies/File Transfers.md",
-    "CTFs/TryHackMe/Linux/Library/Library.md",
-    "CTFs/TryHackMe/Linux/Jack",
-    "Notes/General Methodologies/Linux Wildcard Injection 7zip.md",
-    "Notes/General Methodologies/Unknown Custom Binary.md",
-    "Notes/General Methodologies/Linux Binarys with Capabilities.md",
+    "CTFs/TryHackMe/Linux/Jack-of-All-Trades",
     "CTFs/TryHackMe/Linux/Library",
     "CTFs/TryHackMe/Linux/Gallery",
-    "CTFs/TryHackMe/Linux/Dav",
     "Images/Pasted image 20260501003524.png",
     "Images/Pasted image 20260501004833.png",
     "Images/Pasted image 20260501004741.png",

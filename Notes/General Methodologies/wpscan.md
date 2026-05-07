@@ -5,12 +5,18 @@
 wpscan --url http://192.168.199.229 
 ```
 
+## User Enumeration
+
+
 ## Brute Forcing 
 
 ```
 wpscan --url http://<domain> --usernames <username_wordlist> --passwords <password_wordlist>
 ```
 
+```
+wpscan --url http://jack.thm -U users.txt -P /usr/share/wordlists/fasttrack.txt
+```
 ## Insane Scan
 
 ```
