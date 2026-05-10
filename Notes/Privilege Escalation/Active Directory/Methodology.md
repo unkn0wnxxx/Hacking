@@ -1,4 +1,5 @@
 
+- HTTPS Active in AD? Do [[Internal AD CA Callback|this.]]
 - Found Credentials?
 	- [[nxc spraying]]
 	- [[Notes/Services/RDP/Methodology|Connecting with RDP]]

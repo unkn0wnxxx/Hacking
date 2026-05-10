@@ -57,6 +57,14 @@ result: 0 Success
 # numReferences: 3
 ```
 
+```
+ldapsearch -x -H ldap://10.10.161.74 -b "dc=thm,dc=local" > ldapsearch.txt
+```
+
+```
+cat ldapsearch.txt | grep description
+```
+
 Retrieved Credentials
 
 ```

