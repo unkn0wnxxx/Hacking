@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTFs/TryHackMe/ActiveDirectory/Ra/Documentation.md",
+                "file": "CTFs/TryHackMe/Linux/Simple/Documentation.md",
                 "mode": "source",
                 "source": false
               },
@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Services/HTTP & HTTPS/Methodology.md",
+                "file": "Notes/General Methodologies/Webpage Mail Enum Command.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Methodology"
+              "title": "Webpage Mail Enum Command"
             }
           },
           {
@@ -200,11 +200,14 @@
   },
   "active": "756985f2bee05e5c",
   "lastOpenFiles": [
-    "Notes/Privilege Escalation/Active Directory/Methodology.md",
-    "Notes/Services/HTTP & HTTPS/Methodology.md",
     "Notes/General Methodologies/Webpage Mail Enum Command.md",
-    "Notes/General Methodologies/Enumerating SMB Shares.md",
+    "Notes/Services/HTTP & HTTPS/Methodology.md",
+    "Notes/General Methodologies/DNS Recon.md",
+    "CTFs/TryHackMe/Linux/Simple/Documentation.md",
     "CTFs/TryHackMe/ActiveDirectory/Ra/Documentation.md",
+    "CTFs/TryHackMe/Linux/Simple",
+    "Notes/Privilege Escalation/Active Directory/Methodology.md",
+    "Notes/General Methodologies/Enumerating SMB Shares.md",
     "Pasted image 20260510185245.png",
     "Pasted image 20260510175317.png",
     "Notes/General Methodologies/Creating Wordlist.md",
@@ -235,7 +238,6 @@
     "Notes/General Methodologies/Active Directory ASREP-Roasting.md",
     "Notes/Services/RPC/Methodology.md",
     "Notes/Services/IRC/Methodology.md",
-    "Notes/General Methodologies/WordPress CMS Priv Esc Semantics.md",
     "CTFs/TryHackMe/Linux/Jack",
     "CTFs/TryHackMe/Linux/Develpy",
     "CTFs/TryHackMe/Linux/Corridor",
@@ -243,7 +245,6 @@
     "CTFs/TryHackMe/Linux/Epoch",
     "CTFs/TryHackMe/Linux/Brooklyn99",
     "CTFs/TryHackMe/Linux/Cyborg",
-    "CTFs/TryHackMe/Linux/Jack-of-All-Trades",
-    "CTFs/TryHackMe/Linux/Library"
+    "CTFs/TryHackMe/Linux/Jack-of-All-Trades"
   ]
 }
