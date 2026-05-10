@@ -12,7 +12,7 @@ smbclient -L \\\\<target_ip>
 Authenticated
 
 ```
-smbmap -u mark -p OathDeeplyReprieve91 -H 192.168.139.247
+smbmap -u mark -p OathDeeplyReprieve91 -H 192.168.139.247 -r
 ```
 
 ```

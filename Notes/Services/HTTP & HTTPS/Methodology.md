@@ -1,3 +1,4 @@
+
 - [[wafw00f firewall enum]]
 - ###### Enumerating endpoints
 	- [[Gobuster|Fuzzing Endpoints]]
@@ -9,6 +10,7 @@
 - Enumerating server side language --> php?
 - Enumerating Technologies used by the website with [[whatweb]]
 - Usernames on website?
+	- [[Webpage Mail Enum Command]]
 	- [[Creating Wordlist]]
 - ###### Vulnerability Assessment
 	- Any Services or Web Application being utilized?
