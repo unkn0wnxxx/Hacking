@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTFs/TryHackMe/Linux/Simple/Documentation.md",
+                "file": "CTFs/TryHackMe/Linux/Vulnerability_Capstone/Documentation.md",
                 "mode": "source",
                 "source": false
               },
@@ -33,20 +33,6 @@
               },
               "icon": "lucide-file",
               "title": "Webpage Mail Enum Command"
-            }
-          },
-          {
-            "id": "4b61879f0b65d351",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/Privilege Escalation/Active Directory/Methodology.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Methodology"
             }
           }
         ]
@@ -201,12 +187,14 @@
   "active": "756985f2bee05e5c",
   "lastOpenFiles": [
     "Notes/General Methodologies/Webpage Mail Enum Command.md",
+    "CTFs/TryHackMe/Linux/Vulnerability_Capstone/Documentation.md",
+    "CTFs/TryHackMe/Linux/Simple/Documentation.md",
+    "CTFs/TryHackMe/Linux/Vulnerability_Capstone",
+    "Notes/Privilege Escalation/Active Directory/Methodology.md",
     "Notes/Services/HTTP & HTTPS/Methodology.md",
     "Notes/General Methodologies/DNS Recon.md",
-    "CTFs/TryHackMe/Linux/Simple/Documentation.md",
     "CTFs/TryHackMe/ActiveDirectory/Ra/Documentation.md",
     "CTFs/TryHackMe/Linux/Simple",
-    "Notes/Privilege Escalation/Active Directory/Methodology.md",
     "Notes/General Methodologies/Enumerating SMB Shares.md",
     "Pasted image 20260510185245.png",
     "Pasted image 20260510175317.png",
@@ -237,14 +225,12 @@
     "Notes/General Methodologies/Windows Kerberoasting.md",
     "Notes/General Methodologies/Active Directory ASREP-Roasting.md",
     "Notes/Services/RPC/Methodology.md",
-    "Notes/Services/IRC/Methodology.md",
     "CTFs/TryHackMe/Linux/Jack",
     "CTFs/TryHackMe/Linux/Develpy",
     "CTFs/TryHackMe/Linux/Corridor",
     "CTFs/TryHackMe/Linux/Dig Dug",
     "CTFs/TryHackMe/Linux/Epoch",
     "CTFs/TryHackMe/Linux/Brooklyn99",
-    "CTFs/TryHackMe/Linux/Cyborg",
-    "CTFs/TryHackMe/Linux/Jack-of-All-Trades"
+    "CTFs/TryHackMe/Linux/Cyborg"
   ]
 }
