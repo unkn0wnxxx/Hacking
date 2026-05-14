@@ -9,6 +9,7 @@
 	- [[psexec]]
 	- [[Windows Kerberoasting]]
 	- Only Usernames?
+		- Create username list and verify with kerbrute
 		- Check if [[Active Directory ASREP-Roasting|ASREP-Roasting]] is possible
 - Shell on server with dual host? -->  [[Ligolo-Ng Pivoting]]
 - Got Shell?

@@ -6,3 +6,9 @@ evil-winrm -i 10.10.10.161 -u administrator -p aad3b435b51404eeaad3b435b51404ee:
 ```
 evil-winrm -i 192.168.126.172 -u anirudh -p 'SecureHM'
 ```
+
+## In-Built Function to enumerate services
+
+```
+services
+```

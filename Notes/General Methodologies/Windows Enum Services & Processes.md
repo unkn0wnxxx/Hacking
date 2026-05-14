@@ -33,3 +33,9 @@ In PowerShell
 ```
 Get-Process
 ```
+
+In evil-winrm
+
+```
+services
+```
