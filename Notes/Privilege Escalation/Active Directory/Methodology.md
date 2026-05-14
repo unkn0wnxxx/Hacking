@@ -1,4 +1,4 @@
-
+- Start with [[nxc spraying]] as guest user or blank to enum users.
 - HTTPS Active in AD? Do [[Internal AD CA Callback|this.]]
 - Found Credentials?
 	- [[nxc spraying]]
@@ -7,6 +7,7 @@
 	- [[evil-winrm]]
 	- [[wmiexec]]
 	- [[psexec]]
+		- If psexec doesn't work try [[smbexec.py]]
 	- [[Windows Kerberoasting]]
 	- Only Usernames?
 		- Create username list and verify with kerbrute
@@ -20,7 +21,7 @@
 	- When in internal server --> Download domain information:[[SharpHound]]
 	- [[Windows Permissions]]
 		- [[GenericAll]]
-		- GenericWrite
+		- [[GenericWrite]]
 		- [[WriteDACL]]
 		- AllowedToDelegate
 		- ForceChangePassword

@@ -71,7 +71,6 @@ nxc smb 192.168.230.244 -u 'ka' -p 'ka' --users
 ```
 nxc smb 192.168.230.244 -u 'ka' -p 'ka' --local-auth
 ```
-
 ##### Dump hashes remotely
 
 ```
