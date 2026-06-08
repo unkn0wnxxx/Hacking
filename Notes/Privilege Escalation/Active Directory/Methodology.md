@@ -25,7 +25,7 @@
 		- [[WriteDACL]]
 		- AllowedToDelegate
 		- ForceChangePassword
-		- ResourceBasedConstrainedDelegationAttack
+		- [[ResourceBasedConstrainedDelegationAttack]]
 		- [[GetChangesAll]]
 - Dumped Hashes?
 	- Connect with [[evil-winrm]]

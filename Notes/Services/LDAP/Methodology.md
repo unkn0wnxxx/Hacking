@@ -5,6 +5,48 @@
 nmap -n -Pn -sV --script "ldap* and not brute" 192.168.155.122
 ```
 
+# Apache Directory Studio (Authenticated)
+
+Prefered version, takes more time but is more efficient.
+
+Can be downloaded from **here**: https://directory.apache.org/studio/download/download-linux.html
+
+```
+./ApacheDirectoryStudio
+```
+
+1. Upon accessing it press on the button on the top-left.
+2. Press right click in the "Connections" Tab and choose "New Connection"
+
+Input Support as the connection name, support.htb as the hostname and click Next .
+
+![[Pasted image 20260608225344.png]]
+
+Input the previously retrieved credentials.
+
+![[Pasted image 20260608225420.png]]
+
+We can now view all the objects properly.
+
+![[Pasted image 20260608225627.png]]
+
+And found an "info" panel with an password!
+
+```
+
+```
+
+
+
+```
+
+```
+
+
+
+```
+
+```
 ## LDAP User Enumeration
 
 ```
@@ -63,12 +105,18 @@ ldapsearch -x -H ldap://10.10.161.74 -b "dc=thm,dc=local" > ldapsearch.txt
 
 ```
 cat ldapsearch.txt | grep description
+cat ldapsearch.txt | grep info
 ```
 
 Retrieved Credentials
 
 ```
 Freddy McSorley:CrabSharkJellyfish192
+```
+## Authenticated ldapsearch
+
+```
+ldapsearch -H "ldap://support.htb" -D ldap@support.htb -w 'nvEfEK16^1aM4$e7AclUf8x$tRWxPWO1%lmz' -b "dc=support,dc=htb" "*"
 ```
 
 ## Kerberoasting using nxc
