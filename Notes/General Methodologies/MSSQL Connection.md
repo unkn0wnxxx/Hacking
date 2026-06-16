@@ -3,10 +3,18 @@
 
 Kali linux offers us an tool called impacket-mssqlclient in order to login into an Microsoft SQL Server.
 
+##### NTLM / Domain Authentication
+
 ```
 impacket-mssqlclient Administrator:password@192.168.50.18 -windows-auth
 ```
+##### Local Auth
 
+```
+impacket-mssqlclient Administrator:password@192.168.50.18
+```
+
+---
 #### Version Enumeration
 
 ```
@@ -42,7 +50,6 @@ TABLE_CATALOG   TABLE_SCHEMA   TABLE_NAME   TABLE_TYPE
 -------------   ------------   ----------   ----------   
 offsec          dbo            users        b'BASE TABLE'
 ```
-
 #### Column Enumeration in "users" table
 
 ```

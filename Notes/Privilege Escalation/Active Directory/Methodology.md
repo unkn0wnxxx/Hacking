@@ -1,4 +1,5 @@
 - Start with [[nxc spraying]] as guest user or blank to enum users.
+	- Check with --local-auth 
 - HTTPS Active in AD? Do [[Internal AD CA Callback|this.]]
 - Found Credentials?
 	- [[nxc spraying]]
@@ -15,6 +16,7 @@
 - Shell on server with dual host? -->  [[Ligolo-Ng Pivoting]]
 - Got Shell?
 	- Run winPEAS! (.exe preferred over .bat or .ps1)
+	- [[Domain Enumeration]]
 	- Enumerate [[Windows AutoLogon Credentials Enum|AutoLogon Credentials.]]
 	- [[Enumerating internal machines]]
 - [[BloodHound Enumeration]] --> [[BloodHound HowTo Internal Enum]]
@@ -27,6 +29,7 @@
 		- ForceChangePassword
 		- [[ResourceBasedConstrainedDelegationAttack]]
 		- [[GetChangesAll]]
+- Windows Server 2025? --> [[BadSuccessor PrivEsc]]
 - Dumped Hashes?
 	- Connect with [[evil-winrm]]
 	- Connect with [[wmiexec]]

