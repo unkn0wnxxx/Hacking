@@ -7,7 +7,7 @@ Once credentials or many credentials are found we'll have to utilize them to spr
 ##### nxc spraying domain users
 
 ```
-nxc smb 192.168.230.244 -u 'ka' -p 'ka' --rid-brute
+nxc smb 192.168.230.244 -u 'ka' -p 'ka' --rid-brute > users.txt
 ```
 
 Saved the nxc output into an users.txt file and ran the following command:
