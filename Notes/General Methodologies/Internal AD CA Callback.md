@@ -4,7 +4,6 @@ When an HTTPS Server is running on an AD Box, there could be an potential that w
 ```
 certipy-ad find -u SUSANNA_MCKNIGHT -p 'CHANGEME2023!' -dc-ip 10.201.64.95 -target thm.local -vulnerable -enabled
 ```
-
 ## ESC1 PrivEsc
 
 ![[Pasted image 20260510015119.png]]

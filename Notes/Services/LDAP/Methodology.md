@@ -31,22 +31,6 @@ We can now view all the objects properly.
 ![[Pasted image 20260608225627.png]]
 
 And found an "info" panel with an password!
-
-```
-
-```
-
-
-
-```
-
-```
-
-
-
-```
-
-```
 ## LDAP User Enumeration
 
 ```

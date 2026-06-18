@@ -4,6 +4,8 @@ can reveal information about users on the target system.
 ---
 ## PoC
 
+##### Anonymously
+
 Logging in anonymously and viewing users & information.
 
 ```
@@ -26,4 +28,9 @@ rpcclient $> querydispinfo
 -> enumdomusers - Enumerates all domain users.
 -> queryuser <RID> - Provides information about a specific user.   
 -> querygroup <RID> - Provides information about a specific group
+```
+##### Authenticated
+
+```
+rpcclient -U "sequel.htb\rose%KxEPkKe6R8su" 10.129.232.128
 ```

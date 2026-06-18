@@ -2,7 +2,6 @@
 can provide us with an Administrator hash or an hash of an elevated user, when we have an low priv user.
 
 ---
-
 ## With dc-ip [IMPORTANT]
 
 Using the command like this is extremely important when we pivoted into an internal network in our local machine.

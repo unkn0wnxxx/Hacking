@@ -1,6 +1,9 @@
 - Start with [[nxc spraying]] as guest user or blank to enum users.
 	- Check with --local-auth 
-- HTTPS Active in AD? Do [[Internal AD CA Callback|this.]]
+- HTTPS Active in AD? 
+	- Certificate Attacks
+	- [[Internal AD CA Callback|ESC1]]
+	- [[ESC4]]
 - Found Credentials?
 	- [[nxc spraying]]
 	- [[Notes/Services/RDP/Methodology|Connecting with RDP]]
@@ -29,6 +32,7 @@
 		- ForceChangePassword
 		- [[ResourceBasedConstrainedDelegationAttack]]
 		- [[GetChangesAll]]
+		- [[OwnerWrite]]
 - Windows Server 2025? --> [[BadSuccessor PrivEsc]]
 - Dumped Hashes?
 	- Connect with [[evil-winrm]]

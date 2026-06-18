@@ -31,24 +31,12 @@ SELECT * FROM sysusers;
 
 ```
 SELECT name FROM sys.databases;
-master
-
-tempdb
-
-model
-
-msdb
-
-offsec
 ```
 
 #### Table Enumeration in database "offsec"
 
 ```
 SELECT * FROM offsec.information_schema.tables;
-TABLE_CATALOG   TABLE_SCHEMA   TABLE_NAME   TABLE_TYPE   
--------------   ------------   ----------   ----------   
-offsec          dbo            users        b'BASE TABLE'
 ```
 #### Column Enumeration in "users" table
 
