@@ -19,8 +19,10 @@
 	- [[SeManageVolumePrivilege]]
 - [[Windows Enum Users and Groups|Enumerating users and groups?]]
 	- Am I an local service account with restricted privs? --> Do [[Windows Local Service Account Priv Esc|this.]]
-	- [[Server Operator Priv Esc]]
-	- [[Account Operator Priv Esc]]
+	- Groups
+		- [[Server Operator Priv Esc]]
+		- [[Account Operator Priv Esc]]
+		- [LAPS_Reader Group](LAPS_Reader.md)
 - [[Windows Enum System Enum|Enumerating System Architecture]]
 	- Outdated OS?
 		- Windows Kernel Exploits --> winPEAS tells u which kernel exploits are available.

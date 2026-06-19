@@ -2,6 +2,7 @@
 	- Check with --local-auth 
 - HTTPS Active in AD? 
 	- Certificate Attacks
+	- [PFX Extraction](PFX%20Extraction.md)
 	- [[Internal AD CA Callback|ESC1]]
 	- [[ESC4]]
 - Found Credentials?
@@ -33,6 +34,7 @@
 		- [[ResourceBasedConstrainedDelegationAttack]]
 		- [[GetChangesAll]]
 		- [[OwnerWrite]]
+		- [ReadLAPSPassword](LAPS_Reader.md)
 - Windows Server 2025? --> [[BadSuccessor PrivEsc]]
 - Dumped Hashes?
 	- Connect with [[evil-winrm]]

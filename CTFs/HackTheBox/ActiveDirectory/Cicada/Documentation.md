@@ -283,9 +283,3 @@ Retrieved root.txt in C:\Users\Administrator\Desktop
 ```
 a376a4ee52c1d216beb83774b910295e
 ```
-
-
-
-```
-
-```

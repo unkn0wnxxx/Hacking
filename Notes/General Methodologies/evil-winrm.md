@@ -12,3 +12,19 @@ evil-winrm -i 192.168.126.172 -u anirudh -p 'SecureHM'
 ```
 services
 ```
+
+## SSL Auth
+
+Once we have an .cert file and an private key of sort we can remotely login to the target system.
+
+```
+evil-winrm -i timelapse.htb -c key.cert -k key.pem -S
+```
+
+## Command Substituion
+
+If the password has weird signs in it and can't be used. Store the password in an .txt file and execute the following command:
+
+```
+evil-winrm -S -i timelapse.htb -u "Administrator" -p $(< admin_pwd.txt)
+```
