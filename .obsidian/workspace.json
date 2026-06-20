@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTFs/HackTheBox/ActiveDirectory/Timelapse/Documentation.md",
+                "file": "CTFs/HackTheBox/ActiveDirectory/Return/Documentation.md",
                 "mode": "source",
                 "source": false
               },
@@ -27,12 +27,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/General Methodologies/PFX Extraction.md",
+                "file": "Notes/General Methodologies/Server Operator Priv Esc.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "PFX Extraction"
+              "title": "Server Operator Priv Esc"
+            }
+          },
+          {
+            "id": "2fcfac5fe786cb2a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/General Methodologies/Windows Enum Services & Processes.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Windows Enum Services & Processes"
             }
           }
         ]
@@ -186,10 +200,21 @@
   },
   "active": "4636dda0c445bad0",
   "lastOpenFiles": [
-    "Notes/General Methodologies/PFX Extraction.md",
+    "Notes/General Methodologies/Server Operator Priv Esc.md",
+    "Notes/General Methodologies/Windows Enum Services & Processes.md",
+    "CTFs/HackTheBox/ActiveDirectory/Return/Documentation.md",
+    "Notes/General Methodologies/wmiexec.md",
     "Notes/Privilege Escalation/Active Directory/Methodology.md",
-    "CTFs/HackTheBox/ActiveDirectory/Timelapse/Documentation.md",
+    "Notes/General Methodologies/SeBackupPrivilege.md",
+    "Notes/General Methodologies/psexec.md",
+    "Notes/Services/LDAP/Methodology.md",
     "Notes/General Methodologies/LAPS_Reader.md",
+    "Pasted image 20260620141350.png",
+    "Pasted image 20260620141348.png",
+    "CTFs/HackTheBox/ActiveDirectory/Return",
+    "CTFs/HackTheBox/ActiveDirectory/Timelapse/Documentation.md",
+    "Notes/General Methodologies/Domain Policies.md",
+    "Notes/General Methodologies/PFX Extraction.md",
     "Notes/Privilege Escalation/Windows/Methodology.md",
     "Notes/General Methodologies/evil-winrm.md",
     "Notes/General Methodologies/BloodHound HowTo Internal Enum.md",
@@ -204,33 +229,22 @@
     "Pasted image 20260608220418.png",
     "Pasted image 20260608220541.png",
     "Pasted image 20260608220705.png",
-    "Pasted image 20260608220722.png",
-    "Pasted image 20260608225420.png",
     "README.md",
     "Notes/General Methodologies/Internal AD CA Callback.md",
     "LFI Zip Wrappers.md",
     "Notes/General Methodologies/Linux Wildcard Injection 7zip.md",
     "Notes/General Methodologies/Opening Files.md",
     "CTFs/HackTheBox/ActiveDirectory/EscapeTwo/Documentation.md",
-    "Notes/General Methodologies/SeBackupPrivilege.md",
     "CTFs/HackTheBox/ActiveDirectory/Cicada/Documentation.md",
     "CTFs/HackTheBox/ActiveDirectory/Timelapse",
-    "Notes/Services/LDAP/Methodology.md",
     "Notes/General Methodologies/ESC4.md",
     "CTFs/HackTheBox/ActiveDirectory/Cicada",
-    "Notes/General Methodologies/OwnerWrite.md",
-    "Notes/General Methodologies/WriteDACL.md",
-    "Notes/General Methodologies/Ligolo-Ng/Ligolo-Ng Pivoting.md",
-    "Notes/Services/RPC/Methodology.md",
-    "Notes/Services/IRC/Methodology.md",
-    "Notes/Services/IMAP/Methodology.md",
     "CTFs/HackTheBox/ActiveDirectory/EscapeTwo",
     "CTFs/HackTheBox/ActiveDirectory/Eighteen",
     "CTFs/HackTheBox/Linux/Connected",
     "CTFs/HackTheBox/Windows/Support",
     "CTFs/HackTheBox/Linux/Facts",
     "CTFs/TryHackMe/ActiveDirectory/Operation Endgame",
-    "Notes/General Methodologies/Pentest AI Frameworks",
-    "CTFs/TryHackMe/ActiveDirectory/Services"
+    "Notes/General Methodologies/Pentest AI Frameworks"
   ]
 }

