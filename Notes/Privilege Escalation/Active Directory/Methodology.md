@@ -5,6 +5,7 @@
 		- [PFX Extraction](PFX%20Extraction.md)
 		- [[Internal AD CA Callback|ESC1]]
 		- [[ESC4]]
+		- [[ESC16]]
 - Found Credentials?
 	- [[nxc spraying]]
 	- [[Notes/Services/RDP/Methodology|Connecting with RDP]]

@@ -26,7 +26,6 @@ Address:  172.16.158.240
 Name:    INTERNALSRV1.beyond.com
 Address:  172.16.158.241
 ```
-
 ## List users on domain
 
 ```
