@@ -10,6 +10,7 @@ We can manually exploit this utilizing PrintSpoofer.exe Tool
 ```
 https://github.com/dievus/printspoofer
 ```
+
 Utilizing following command, should give us elevated privileges.
 
 ```
