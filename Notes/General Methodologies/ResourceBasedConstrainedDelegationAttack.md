@@ -142,7 +142,7 @@ base64 -d ticket.kirbi.b64 > ticket.kirbi
 Finally, we can convert this ticket to a format that Impacket can use. This can be achieved with Impackets TicketConverter.py
 
 ```
-impacket-ticketConverter ticket.kirbi ticket.ccache                    
+impacket-ticketConverter ticket.kirbi ticket.ccache   
 ```
 
 To acquire a shell we can use Impackets psexec.py 

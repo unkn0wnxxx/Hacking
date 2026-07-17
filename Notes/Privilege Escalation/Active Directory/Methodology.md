@@ -35,6 +35,7 @@
 		- AllowedToDelegate
 		- ForceChangePassword
 		- [[ResourceBasedConstrainedDelegationAttack]]
+		- [[AddAllowedToAct]]
 		- [[GetChangesAll]]
 		- [[OwnerWrite]]
 		- [ReadLAPSPassword](LAPS_Reader.md)

@@ -75,6 +75,7 @@
 		- [[Command Injection Brace Expansion]]
 			- [[Command Injection Filter types]]
 	- [[PHP Session Hijacking]]
+	- [[SSRF]]
 - Browser says "This address is restricted" bc's port which is being used for an different port is used. Do [[Known Port being used for webpage|this.]]
 - Steganography
 	- [[Opening Files|Open Image]]

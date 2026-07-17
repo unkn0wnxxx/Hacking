@@ -2,6 +2,11 @@
 ```
 gobuster dir -u http://<target_ip>/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
 ```
+##### Unappropriate Statuscode Fix
+
+```
+gobuster dir -u http://<target_ip>/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -b 403,404
+```
 
 ```
 feroxbuster -u http://<target_ip>/
