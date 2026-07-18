@@ -18,13 +18,11 @@ Get-CimInstance -ClassName win32_service | Select Name,State,PathName
 ```
 tasklist /v
 ```
-
 #### Check Processes
 
 ```
 wmic process get name,processid,executablepath
 ```
-
 #### Check Services of an user
 
 In this we search for "svcadmin" user.
