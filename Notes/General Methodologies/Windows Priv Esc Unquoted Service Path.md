@@ -45,6 +45,7 @@ Check privs if we have "SeShutdownPrivilege"
 ```
 whoam /priv
 ```
+
 ```
 shutdown /r /t 0
 ```
@@ -105,6 +106,7 @@ Since we got permissions to Start the Service we can execute our malicious binar
 ```
 Start-Service GammaService
 ```
+
 ```
 net user
 hacker

@@ -13,26 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTFs/TryHackMe/ActiveDirectory/Forward/Documentation.md",
+                "file": "CTFs/TryHackMe/Windows/Windows Jump/Documentation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
               "title": "Documentation"
-            }
-          },
-          {
-            "id": "889434cefae5216e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/Privilege Escalation/Active Directory/Methodology.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Methodology"
             }
           }
         ]
@@ -186,33 +172,34 @@
   },
   "active": "4636dda0c445bad0",
   "lastOpenFiles": [
+    "Notes/General Methodologies/File Transfers.md",
+    "Notes/General Methodologies/Windows Enum Services & Processes.md",
+    "CTFs/TryHackMe/Windows/Windows Jump/Documentation.md",
+    "Notes/Privilege Escalation/Windows/Methodology.md",
+    "Notes/General Methodologies/Windows Installed Applications.md",
+    "Notes/General Methodologies/Windows Scheduled Tasks.md",
+    "Notes/General Methodologies/Windows File Enumeration.md",
+    "Notes/General Methodologies/Windows Privesc Binary Hijacking.md",
+    "Notes/General Methodologies/Windows Priv Esc Unquoted Service Path.md",
+    "Notes/General Methodologies/Windows PrivEsc Writable GPO.md",
+    "Notes/General Methodologies/PowerUp.ps1.md",
+    "Notes/Services/RPC/Methodology.md",
+    "Notes/General Methodologies/RunasCs.md",
+    "README.md",
+    "RFI.md",
+    "Phishing with Windows Library File.md",
+    "LFI Zip Wrappers.md",
+    "Notes/General Methodologies/Port Scan PowerShell.md",
+    "Notes/General Methodologies/Windows Enum System Enum.md",
+    "Notes/General Methodologies/Windows Local Service Account Priv Esc.md",
+    "Notes/General Methodologies/PS History.md",
+    "Notes/General Methodologies/Windows AutoLogon Credentials Enum.md",
+    "Notes/General Methodologies/Decompiling.md",
+    "CTFs/TryHackMe/ActiveDirectory/Forward/Documentation.md",
+    "CTFs/TryHackMe/Windows/Windows Jump",
     "Notes/Privilege Escalation/Active Directory/Methodology.md",
     "Notes/General Methodologies/AddAllowedToAct.md",
-    "Notes/General Methodologies/ResourceBasedConstrainedDelegationAttack.md",
-    "CTFs/TryHackMe/ActiveDirectory/Forward/Documentation.md",
-    "AddAllowedToAct.md",
-    "Notes/General Methodologies/BloodHound HowTo Internal Enum.md",
-    "Notes/General Methodologies/Hash Cracking.md",
-    "Notes/General Methodologies/Windows Installed Applications.md",
-    "Notes/Privilege Escalation/Windows/Methodology.md",
-    "Notes/General Methodologies/PS History.md",
-    "Notes/General Methodologies/Enumerating internal machines.md",
-    "Notes/General Methodologies/Windows AutoLogon Credentials Enum.md",
-    "Notes/General Methodologies/Domain Enumeration.md",
-    "Notes/General Methodologies/Windows Kerberoasting.md",
-    "Notes/General Methodologies/Internal AD CA Callback.md",
-    "Notes/General Methodologies/File Transfers.md",
-    "Notes/Services/RDP/Methodology.md",
-    "Notes/General Methodologies/WordPress Default Paths.md",
-    "Notes/Services/LDAP/Methodology.md",
-    "Notes/Services/RPC/Methodology.md",
-    "Notes/General Methodologies/SSRF.md",
-    "CTFs/TryHackMe/ActiveDirectory/Operation Endgame/Documentation.md",
     "CTFs/TryHackMe/ActiveDirectory/Forward",
-    "CTFs/HackTheBox/Windows/Remote/Documentation.md",
-    "CTFs/HackTheBox/Windows/Love/Documentation.md",
-    "Notes/Services/HTTP & HTTPS (80 & 443)/Methodology.md",
-    "Notes/General Methodologies/Extract Information out of the picture.md",
     "CTFs/HackTheBox/Windows/Love",
     "Notes/CMS",
     "CTFs/HackTheBox/ActiveDirectory/Baby",
@@ -230,7 +217,6 @@
     "Images/Pasted image 20260608220705.png",
     "CTFs/HackTheBox/ActiveDirectory/Timelapse",
     "CTFs/HackTheBox/ActiveDirectory/Cicada",
-    "CTFs/HackTheBox/ActiveDirectory/EscapeTwo",
-    "CTFs/HackTheBox/ActiveDirectory/Eighteen"
+    "CTFs/HackTheBox/ActiveDirectory/EscapeTwo"
   ]
 }

@@ -19,8 +19,18 @@ Get-CimInstance -ClassName win32_service | Select Name,State,PathName
 tasklist /v
 ```
 
+#### Check Processes
+
 ```
 wmic process get name,processid,executablepath
+```
+
+#### Check Services of an user
+
+In this we search for "svcadmin" user.
+
+```
+wmic service get name,pathname,startname | findstr /i "svcadmin"
 ```
 
 Run winPEAS and check registry services available.

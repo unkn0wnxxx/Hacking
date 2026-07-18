@@ -1,4 +1,9 @@
 
+
+## .Compiled
+
+Use Ghidra to decompile.
+## .exe
 In order to perform forensics on .exe files in order to potentially find passwords we can utilize the following tool:
 # ILSpy
 

