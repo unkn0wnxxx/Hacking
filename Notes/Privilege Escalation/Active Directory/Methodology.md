@@ -4,6 +4,7 @@
 	- Download Domain Information with rusthound-ce
 	- Certificate Attacks
 		- [PFX Extraction](PFX%20Extraction.md)
+		- [DNS Poisoning](DNS%20Poisoning.md)
 		- [[Internal AD CA Callback|ESC1]]
 		- [[ESC4]]
 		- [[ESC16]]

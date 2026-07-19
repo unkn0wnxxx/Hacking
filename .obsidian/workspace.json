@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTFs/TryHackMe/ActiveDirectory/FusionCorp/Documentation.md",
+                "file": "CTFs/TryHackMe/ActiveDirectory/Ra2/Documentation.md",
                 "mode": "source",
                 "source": false
               },
@@ -22,17 +22,31 @@
             }
           },
           {
-            "id": "bd770f327fb0a296",
+            "id": "2f001b32febc9196",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/General Methodologies/SeBackupPrivilege.md",
+                "file": "Notes/General Methodologies/RunasCs.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SeBackupPrivilege"
+              "title": "RunasCs"
+            }
+          },
+          {
+            "id": "418358de0221cf6d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/General Methodologies/Gobuster.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Gobuster"
             }
           }
         ]
@@ -186,35 +200,37 @@
   },
   "active": "4636dda0c445bad0",
   "lastOpenFiles": [
-    "Notes/General Methodologies/SeBackupPrivilege.md",
-    "CTFs/TryHackMe/ActiveDirectory/FusionCorp/Documentation.md",
-    "Notes/General Methodologies/BloodHound HowTo Internal Enum.md",
-    "Notes/General Methodologies/AD Lateral Movement Overpass the Hash.md",
-    "Notes/Privilege Escalation/Active Directory/Methodology.md",
-    "Notes/General Methodologies/psexec.md",
-    "Notes/General Methodologies/wmiexec.md",
+    "Notes/General Methodologies/RunasCs.md",
     "Notes/Privilege Escalation/Windows/Methodology.md",
+    "Notes/Privilege Escalation/Active Directory/Methodology.md",
+    "Notes/Services/HTTP & HTTPS (80 & 443)/Methodology.md",
+    "Notes/General Methodologies/DNS Poisoning.md",
+    "CTFs/TryHackMe/ActiveDirectory/Ra2/Documentation.md",
+    "Notes/General Methodologies/SweetPotato.md",
+    "Notes/General Methodologies/Gobuster.md",
+    "Notes/General Methodologies/dnsrecon.md",
+    "Notes/Services/domain (53)/Documentation.md",
+    "Notes/General Methodologies/DNS Recon.md",
+    "Notes/Services/domain (53)",
+    "Notes/General Methodologies/Account Operator Priv Esc.md",
+    "Notes/General Methodologies/Windows Scheduled Tasks.md",
+    "Notes/General Methodologies/Windows Enum Services & Processes.md",
     "Notes/General Methodologies/Windows AutoLogon Credentials Enum.md",
-    "Notes/General Methodologies/smbexec.py.md",
-    "Notes/General Methodologies/Active Directory ASREP-Roasting.md",
+    "Notes/General Methodologies/PS History.md",
+    "Notes/General Methodologies/BloodHound HowTo Internal Enum.md",
+    "Notes/General Methodologies/JuicyPotato.md",
+    "Notes/General Methodologies/SeImpersonatePrivilege.md",
+    "Notes/General Methodologies/PFX Extraction.md",
+    "Notes/Services/LDAP/Methodology.md",
     "Notes/General Methodologies/nxc spraying.md",
+    "CTFs/TryHackMe/ActiveDirectory/Ra/Documentation.md",
+    "CTFs/TryHackMe/ActiveDirectory/Ra2",
+    "CTFs/TryHackMe/ActiveDirectory/FusionCorp/Documentation.md",
     "Phishing with Windows Library File.md",
+    "Notes/General Methodologies/SeBackupPrivilege.md",
     "Pasted image 20260718162742.png",
     "Pasted image 20260718162736.png",
-    "Notes/General Methodologies/Windows Enum Services & Processes.md",
-    "Notes/General Methodologies/msfvenom.md",
-    "CTFs/TryHackMe/Windows/Windows Jump/Documentation.md",
     "CTFs/TryHackMe/ActiveDirectory/FusionCorp",
-    "Notes/General Methodologies/Windows Scheduled Tasks.md",
-    "Notes/General Methodologies/File Transfers.md",
-    "Notes/General Methodologies/Windows Installed Applications.md",
-    "Notes/General Methodologies/Windows File Enumeration.md",
-    "Notes/General Methodologies/Windows Privesc Binary Hijacking.md",
-    "Notes/General Methodologies/Windows Priv Esc Unquoted Service Path.md",
-    "Notes/General Methodologies/Windows PrivEsc Writable GPO.md",
-    "Notes/General Methodologies/PowerUp.ps1.md",
-    "Notes/Services/RPC/Methodology.md",
-    "Notes/General Methodologies/RunasCs.md",
     "CTFs/TryHackMe/Windows/Windows Jump",
     "CTFs/TryHackMe/ActiveDirectory/Forward",
     "CTFs/HackTheBox/Windows/Love",
@@ -229,8 +245,6 @@
     "Images/Pasted image 20260514205754.png",
     "Images/Pasted image 20260514205759.png",
     "Images/Pasted image 20260514212508.png",
-    "Images/Pasted image 20260608220418.png",
-    "CTFs/HackTheBox/ActiveDirectory/Timelapse",
-    "CTFs/HackTheBox/ActiveDirectory/Cicada"
+    "Images/Pasted image 20260608220418.png"
   ]
 }
