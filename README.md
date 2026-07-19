@@ -1,1 +1,1 @@
-# Obisidian-Methodology
+# Obsidian-Methodology
