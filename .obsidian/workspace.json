@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTFs/HackTheBox/ActiveDirectory/Flight/Documentation.md",
+                "file": "CTFs/HackTheBox/ActiveDirectory/Blackfield/Documentation.md",
                 "mode": "source",
                 "source": false
               },
@@ -22,31 +22,31 @@
             }
           },
           {
-            "id": "fde3d93130116861",
+            "id": "66a38346e1e71bf4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Services/SMB/Methodology.md",
+                "file": "Notes/General Methodologies/SeBackupPrivilege.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Methodology"
+              "title": "SeBackupPrivilege"
             }
           },
           {
-            "id": "fdbb36cde8c88a7f",
+            "id": "bada6fed1a9e8868",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Privilege Escalation/Active Directory/Methodology.md",
+                "file": "Notes/General Methodologies/ForceChangePassword.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Methodology"
+              "title": "ForceChangePassword"
             }
           }
         ]
@@ -200,32 +200,33 @@
   },
   "active": "4636dda0c445bad0",
   "lastOpenFiles": [
-    "Notes/Services/SMB/Methodology.md",
-    "Notes/Privilege Escalation/Active Directory/Methodology.md",
-    "Notes/Privilege Escalation/Windows/Methodology.md",
-    "Notes/General Methodologies/RunasCs.md",
+    "Notes/General Methodologies/SeBackupPrivilege.md",
+    "CTFs/HackTheBox/ActiveDirectory/Blackfield/Documentation.md",
+    "CTFs/ProvingGrounds/ActiveDirectory/hokkaido/Documentation.md",
+    "Notes/General Methodologies/ForceChangePassword.md",
+    "CTFs/HackTheBox/ActiveDirectory/Timelapse/Documentation.md",
+    "CTFs/HackTheBox/ActiveDirectory/Sauna/Documentation.md",
+    "CTFs/HackTheBox/ActiveDirectory/Return/Documentation.md",
+    "CTFs/HackTheBox/ActiveDirectory/Forest/Methodology.md",
+    "CTFs/HackTheBox/ActiveDirectory/Fluffy/Documentation.md",
     "CTFs/HackTheBox/ActiveDirectory/Flight/Documentation.md",
-    "Notes/Services/HTTP & HTTPS (80 & 443)/Methodology.md",
-    "Notes/General Methodologies/NTLM Theft.md",
-    "Notes/General Methodologies/Microsoft Virtual Account.md",
-    "Notes/General Methodologies/SQLI NTLM Theft with xp_dirtree.md",
-    "Notes/Services/MSSQL/Methodology.md",
-    "Notes/General Methodologies/LFI NTLM Relay.md",
-    "Notes/General Methodologies/DCSync.md",
-    "Notes/General Methodologies/LFI.md",
-    "Notes/General Methodologies/Windows Kerberoasting.md",
-    "Notes/General Methodologies/SweetPotato.md",
-    "Notes/General Methodologies/Ligolo-Ng/Ligolo-Ng Port Forwarding.md",
-    "Notes/General Methodologies/Ligolo-Ng/Ligolo-Ng Pivoting.md",
+    "CTFs/HackTheBox/ActiveDirectory/EscapeTwo/Documentation.md",
+    "CTFs/HackTheBox/ActiveDirectory/Eighteen/Documentation.md",
+    "CTFs/HackTheBox/ActiveDirectory/Cicada/Documentation.md",
+    "CTFs/HackTheBox/ActiveDirectory/Baby/Documentation.md",
+    "CTFs/HackTheBox/ActiveDirectory/Active/Enumeration.md",
+    "CTFs/HackTheBox/ActiveDirectory/Access/Documentation.md",
+    "Notes/Privilege Escalation/Active Directory/Methodology.md",
+    "Notes/General Methodologies/GetChangesAll.md",
+    "Notes/General Methodologies/AddAllowedToAct.md",
+    "Notes/General Methodologies/ResourceBasedConstrainedDelegationAttack.md",
+    "Notes/General Methodologies/OwnerWrite.md",
+    "Notes/General Methodologies/GenericWrite.md",
+    "Notes/General Methodologies/GenericAll.md",
+    "Notes/Services/RPC/Methodology.md",
     "Notes/General Methodologies/nxc spraying.md",
-    "Notes/Services/LDAP/Methodology.md",
-    "Notes/General Methodologies/MSSQL Connection.md",
-    "Notes/General Methodologies/LFI via SMB.md",
-    "Notes/General Methodologies/Known Port being used for webpage.md",
-    "Notes/General Methodologies/LFI PHP Wrappers and Code Execution.md",
-    "Notes/General Methodologies/LFI SSH Keys.md",
-    "Notes/General Methodologies/Linux PrivEsc Disk Group.md",
-    "Notes/Privilege Escalation/Linux/Methodology.md",
+    "Notes/General Methodologies/dnsrecon.md",
+    "CTFs/HackTheBox/ActiveDirectory/Blackfield",
     "CTFs/HackTheBox/ActiveDirectory/Flight",
     "Notes/Services/domain (53)",
     "CTFs/TryHackMe/ActiveDirectory/Ra2",
@@ -237,7 +238,6 @@
     "CTFs/HackTheBox/Windows/Love",
     "Notes/CMS",
     "CTFs/HackTheBox/ActiveDirectory/Baby",
-    "CTFs/HackTheBox/ActiveDirectory/Fluffy",
     "Images/Pasted image 20260620141350.png",
     "Images/Pasted image 20260620141348.png",
     "Images/Pasted image 20260619222256.png",
