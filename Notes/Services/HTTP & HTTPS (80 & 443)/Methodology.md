@@ -69,6 +69,7 @@
 			- [[LFI Zip Wrappers]]
 			- [[Log Poisoning with LFI]]
 			- [[WordPress Default Paths|WordPress running? --> wp-config.php]]
+			- Windows Host? Capture NTLM Hash --> Do this: [LFI NTLM Relay](LFI%20NTLM%20Relay.md)
 		- [[RFI]]
 	- [[SSTI]]
 	- [[Command Injection]]

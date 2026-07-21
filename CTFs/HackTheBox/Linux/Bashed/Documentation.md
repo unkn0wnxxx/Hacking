@@ -117,7 +117,6 @@ User www-data may run the following commands on bashed:
 
 Logged in as user scriptmanager.
 
-
 ```
 $ sudo -u scriptmanager /bin/bash
 ```

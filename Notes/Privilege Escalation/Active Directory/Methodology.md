@@ -23,7 +23,7 @@
 		- Check if [[Active Directory ASREP-Roasting|ASREP-Roasting]] is possible
 - Shell on server with dual host? -->  [[Ligolo-Ng Pivoting]]
 - Got Shell?
-	- Run winPEAS! (.exe preferred over .bat or .ps1)
+	- IIS APPOOL Account? Do this [Microsoft Virtual Account](Microsoft%20Virtual%20Account.md)
 	- [[Domain Enumeration]]
 	- Enumerate [[Windows AutoLogon Credentials Enum|AutoLogon Credentials.]]
 	- [[Enumerating internal machines]]
@@ -40,6 +40,7 @@
 		- [[GetChangesAll]]
 		- [[OwnerWrite]]
 		- [ReadLAPSPassword](LAPS_Reader.md)
+		- [DCSync](DCSync.md)
 - Windows Server 2025? --> [[BadSuccessor PrivEsc]]
 - Dumped Hashes?
 	- Connect with [[evil-winrm]]
@@ -52,6 +53,7 @@
 	- when owned NTLM Hash, but Kerberos Authentication is needed to authenticate into the next server use this --> [[AD Lateral Movement Overpass the Hash]] 
 	- [[AD Lateral Movement Pass the Ticket]]
 	- [[AD Lateral Movement DCOM]]
+	- [RunasCs](RunasCs.md)
 
 #### Post Exploitation
 
