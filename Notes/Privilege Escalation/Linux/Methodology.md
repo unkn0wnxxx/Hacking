@@ -12,6 +12,8 @@
 	- gtfobins.github.io
 	- Unknown/Custom Binary? Do [[Unknown Custom Binary|this.]]
 - Found .zip,.kdbx files? Download them locally & bruteforce!
+- Found Credentials?
+	- Encoded with Salt? [Format Hash](Format%20Hash.md)
 - Enumerating [[Linux Binarys with Capabilities]]
 - sudo -l
 	- Any runnable binary? --> Google Exploits on it!

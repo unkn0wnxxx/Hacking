@@ -11,6 +11,7 @@
 - Found Credentials?
 	- [[nxc spraying]]
 		- [User Needs to Change Password](User%20Needs%20to%20Change%20Password.md)
+		- Encoded with Salt? [Format Hash](Format%20Hash.md)
 	- [[Notes/Services/RDP/Methodology|Connecting with RDP]]
 	- Access SMB Shares
 	- [[evil-winrm]]
@@ -34,14 +35,16 @@
 		- [[GenericWrite]]
 		- [[WriteDACL]]
 		- AllowedToDelegate
-		- ForceChangePassword
+		- [ForceChangePassword](ForceChangePassword.md)
 		- [[ResourceBasedConstrainedDelegationAttack]]
 		- [[AddAllowedToAct]]
 		- [[GetChangesAll]]
 		- [[OwnerWrite]]
 		- [ReadLAPSPassword](LAPS_Reader.md)
 		- [DCSync](DCSync.md)
+		- [WriteGPLink](WriteGPLink.md)
 - Windows Server 2025? --> [[BadSuccessor PrivEsc]]
+- [Clock Skew Error](Clock%20Skew%20Error.md)
 - Dumped Hashes?
 	- Connect with [[evil-winrm]]
 	- Connect with [[wmiexec]]
@@ -54,8 +57,10 @@
 	- [[AD Lateral Movement Pass the Ticket]]
 	- [[AD Lateral Movement DCOM]]
 	- [RunasCs](RunasCs.md)
-
+	- [Request TGT](Request%20TGT.md)
+	- [Convert TGT](Convert%20TGT.md)
 #### Post Exploitation
 
 - [[Credential Dumping]]
 - [[File Transfers]]
+- Found lsass.DMP file? Do this: [LSASS.dmp](LSASS.dmp.md)

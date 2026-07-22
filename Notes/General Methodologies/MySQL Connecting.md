@@ -1,18 +1,29 @@
 
 ## Remotely Connecting
 
+**Note**: No Space between -p parameter and actual password!!
+
 ```
-mysql -u root -p -h 192.168.50.16 -P 3306 --skip-ssl-verify-server-cert 
+mysql -u root -p'<password>' -h 192.168.50.16 -P 3306 --skip-ssl-verify-server-cert 
 *prompt password*
 ```
 
-## Internaly Connecting
+## Internal Connecting
+
+Linux
 
 ```
 mysql -u <username> -p
 *prompts for password*
 ```
 
+Windows
+
+WARNING: Don't have an space between the parameters and the credentials.
+
+```
+C:\xampp\mysql\bin\mysql.exe -uMrGibbonsDB -pMisterGibbs!Parrot!?1
+```
 #### Querying for Version
 
 ```

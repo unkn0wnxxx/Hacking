@@ -3,6 +3,7 @@
 - Check [[PS History]]
 - Mail Server? --> [[Phishing with Windows Library File]]
 - Webpage? Check if webroot is writable and use reverse shell --> potentially elevate privs.
+- [Hidden Files and Recycle Bin](Hidden%20Files%20and%20Recycle%20Bin.md)
 - Run winPEAS.exe preferred over winPEAS.bat
 	- Enumerate [[Windows AutoLogon Credentials Enum|AutoLogon Credentials.]]
 	- [[Enumerating internal machines]]
@@ -35,6 +36,7 @@
 - Enumerate [[Windows AutoLogon Credentials Enum|AutoLogon Credentials.]]
 - Found Credentials?
 	- Get RCE as this user by creating an ps object like [[Lateral Movement Windows PowerShell|this.]]
+	- Encoded with Salt? [Format Hash](Format%20Hash.md)
 - Windows Priv Esc's
 	- Run [[PowerUp.ps1]]
 	- Found writable .exe file --> do [[Windows Privesc Binary Hijacking|this.]]
@@ -51,3 +53,4 @@ Lateral Movement
 
 - [[Credential Dumping]]
 - [[File Transfers]]
+- Found lsass.DMP file? Do this: [LSASS.dmp](LSASS.dmp.md)
