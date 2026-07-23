@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTFs/HackTheBox/ActiveDirectory/TheFrizz/Documentation.md",
+                "file": "CTFs/HackTheBox/ActiveDirectory/Monteverde/Documentation.md",
                 "mode": "source",
                 "source": false
               },
@@ -22,48 +22,35 @@
             }
           },
           {
-            "id": "0bb0bd43c1ef0db8",
+            "id": "5b16c2aed6c02cbd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/General Methodologies/Clock Skew Error.md",
+                "file": "Notes/General Methodologies/Windows Installed Applications.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Clock Skew Error"
+              "title": "Windows Installed Applications"
             }
           },
           {
-            "id": "ec3a3fc936983c6a",
+            "id": "4170098049e1c395",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/General Methodologies/venv.md",
+                "file": "Notes/Privilege Escalation/Active Directory/Methodology.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "venv"
-            }
-          },
-          {
-            "id": "0de92556f01d014e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/General Methodologies/SSH Connecting.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "SSH Connecting"
+              "title": "Methodology"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -212,34 +199,36 @@
       "bases:Create new base": false
     }
   },
-  "active": "4636dda0c445bad0",
+  "active": "5b16c2aed6c02cbd",
   "lastOpenFiles": [
-    "Notes/General Methodologies/SSH Connecting.md",
-    "Notes/General Methodologies/venv.md",
-    "Notes/General Methodologies/Clock Skew Error.md",
-    "CTFs/HackTheBox/ActiveDirectory/TheFrizz/Documentation.md",
+    "CTFs/HackTheBox/ActiveDirectory/Monteverde/Documentation.md",
     "Notes/Privilege Escalation/Active Directory/Methodology.md",
-    "Notes/General Methodologies/MySQL Connecting.md",
-    "Notes/General Methodologies/File Transfers.md",
-    "Notes/General Methodologies/Request TGT.md",
-    "Notes/General Methodologies/Convert TGT.md",
-    "Notes/Privilege Escalation/Linux/Methodology.md",
+    "Notes/General Methodologies/ADSync & AD Connect.md",
+    "Notes/General Methodologies/Windows Installed Applications.md",
     "Notes/Privilege Escalation/Windows/Methodology.md",
-    "Notes/General Methodologies/Format Hash.md",
-    "Notes/General Methodologies/Hash Cracking.md",
-    "Notes/General Methodologies/AD Lateral Movement Overpass the Hash.md",
-    "Notes/General Methodologies/WriteGPLink.md",
+    "Notes/General Methodologies/MSSQL Impersonate.md",
+    "Notes/Services/MSSQL/Methodology.md",
+    "Notes/General Methodologies/MSSQL Connection.md",
+    "Notes/General Methodologies/MSSQL Enum.md",
+    "Notes/General Methodologies/Windows Enum System Enum.md",
+    "Notes/General Methodologies/Enumerating internal machines.md",
+    "Notes/General Methodologies/Windows AutoLogon Credentials Enum.md",
     "Notes/General Methodologies/Hidden Files and Recycle Bin.md",
-    "Notes/General Methodologies/7z.md",
-    "Notes/General Methodologies/Linux Wildcard Injection 7zip.md",
-    "Notes/General Methodologies/tar.md",
+    "Notes/General Methodologies/PS History.md",
     "Notes/General Methodologies/nxc spraying.md",
-    "Notes/Services/SSH/Methodology.md",
-    "Notes/General Methodologies/SSH Git Repo Push to Remote Target.md",
-    "Notes/General Methodologies/BloodHound HowTo Internal Enum.md",
-    "Notes/General Methodologies/ForceChangePassword.md",
-    "Notes/General Methodologies/Windows Scheduled Tasks.md",
-    "Notes/General Methodologies/Windows Enum Services & Processes.md",
+    "Notes/Services/RPC/Methodology.md",
+    "Notes/General Methodologies/Active Directory ASREP-Roasting.md",
+    "Notes/General Methodologies/Windows Kerberoasting.md",
+    "Notes/Services/LDAP/Methodology.md",
+    "CTFs/HackTheBox/ActiveDirectory/Administrator/Documentation.md",
+    "CTFs/HackTheBox/ActiveDirectory/Monteverde",
+    "Notes/General Methodologies/Cracking Files.md",
+    "Notes/General Methodologies/DCSync.md",
+    "Notes/General Methodologies/Format Hash.md",
+    "Notes/General Methodologies/GetChangesAll.md",
+    "Notes/General Methodologies/Untitled 1.md",
+    "Notes/General Methodologies/GenericWrite.md",
+    "CTFs/HackTheBox/ActiveDirectory/Administrator",
     "CTFs/HackTheBox/ActiveDirectory/TheFrizz",
     "CTFs/HackTheBox/ActiveDirectory/Blackfield",
     "CTFs/HackTheBox/ActiveDirectory/Flight",
@@ -250,8 +239,6 @@
     "CTFs/TryHackMe/ActiveDirectory/FusionCorp",
     "CTFs/TryHackMe/Windows/Windows Jump",
     "CTFs/TryHackMe/ActiveDirectory/Forward",
-    "CTFs/HackTheBox/Windows/Love",
-    "Notes/CMS",
     "Images/Pasted image 20260620141350.png",
     "Images/Pasted image 20260620141348.png",
     "Images/Pasted image 20260619222256.png",

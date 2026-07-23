@@ -59,6 +59,8 @@
 	- [RunasCs](RunasCs.md)
 	- [Request TGT](Request%20TGT.md)
 	- [Convert TGT](Convert%20TGT.md)
+- Azure active?
+	- AD Sync / AD Connect as Application? Do this: [ADSync & AD Connect](ADSync%20&%20AD%20Connect.md)
 #### Post Exploitation
 
 - [[Credential Dumping]]

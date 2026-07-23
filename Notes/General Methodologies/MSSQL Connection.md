@@ -52,3 +52,9 @@ guest        guest
 ## Windows 
 
 Windows has a built-in command-line tool named SQLCMD
+
+Enumerating databases
+
+```
+sqlcmd -q "SELECT name FROM sys.databases;"
+```
