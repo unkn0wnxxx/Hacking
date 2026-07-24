@@ -18,6 +18,10 @@ Also run rusthound-ce for more detailled certificate information.
 rusthound-ce --domain fluffy.htb -u j.fleischman -p 'J0elTHEM4n1990!'
 ```
 
+```
+rusthound-ce -d sequel.htb -u sql_svc -p 'REGGIE1234ronnie' -i 10.129.37.251 -P 636
+```
+
 Startup docker since it runs the backend of bloodhound
 
 ```
