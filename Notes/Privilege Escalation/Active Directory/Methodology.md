@@ -8,6 +8,7 @@
 		- [DNS Poisoning](DNS%20Poisoning.md)
 		- [[ESC1|ESC1]]
 		- [[ESC4]]
+		- [ESC9](ESC9.md)
 		- [[ESC16]]
 - Found Credentials?
 	- [[nxc spraying]]
@@ -40,7 +41,7 @@
 		- [[ResourceBasedConstrainedDelegationAttack]]
 		- [[AddAllowedToAct]]
 		- [[GetChangesAll]]
-		- [[OwnerWrite]]
+		- [[OwnerWrite & WriteOwner]]
 		- [ReadLAPSPassword](LAPS_Reader.md)
 		- [DCSync](DCSync.md)
 		- [WriteGPLink](WriteGPLink.md)

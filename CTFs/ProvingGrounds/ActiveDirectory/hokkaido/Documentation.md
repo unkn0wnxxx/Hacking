@@ -1,8 +1,7 @@
 # CTF Writeup: hokkaido
 
 ---
-
-## Reconaissance
+## Reconnaissance
 
 An initial scan revealed the following information about running services on the target system.
 
