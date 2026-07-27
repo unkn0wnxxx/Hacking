@@ -116,7 +116,6 @@ grep -E 'CN=[A-Z][a-z]+ [A-Z][a-z]+' ldapsearch.txt | awk -F',|=' '{print $2}' |
 ```
 ldapsearch -H "ldap://support.htb" -D ldap@support.htb -w 'nvEfEK16^1aM4$e7AclUf8x$tRWxPWO1%lmz' -b "dc=support,dc=htb" "*" > ldapsearch.txt
 ```
-
 ## Kerberoasting using nxc
 
 ```

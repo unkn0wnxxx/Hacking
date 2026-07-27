@@ -3,15 +3,7 @@
 ## First Pivot  (10.10.10.15 / 152.20.20.60)
 #### Create Interface
 ```
-ip tuntap add user saitama mode tun ligolo
-```
-#### Set Up Interface
-```
-ip link set ligolo up
-```
-#### Run Ligolo Proxy on Attacker Host (10.10.10.10)
-```
-ligolo-proxy -selfcert
+ip tuntap add user saitama mode tun ligolo && ip link set ligolo up && ligolo-proxy -selfcert
 ```
 #### Run Ligolo Agent on First Compromised Machine (10.10.10.15 / 152.20.20.60)
 *Transfer file to target & give the right permissions to it*
@@ -29,7 +21,11 @@ ligolo-ng >> session # Choose session
 ```
 sudo ip route add 152.20.20.0/24 dev ligolo
 ```
+# Troubleshooting
 
+```
+ip link delete ligolo
+```
 ## Second Pivot  (152.20.20.13 / 175.162.10.12)
 #### Create Interface
 ```

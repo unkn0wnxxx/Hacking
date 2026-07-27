@@ -42,7 +42,7 @@
 	- Found writable .exe file --> do [[Windows Privesc Binary Hijacking|this.]]
 	- Found writable .dll file --> do [[Windows PrivEsc DLL Hijacking|this.]]
 	- Write Access on Domain Policys? --> do [[Windows PrivEsc Writable GPO|this.]]
-	- Write Perms on Unquoted Service Path? --> Do [[Windows Priv Esc Unquoted Service Path|this.]]
+	- Write Perms on Unquoted Service Path? --> Do [[Unquoted Service Path|this.]]
 [DNS Poisoning](DNS%20Poisoning.md)
 
 

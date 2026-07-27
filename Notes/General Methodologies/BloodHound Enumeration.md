@@ -12,6 +12,12 @@ Once we have user credentials and an domainname we can use them to gain informat
 bloodhound-python -u "SVC_TGS" -p "GPPstillStandingStrong2k18" -ns 10.129.161.230 -d active.htb -c all
 ```
 
+NTLM Auth
+
+```
+bloodhound-python --username 'MediaAdmin$' --hashes :5900eed28abf42d0bac3cf431f11508e --domain dante.local --collectionmethod All -dc DANTE-DC01.DANTE.local -ns 172.16.1.20
+```
+
 Also run rusthound-ce for more detailled certificate information.
 
 ```

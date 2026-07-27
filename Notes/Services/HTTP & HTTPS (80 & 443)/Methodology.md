@@ -53,6 +53,7 @@
 	- [[Git Repo Download|Download Git Repository]]
 - ###### Analysing all fields for Web Misconfigurations
 	- SQLi
+		- Check for Public exploits of webpage title!
 		- [[SQL Injection Union Attack]]
 		- [[SQL Injection Blind SQLi]]
 		- If Windows Box:

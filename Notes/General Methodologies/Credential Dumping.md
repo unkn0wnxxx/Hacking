@@ -27,6 +27,12 @@ lsadump::sam
 lsadump::sam /sam:C:Temp\SAM /system:C:\Temp\SYSTEM
 ```
 
+##### Domain Hashes
+
+```
+lsadump::dcsync /all /csv
+```
+
 ---
 ##### Default Path for SAM & SYSTEM File
 
