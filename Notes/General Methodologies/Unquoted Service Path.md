@@ -113,7 +113,7 @@ hacker
 ```
 
 ---
-## Modifying Binary Path of Service
+## Path Injection
 
 Let's check if it runs as SYSTEM Process, so we can use it to elevate our privs.
 

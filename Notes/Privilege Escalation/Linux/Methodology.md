@@ -8,9 +8,10 @@
 	- sudo Group and runnable script with root permissions? Do [[sudo group|this]]
 - Enumerating all directories in which usually sensitive information is stored.
 	- /opt, /mnt, /home, /var
-- Enumerating SUID Binaries
+- Enumerating [SUID Binaries](SUID%20Binaries.md)
 	- gtfobins.github.io
 	- Unknown/Custom Binary? Do [[Unknown Custom Binary|this.]]
+		- or [Buffer Overflows](Buffer%20Overflows.md)
 - Found .zip,.kdbx files? Download them locally & bruteforce!
 - Found Credentials?
 	- Encoded with Salt? [Format Hash](Format%20Hash.md)

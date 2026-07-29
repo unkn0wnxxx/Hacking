@@ -25,6 +25,7 @@
 		- Create username list and verify with kerbrute
 		- Check if [[Active Directory ASREP-Roasting|ASREP-Roasting]] is possible
 - Shell on server with dual host? -->  [[Ligolo-Ng Pivoting]]
+- Check [Browser History](Browser%20History.md)
 - Got Shell?
 	- IIS APPOOL Account? Do this [Microsoft Virtual Account](Microsoft%20Virtual%20Account.md)
 	- [[Domain Enumeration]]
@@ -65,6 +66,7 @@
 	- AD Sync / AD Connect as Application? Do this: [ADSync & AD Connect](ADSync%20&%20AD%20Connect.md)
 #### Post Exploitation
 
+- [Host Discovery & Ping Sweeps](Host%20Discovery%20&%20Ping%20Sweeps.md)
 - [[Credential Dumping]]
 - [[File Transfers]]
 - Found lsass.DMP file? Do this: [LSASS.dmp](LSASS.dmp.md)
