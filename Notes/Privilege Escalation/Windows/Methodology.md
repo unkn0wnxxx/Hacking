@@ -3,6 +3,7 @@
 - Check [[PS History]]
 - Mail Server? --> [[Phishing with Windows Library File]]
 - Webpage? Check if webroot is writable and use reverse shell --> potentially elevate privs.
+- Found [DPAPI Credentials](DPAPI%20Credentials.md)?
 - [Hidden Files and Recycle Bin](Hidden%20Files%20and%20Recycle%20Bin.md)
 - Run winPEAS.exe preferred over winPEAS.bat
 	- Enumerate [[Windows AutoLogon Credentials Enum|AutoLogon Credentials.]]

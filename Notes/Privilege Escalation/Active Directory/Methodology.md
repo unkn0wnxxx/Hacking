@@ -12,7 +12,8 @@
 		- [[ESC16]]
 - Found Credentials?
 	- [[nxc spraying]]
-		- [User Needs to Change Password](User%20Needs%20to%20Change%20Password.md)
+		- [STATUS_PASSWORD_MUST_CHANGE](STATUS_PASSWORD_MUST_CHANGE.md)
+		- [STATUS_ACCOUNT_DISABLED](STATUS_ACCOUNT_DISABLED.md)
 		- Encoded with Salt? [Format Hash](Format%20Hash.md)
 	- [[Notes/Services/RDP/Methodology|Connecting with RDP]]
 	- Access SMB Shares
@@ -31,8 +32,9 @@
 	- [[Domain Enumeration]]
 	- Enumerate [[Windows AutoLogon Credentials Enum|AutoLogon Credentials.]]
 	- [[Enumerating internal machines]]
+	- Found [DPAPI Credentials](DPAPI%20Credentials.md)?
 - [[BloodHound Enumeration]] --> [[BloodHound HowTo Internal Enum]]
-	- When in internal server --> Download domain information:[[SharpHound]]
+	- When in internal server --> Download domain information: [[SharpHound]]
 	- [[Domain Policies]]
 		- [[GenericAll]]
 		- [[GenericWrite]]

@@ -11,7 +11,7 @@
 - Enumerating Technologies used by the website with [[whatweb]]
 - Usernames on website?
 	- [[Webpage Mail Enum Command]]
-	- [[Creating Wordlist]]
+	- [Wordlist Generation](Wordlist%20Generation.md)
 - ###### Vulnerability Assessment
 	- Any Services or Web Application being utilized?
 	- Any Version Information?

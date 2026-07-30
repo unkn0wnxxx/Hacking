@@ -16,3 +16,9 @@ Excel Files (.xls)
 ```
 libreoffice --calc <file>
 ```
+
+KeePass (.kdbx)
+
+```
+keepassxc recovery.kdbx
+```
