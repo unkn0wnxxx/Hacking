@@ -39,7 +39,7 @@
 		- [[GenericAll]]
 		- [[GenericWrite]]
 		- [[WriteDACL]]
-		- AllowedToDelegate
+		- [AllowedToDelegate](AllowedToDelegate.md)
 		- [ForceChangePassword](ForceChangePassword.md)
 		- [[ResourceBasedConstrainedDelegationAttack]]
 		- [[AddAllowedToAct]]

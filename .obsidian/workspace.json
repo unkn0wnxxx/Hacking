@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTFs/HackTheBox/ActiveDirectory/Puppy/Documentation.md",
+                "file": "CTFs/HackTheBox/Networks/Zephyr/Documentation.md",
                 "mode": "source",
                 "source": false
               },
@@ -22,12 +22,68 @@
             }
           },
           {
-            "id": "09dad260b164d31b",
+            "id": "1b43fb8abb386675",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Privilege Escalation/Windows/Methodology.md",
+                "file": "Notes/General Methodologies/Host Discovery & Ping Sweeps.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Host Discovery & Ping Sweeps"
+            }
+          },
+          {
+            "id": "bdc9b145970ac71a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/General Methodologies/Convert TGT.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Convert TGT"
+            }
+          },
+          {
+            "id": "c3e372333bc014e7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/General Methodologies/BloodHound HowTo Internal Enum.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "BloodHound HowTo Internal Enum"
+            }
+          },
+          {
+            "id": "a7f2b7019f16a505",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/General Methodologies/Ligolo-Ng/Ligolo-Ng Pivoting.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Ligolo-Ng Pivoting"
+            }
+          },
+          {
+            "id": "5dd48f5cd0b1de8f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Privilege Escalation/Active Directory/Methodology.md",
                 "mode": "source",
                 "source": false
               },
@@ -55,7 +111,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -186,32 +244,34 @@
   },
   "active": "9e7bda020cdde387",
   "lastOpenFiles": [
-    "Notes/Privilege Escalation/Windows/Methodology.md",
-    "Notes/Privilege Escalation/Active Directory/Methodology.md",
-    "Notes/General Methodologies/Format Hash.md",
-    "Notes/General Methodologies/STATUS_PASSWORD_MUST_CHANGE.md",
-    "CTFs/HackTheBox/ActiveDirectory/Puppy/Documentation.md",
-    "Notes/General Methodologies/Hash Cracking.md",
-    "Notes/General Methodologies/File Transfers.md",
-    "Notes/General Methodologies/DPAPI Credentials.md",
     "Notes/General Methodologies/Host Discovery & Ping Sweeps.md",
-    "Notes/General Methodologies/Brute Forcing FTP.md",
-    "Notes/General Methodologies/Windows Scheduled Tasks.md",
-    "Notes/General Methodologies/Windows Installed Applications.md",
-    "Notes/General Methodologies/Windows Enum Services & Processes.md",
-    "Notes/General Methodologies/Windows Enum System Enum.md",
+    "CTFs/HackTheBox/Networks/Zephyr/Documentation.md",
+    "Notes/Privilege Escalation/Active Directory/Methodology.md",
+    "Notes/General Methodologies/AllowedToDelegate.md",
     "Notes/General Methodologies/Browser History.md",
+    "Notes/General Methodologies/BloodHound HowTo Internal Enum.md",
+    "Notes/General Methodologies/psexec.md",
+    "Notes/General Methodologies/Convert TGT.md",
+    "Notes/General Methodologies/nxc spraying.md",
     "Notes/General Methodologies/ForceChangePassword.md",
-    "Notes/General Methodologies/Windows Enum Users and Groups.md",
-    "Notes/General Methodologies/Enumerating internal machines.md",
-    "Notes/General Methodologies/Windows AutoLogon Credentials Enum.md",
-    "Notes/General Methodologies/PS History.md",
-    "Notes/General Methodologies/STATUS_ACCOUNT_DISABLED.md",
     "Notes/General Methodologies/Ligolo-Ng/Ligolo-Ng Pivoting.md",
-    "Notes/General Methodologies/SharpHound.md",
     "Notes/General Methodologies/GenericWrite.md",
-    "Notes/General Methodologies/WriteDACL.md",
-    "Notes/General Methodologies/GenericAll.md",
+    "Notes/General Methodologies/Credential Dumping.md",
+    "Notes/General Methodologies/BloodHound Enumeration.md",
+    "Notes/Privilege Escalation/Windows/Methodology.md",
+    "Notes/General Methodologies/PS History.md",
+    "Notes/General Methodologies/SeBackupPrivilege.md",
+    "Notes/General Methodologies/Hidden Files and Recycle Bin.md",
+    "Notes/General Methodologies/Windows AutoLogon Credentials Enum.md",
+    "Notes/General Methodologies/DPAPI Credentials.md",
+    "Notes/General Methodologies/Windows Kerberoasting.md",
+    "Notes/Services/LDAP/Methodology.md",
+    "Notes/General Methodologies/Request TGT.md",
+    "Notes/General Methodologies/Phishing Attacks.md",
+    "Notes/Services/SMTP/Methodology.md",
+    "Pasted image 20260730223408.png",
+    "Notes/General Methodologies/File Transfers.md",
+    "CTFs/HackTheBox/ActiveDirectory/Signed",
     "CTFs/HackTheBox/ActiveDirectory/Puppy",
     "Pasted image 20260727193006.png",
     "Pasted image 20260727192953.png",
@@ -226,11 +286,9 @@
     "CTFs/HackTheBox/ActiveDirectory/Escape",
     "CTFs/HackTheBox/ActiveDirectory/Monteverde",
     "CTFs/HackTheBox/ActiveDirectory/Administrator",
-    "CTFs/HackTheBox/ActiveDirectory/TheFrizz",
     "Pasted image 20260718162742.png",
     "Pasted image 20260718162736.png",
     "Images/Pasted image 20260620141350.png",
-    "Images/Pasted image 20260620141348.png",
-    "Images/Pasted image 20260619222256.png"
+    "Images/Pasted image 20260620141348.png"
   ]
 }

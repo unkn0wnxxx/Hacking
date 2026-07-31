@@ -3453,25 +3453,3 @@ DANTE{Alw4ys_check_th053_group5}
 ```
 
 Since the file "SQL" hints that we can use these credentials to authenticate on DANTE-SQL01 & the other retrieved credentials out of the Jenkins.bat file hint that we can exploit the jenkins website on 172.16.1.19. It means our job is done for now. Let's move to these targets now!
-
-```
-
-```
-
-
-
-```
-
-```
-
-
-
-```
-
-```
-
-
-
-```
-
-```

