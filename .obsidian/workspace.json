@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTFs/HackTheBox/Networks/Zephyr/Documentation.md",
+                "file": "CTFs/HackTheBox/ActiveDirectory/Mantis/Documentation.md",
                 "mode": "source",
                 "source": false
               },
@@ -22,87 +22,31 @@
             }
           },
           {
-            "id": "e88968bdf94b8064",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/General Methodologies/Browser Credential Decryption.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Browser Credential Decryption"
-            }
-          },
-          {
-            "id": "1b43fb8abb386675",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/General Methodologies/Ports not blocked by firewall.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Ports not blocked by firewall"
-            }
-          },
-          {
-            "id": "bdc9b145970ac71a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/General Methodologies/File Transfers.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "File Transfers"
-            }
-          },
-          {
-            "id": "c3e372333bc014e7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/General Methodologies/DPAPI Credentials.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "DPAPI Credentials"
-            }
-          },
-          {
-            "id": "a7f2b7019f16a505",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/General Methodologies/Ligolo-Ng/Ligolo-Ng Pivoting.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Ligolo-Ng Pivoting"
-            }
-          },
-          {
             "id": "5dd48f5cd0b1de8f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/General Methodologies/Domain Trust Abuse.md",
+                "file": "Notes/Services/RPC/Methodology.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Domain Trust Abuse"
+              "title": "Methodology"
+            }
+          },
+          {
+            "id": "838526cd01a54697",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Services/LDAP/Methodology.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Methodology"
             }
           }
         ]
@@ -258,33 +202,34 @@
   },
   "active": "ffabebcb3d09541d",
   "lastOpenFiles": [
-    "CTFs/HackTheBox/Networks/Zephyr/Computers.md",
-    "CTFs/HackTheBox/Networks/Zephyr/Documentation.md",
-    "Notes/Privilege Escalation/Active Directory/Methodology.md",
-    "Notes/General Methodologies/Browser Credential Decryption.md",
-    "Notes/General Methodologies/Domain Trust Abuse.md",
-    "Notes/General Methodologies/Host Discovery & Ping Sweeps.md",
-    "Notes/General Methodologies/Ligolo-Ng/Ligolo-Ng Pivoting.md",
-    "Notes/General Methodologies/Ports not blocked by firewall.md",
-    "Notes/General Methodologies/File Transfers.md",
-    "Notes/General Methodologies/Command Execution Linked MSSQL Servers.md",
-    "Notes/Privilege Escalation/Windows/Methodology.md",
-    "Notes/General Methodologies/GetChangesAll.md",
-    "Notes/General Methodologies/SweetPotato.md",
-    "Notes/Services/MSSQL/Methodology.md",
-    "Notes/General Methodologies/Deactivate Windows Defender.md",
-    "Notes/General Methodologies/xp_cmdshell activating.md",
+    "Notes/Services/RPC/Methodology.md",
+    "CTFs/HackTheBox/ActiveDirectory/Mantis/Documentation.md",
+    "Notes/General Methodologies/Credential Dumping.md",
+    "Notes/General Methodologies/SeBackupPrivilege.md",
     "Notes/General Methodologies/MITM Attack with xp_dirtree.md",
-    "Notes/General Methodologies/MSSQL Impersonate.md",
-    "Notes/General Methodologies/MSSQL Connection.md",
-    "Notes/General Methodologies/Persistence.md",
-    "Notes/General Methodologies/SQLI NTLM Theft with xp_dirtree.md",
+    "Notes/Services/MSSQL/Methodology.md",
+    "Notes/General Methodologies/xp_cmdshell activating.md",
     "Notes/General Methodologies/xp_cmdshell.md",
+    "Notes/General Methodologies/MSSQL Connection.md",
+    "Notes/Services/LDAP/Methodology.md",
+    "Notes/General Methodologies/nxc spraying.md",
+    "Notes/General Methodologies/BloodHound HowTo Internal Enum.md",
     "Notes/General Methodologies/Enumerate Linked MSSQL Servers.md",
+    "Notes/General Methodologies/Command Execution Linked MSSQL Servers.md",
+    "Notes/General Methodologies/SQLI NTLM Theft with xp_dirtree.md",
+    "Notes/General Methodologies/Endpoint Enumeration.md",
+    "Notes/Services/HTTP & HTTPS (80 & 443)/Methodology.md",
+    "Notes/General Methodologies/WebDAV.md",
+    "Notes/General Methodologies/Domain Trust Abuse.md",
+    "CTFs/HackTheBox/Networks/Zephyr/Documentation.md",
+    "CTFs/HackTheBox/ActiveDirectory/Mantis",
+    "Notes/General Methodologies/Ligolo-Ng/Ligolo-Ng Pivoting.md",
+    "Notes/General Methodologies/DPAPI Credentials.md",
+    "Notes/General Methodologies/File Transfers.md",
+    "Notes/General Methodologies/Ports not blocked by firewall.md",
+    "Notes/General Methodologies/Browser Credential Decryption.md",
+    "CTFs/HackTheBox/Networks/Zephyr/Computers.md",
     "Images/OSCP-Challenge.png",
-    "Notes/General Methodologies/MSSQL Enum.md",
-    "Notes/General Methodologies/Deactivate Firewall.md",
-    "Notes/General Methodologies/Request TGT.md",
     "Pasted image 20260802212501.png",
     "Pasted image 20260730223408.png",
     "CTFs/HackTheBox/ActiveDirectory/Signed",
@@ -301,7 +246,6 @@
     "Pasted image 20260724012243.png",
     "CTFs/HackTheBox/ActiveDirectory/Escape",
     "CTFs/HackTheBox/ActiveDirectory/Monteverde",
-    "CTFs/HackTheBox/ActiveDirectory/Administrator",
     "Pasted image 20260718162742.png",
     "Pasted image 20260718162736.png"
   ]
