@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Privilege Escalation/Active Directory/Methodology.md",
+                "file": "Notes/General Methodologies/Browser Credential Decryption.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Methodology"
+              "title": "Browser Credential Decryption"
             }
           },
           {
@@ -258,9 +258,11 @@
   },
   "active": "ffabebcb3d09541d",
   "lastOpenFiles": [
-    "Notes/General Methodologies/Domain Trust Abuse.md",
+    "CTFs/HackTheBox/Networks/Zephyr/Computers.md",
     "CTFs/HackTheBox/Networks/Zephyr/Documentation.md",
     "Notes/Privilege Escalation/Active Directory/Methodology.md",
+    "Notes/General Methodologies/Browser Credential Decryption.md",
+    "Notes/General Methodologies/Domain Trust Abuse.md",
     "Notes/General Methodologies/Host Discovery & Ping Sweeps.md",
     "Notes/General Methodologies/Ligolo-Ng/Ligolo-Ng Pivoting.md",
     "Notes/General Methodologies/Ports not blocked by firewall.md",
@@ -283,8 +285,6 @@
     "Notes/General Methodologies/MSSQL Enum.md",
     "Notes/General Methodologies/Deactivate Firewall.md",
     "Notes/General Methodologies/Request TGT.md",
-    "Notes/Services/RDP/Methodology.md",
-    "Notes/General Methodologies/DPAPI Credentials.md",
     "Pasted image 20260802212501.png",
     "Pasted image 20260730223408.png",
     "CTFs/HackTheBox/ActiveDirectory/Signed",

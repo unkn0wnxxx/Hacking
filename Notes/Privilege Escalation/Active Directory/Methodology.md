@@ -75,6 +75,7 @@
 		- Check [Domain Trust Abuse](Domain%20Trust%20Abuse.md)
 #### Post Exploitation & Enumeration
 
+- [Ports not blocked by firewall](Ports%20not%20blocked%20by%20firewall.md)
 - [Host Discovery & Ping Sweeps](Host%20Discovery%20&%20Ping%20Sweeps.md)
 - [[Credential Dumping]]
 - Found lsass.DMP file? Do this: [LSASS.dmp](LSASS.dmp.md)
