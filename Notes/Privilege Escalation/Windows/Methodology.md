@@ -27,6 +27,7 @@
 		- [LAPS_Reader Group](LAPS_Reader.md)
 - [[Windows Enum System Enum|Enumerating System Architecture]]
 	- Outdated OS?
+		- [MS14-068](MS14-068.md)
 		- Windows Kernel Exploits --> winPEAS tells u which kernel exploits are available.
 - [[Windows Installed Applications|Check Installed Applications]]
 - [[Windows Enum Services & Processes|Check Running Services and Processes]]
