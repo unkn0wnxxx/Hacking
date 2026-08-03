@@ -71,6 +71,8 @@
 	- [Convert TGT](Convert%20TGT.md)
 - Azure active?
 	- AD Sync / AD Connect as Application? Do this: [ADSync & AD Connect](ADSync%20&%20AD%20Connect.md)
+	- Multiple Domains/Forests active?
+		- Check [Domain Trust Abuse](Domain%20Trust%20Abuse.md)
 #### Post Exploitation & Enumeration
 
 - [Host Discovery & Ping Sweeps](Host%20Discovery%20&%20Ping%20Sweeps.md)
@@ -81,3 +83,4 @@
 - [Enable RDP](Enable%20RDP.md)
 - [Enable WinRM](Enable%20WinRM.md)
 - [Deactivate Firewall](Deactivate%20Firewall.md)
+- [Deactivate Windows Defender](Deactivate%20Windows%20Defender.md)

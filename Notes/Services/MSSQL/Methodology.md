@@ -1,4 +1,5 @@
-
+- [Enumerate Linked MSSQL Servers](Enumerate%20Linked%20MSSQL%20Servers.md)
+- [Command Execution Linked MSSQL Servers](Command%20Execution%20Linked%20MSSQL%20Servers.md)
 - [[MSSQL Connection|Authenticated Connection possible?]]
 - If we got access:
 	- [[xp_cmdshell]]

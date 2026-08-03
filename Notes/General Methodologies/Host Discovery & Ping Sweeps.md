@@ -58,6 +58,21 @@ nmap -sn 172.0.0.0/24 --min-rate 10000
 ```
 
 ---
+## ARP
+
+Important step:
+
+```
+arp -a
+```
+
+Can we reach it?
+
+```
+TNC -computer 192.168.210.19
+```
+
+---
 #### Check Hosts Files
 
 Windows

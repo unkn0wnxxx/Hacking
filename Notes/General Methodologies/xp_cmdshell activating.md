@@ -10,14 +10,17 @@ Assuming we have connected to the database with impacket-mssqlclient, we can uti
 ```
 EXEC sp_configure 'show advanced options', '1';
 ```
+
 ```
 RECONFIGURE;
 ```
+
 2. Step: Enable xp_cmdshell
 
 ```
 EXEC sp_configure 'xp_cmdshell', '1';
 ```
+
 ```
 RECONFIGURE;
 ```
