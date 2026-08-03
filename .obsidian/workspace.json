@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "9e7bda020cdde387",
+            "id": "ffabebcb3d09541d",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -22,17 +22,31 @@
             }
           },
           {
+            "id": "e88968bdf94b8064",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/General Methodologies/Request TGT.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Request TGT"
+            }
+          },
+          {
             "id": "1b43fb8abb386675",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/General Methodologies/Host Discovery & Ping Sweeps.md",
+                "file": "Notes/Services/RDP/Methodology.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Host Discovery & Ping Sweeps"
+              "title": "Methodology"
             }
           },
           {
@@ -41,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/General Methodologies/Convert TGT.md",
+                "file": "Notes/General Methodologies/File Transfers.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Convert TGT"
+              "title": "File Transfers"
             }
           },
           {
@@ -55,12 +69,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/General Methodologies/BloodHound HowTo Internal Enum.md",
+                "file": "Notes/General Methodologies/DPAPI Credentials.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "BloodHound HowTo Internal Enum"
+              "title": "DPAPI Credentials"
             }
           },
           {
@@ -83,12 +97,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Privilege Escalation/Active Directory/Methodology.md",
+                "file": "Notes/General Methodologies/GetChangesAll.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Methodology"
+              "title": "GetChangesAll"
             }
           }
         ]
@@ -242,35 +256,36 @@
       "bases:Create new base": false
     }
   },
-  "active": "9e7bda020cdde387",
+  "active": "ffabebcb3d09541d",
   "lastOpenFiles": [
-    "Notes/General Methodologies/Host Discovery & Ping Sweeps.md",
-    "CTFs/HackTheBox/Networks/Zephyr/Documentation.md",
-    "Notes/Privilege Escalation/Active Directory/Methodology.md",
-    "Notes/General Methodologies/AllowedToDelegate.md",
-    "Notes/General Methodologies/Browser History.md",
-    "Notes/General Methodologies/BloodHound HowTo Internal Enum.md",
-    "Notes/General Methodologies/psexec.md",
-    "Notes/General Methodologies/Convert TGT.md",
-    "Notes/General Methodologies/nxc spraying.md",
-    "Notes/General Methodologies/ForceChangePassword.md",
     "Notes/General Methodologies/Ligolo-Ng/Ligolo-Ng Pivoting.md",
-    "Notes/General Methodologies/GenericWrite.md",
-    "Notes/General Methodologies/Credential Dumping.md",
-    "Notes/General Methodologies/BloodHound Enumeration.md",
-    "Notes/Privilege Escalation/Windows/Methodology.md",
-    "Notes/General Methodologies/PS History.md",
-    "Notes/General Methodologies/SeBackupPrivilege.md",
-    "Notes/General Methodologies/Hidden Files and Recycle Bin.md",
-    "Notes/General Methodologies/Windows AutoLogon Credentials Enum.md",
+    "CTFs/HackTheBox/Networks/Zephyr/Documentation.md",
     "Notes/General Methodologies/DPAPI Credentials.md",
-    "Notes/General Methodologies/Windows Kerberoasting.md",
-    "Notes/Services/LDAP/Methodology.md",
-    "Notes/General Methodologies/Request TGT.md",
-    "Notes/General Methodologies/Phishing Attacks.md",
-    "Notes/Services/SMTP/Methodology.md",
-    "Pasted image 20260730223408.png",
     "Notes/General Methodologies/File Transfers.md",
+    "Notes/Services/RDP/Methodology.md",
+    "Notes/General Methodologies/Request TGT.md",
+    "Notes/Privilege Escalation/Active Directory/Methodology.md",
+    "Notes/General Methodologies/AD Lateral Movement Pass the Hash.md",
+    "Notes/General Methodologies/Convert TGT.md",
+    "Notes/General Methodologies/psexec.md",
+    "Notes/Privilege Escalation/Windows/Methodology.md",
+    "Notes/General Methodologies/Deactivate Firewall.md",
+    "Notes/General Methodologies/Persistence.md",
+    "Notes/General Methodologies/Enable RDP.md",
+    "Notes/General Methodologies/Enable WinRM.md",
+    "CTFs/HackTheBox/Networks/Zephyr/Computers.md",
+    "Notes/General Methodologies/Host Discovery & Ping Sweeps.md",
+    "Notes/General Methodologies/GetChangesAll.md",
+    "Notes/General Methodologies/BloodHound HowTo Internal Enum.md",
+    "Notes/General Methodologies/Browser Credential Decryption.md",
+    "Notes/General Methodologies/S4U2self Impersonation.md",
+    "Notes/General Methodologies/ADCS Enum.md",
+    "Pasted image 20260802212501.png",
+    "Notes/General Methodologies/nxc spraying.md",
+    "Notes/General Methodologies/Browser History.md",
+    "Notes/General Methodologies/RunasCs.md",
+    "Notes/General Methodologies/mimikatz.md",
+    "Pasted image 20260730223408.png",
     "CTFs/HackTheBox/ActiveDirectory/Signed",
     "CTFs/HackTheBox/ActiveDirectory/Puppy",
     "Pasted image 20260727193006.png",
@@ -288,7 +303,6 @@
     "CTFs/HackTheBox/ActiveDirectory/Administrator",
     "Pasted image 20260718162742.png",
     "Pasted image 20260718162736.png",
-    "Images/Pasted image 20260620141350.png",
-    "Images/Pasted image 20260620141348.png"
+    "Images/Pasted image 20260620141350.png"
   ]
 }

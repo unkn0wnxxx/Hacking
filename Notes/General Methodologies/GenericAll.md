@@ -1,7 +1,8 @@
 
 We can abuse ALL permissions and there is many methodologies, let's just do the most effective and simple move.
 
-## 1. Method: 
+
+## 1. Method AddMember ACL:
 
 Adding current user to the group using "BloodyAD".
 

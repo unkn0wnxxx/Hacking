@@ -45,6 +45,12 @@ Hosts
 (for /L %a IN (1,1,254) DO ping /n 1 /w 1 172.16.2.%a) | find "Reply"
 ```
 
+PowerShell
+
+```
+1..254 | % {"192.168.210.$($_): $(Test-Connection -count 1 -comp 192.168.210.$($_) -quiet)"}
+```
+
 Efficient nmap scan
 
 ```

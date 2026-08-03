@@ -27,6 +27,9 @@
 		- Check if [[Active Directory ASREP-Roasting|ASREP-Roasting]] is possible
 - Shell on server with dual host? -->  [[Ligolo-Ng Pivoting]]
 - Check [Browser History](Browser%20History.md)
+	- Found Chrome Login Entry?  [Browser Credential Decryption](Browser%20Credential%20Decryption.md)
+- Authenticated?
+	- Machine Account with NTLM Hash, but only Kerberos auth? [S4U2self Impersonation](S4U2self%20Impersonation.md)
 - Got Shell?
 	- IIS APPOOL Account? Do this [Microsoft Virtual Account](Microsoft%20Virtual%20Account.md)
 	- [[Domain Enumeration]]
@@ -38,6 +41,7 @@
 	- [[Domain Policies]]
 		- [[GenericAll]]
 		- [[GenericWrite]]
+		- [[AddMember]]
 		- [[WriteDACL]]
 		- [AllowedToDelegate](AllowedToDelegate.md)
 		- [ForceChangePassword](ForceChangePassword.md)
@@ -47,6 +51,7 @@
 		- [[OwnerWrite & WriteOwner]]
 		- [ReadLAPSPassword](LAPS_Reader.md)
 		- [DCSync](DCSync.md)
+		- [AddKeyCredentialLink](AddKeyCredentialLink.md)
 		- [WriteGPLink](WriteGPLink.md)
 - Windows Server 2025? --> [[BadSuccessor PrivEsc]]
 - [Clock Skew Error](Clock%20Skew%20Error.md)
@@ -66,9 +71,13 @@
 	- [Convert TGT](Convert%20TGT.md)
 - Azure active?
 	- AD Sync / AD Connect as Application? Do this: [ADSync & AD Connect](ADSync%20&%20AD%20Connect.md)
-#### Post Exploitation
+#### Post Exploitation & Enumeration
 
 - [Host Discovery & Ping Sweeps](Host%20Discovery%20&%20Ping%20Sweeps.md)
 - [[Credential Dumping]]
-- [[File Transfers]]
 - Found lsass.DMP file? Do this: [LSASS.dmp](LSASS.dmp.md)
+- [[File Transfers]]
+- [[Persistence]]
+- [Enable RDP](Enable%20RDP.md)
+- [Enable WinRM](Enable%20WinRM.md)
+- [Deactivate Firewall](Deactivate%20Firewall.md)
