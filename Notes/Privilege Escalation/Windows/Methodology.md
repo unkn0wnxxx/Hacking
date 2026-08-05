@@ -1,7 +1,6 @@
 - View environment variable (dir env:)
 - [[Old Windows]] Sub-Directory/Backup?
 - Check [[PS History]]
-- Mail Server? --> [[Phishing with Windows Library File]]
 - Webpage? Check if webroot is writable and use reverse shell --> potentially elevate privs.
 - Found [DPAPI Credentials](DPAPI%20Credentials.md)?
 - [Hidden Files and Recycle Bin](Hidden%20Files%20and%20Recycle%20Bin.md)
@@ -15,7 +14,7 @@
 			- SweetPotato, works on all OS.
 			- [[JuicyPotato]], pretty good for Windows Server 2008
 			- HotPotato, pretty good for Windows Server 2008
-			- SigmaPotato, viable for Windows Server 2012-2022
+			- [SigmaPotato](SigmaPotato.md), viable for Windows Server 2012-2022
 	- [[SeBackupPrivilege]]
 	- [[SeRestorePrivilege]]
 	- [[SeManageVolumePrivilege]]
@@ -46,6 +45,9 @@
 	- Write Access on Domain Policys? --> do [[Windows PrivEsc Writable GPO|this.]]
 	- Write Perms on Unquoted Service Path? --> Do [[Unquoted Service Path|this.]]
 [DNS Poisoning](DNS%20Poisoning.md)
+- [Get SID](Get%20SID.md)
+
+
 
 Lateral Movement
 

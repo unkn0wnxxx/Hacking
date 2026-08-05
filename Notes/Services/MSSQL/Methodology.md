@@ -7,3 +7,4 @@
 	- Check if we can impersonate an high priv user with this [[MSSQL Impersonate]]
 	- [[MITM Attack with xp_dirtree|NTLM Theft with xp_dirtree]]
 	- If an website is vulnerable to SQLi abuse this: [[SQLI NTLM Theft with xp_dirtree]]
+-  Nothing working? Get Domain Admin on MSSQL! [Silver Ticket Attack](Silver%20Ticket%20Attack.md)

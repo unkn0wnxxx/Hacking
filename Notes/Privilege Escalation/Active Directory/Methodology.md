@@ -1,6 +1,7 @@
 - Start with [[nxc spraying]] as guest user or blank to enum users.
 	- Check with --local-auth 
-- HTTPS Active in AD? 
+	- Only Kerberos Auth? 
+- HTTPS Active in AD?
 	- Download Domain Information with rusthound-ce
 	- Certificate Attacks
 		- [ADCS Enum](ADCS%20Enum.md)
@@ -11,21 +12,24 @@
 		- [ESC9](ESC9.md)
 		- [[ESC16]]
 - Found Credentials?
-	- [[nxc spraying]]
-		- [STATUS_PASSWORD_MUST_CHANGE](STATUS_PASSWORD_MUST_CHANGE.md)
-		- [STATUS_ACCOUNT_DISABLED](STATUS_ACCOUNT_DISABLED.md)
-		- Encoded with Salt? [Format Hash](Format%20Hash.md)
-	- [[Notes/Services/RDP/Methodology|Connecting with RDP]]
-	- Access SMB Shares
-	- [[evil-winrm]]
-	- [[wmiexec]]
-	- [[psexec]]
-		- If psexec doesn't work try [[smbexec.py]]
-	- [[Windows Kerberoasting]]
+	- Service Account? [Silver Ticket Attack](Silver%20Ticket%20Attack.md)
+- [[nxc spraying]]
+	- [STATUS_NOT_SUPPORTED](STATUS_NOT_SUPPORTED.md)
+	- [STATUS_PASSWORD_MUST_CHANGE](STATUS_PASSWORD_MUST_CHANGE.md)
+	- [STATUS_ACCOUNT_DISABLED](STATUS_ACCOUNT_DISABLED.md)
+- Encoded with Salt? [Format Hash](Format%20Hash.md)
+- [[Notes/Services/RDP/Methodology|Connecting with RDP]]
+- Access SMB Shares
+- [[evil-winrm]]
+- [[wmiexec]]
+- [[psexec]]
+	- If psexec doesn't work try [[smbexec.py]]
+- [[Windows Kerberoasting]]
 	- Only Usernames?
 		- Create username list and verify with kerbrute
 		- Check if [[Active Directory ASREP-Roasting|ASREP-Roasting]] is possible
 - Shell on server with dual host? -->  [[Ligolo-Ng Pivoting]]
+- [Get SID](Get%20SID.md)
 - Check [Browser History](Browser%20History.md)
 	- Found Chrome Login Entry?  [Browser Credential Decryption](Browser%20Credential%20Decryption.md)
 - Authenticated?
@@ -60,18 +64,16 @@
 	- Connect with [[wmiexec]]
 	- Connect with [[psexec]]
 - Lateral Movement to internal server / next server
-	- with [[AD Lateral Movement WMIC and WinRS|WMI and WinRS]]
 	- with [[AD Lateral Movement psexec|psexec.]]
 	- with [[AD Lateral Movement Pass the Hash]]
 	- when owned NTLM Hash, but Kerberos Authentication is needed to authenticate into the next server use this --> [[AD Lateral Movement Overpass the Hash]] 
 	- [[AD Lateral Movement Pass the Ticket]]
-	- [[AD Lateral Movement DCOM]]
 	- [RunasCs](RunasCs.md)
 	- [Request TGT](Request%20TGT.md)
 	- [Convert TGT](Convert%20TGT.md)
 - Azure active?
 	- AD Sync / AD Connect as Application? Do this: [ADSync & AD Connect](ADSync%20&%20AD%20Connect.md)
-	- Multiple Domains/Forests active?
+- Multiple Domains/Forests active?
 		- Check [Domain Trust Abuse](Domain%20Trust%20Abuse.md)
 #### Post Exploitation & Enumeration
 

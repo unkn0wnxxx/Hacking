@@ -14,9 +14,6 @@ feroxbuster -u http://<target_ip>/ -w /usr/share/wordlists/dirbuster/directory-l
 ```
 dirsearch -u http://<target_ip>/
 ```
-
-
-
 ##### Unappropriate Statuscode Fix
 
 ```

