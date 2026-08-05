@@ -1,6 +1,5 @@
 
 Works when we are authenticated as Administrator on the mssql database.
-
 ## PoC
 
 Assuming we have connected to the database with impacket-mssqlclient, we can utilize the following steps in order to activate xp_cmdshell.

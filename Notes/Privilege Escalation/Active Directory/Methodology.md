@@ -58,6 +58,7 @@
 		- [AddKeyCredentialLink](AddKeyCredentialLink.md)
 		- [WriteGPLink](WriteGPLink.md)
 - Windows Server 2025? --> [[BadSuccessor PrivEsc]]
+- Earlier than Windows Server 2025/2026? --> [NTLM Reflection Attack](NTLM%20Reflection%20Attack.md)
 - [Clock Skew Error](Clock%20Skew%20Error.md)
 - Dumped Hashes?
 	- Connect with [[evil-winrm]]

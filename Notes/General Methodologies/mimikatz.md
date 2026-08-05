@@ -1,7 +1,7 @@
 
 ## Mimikatz
 
-1. Activate SeBackupPrivilege
+1. Activate SeDebugPrivilege
 
 ```
 privilege::debug

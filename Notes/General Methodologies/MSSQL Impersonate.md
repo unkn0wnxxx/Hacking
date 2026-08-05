@@ -2,7 +2,6 @@
 # nxc
 
 ---
-
 ## PoC
 
 For example we can utilize nxc once we got credentials and check which modules we can use for mssql service.
