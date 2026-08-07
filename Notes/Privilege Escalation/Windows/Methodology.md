@@ -47,8 +47,6 @@
 [DNS Poisoning](DNS%20Poisoning.md)
 - [Get SID](Get%20SID.md)
 
-
-
 Lateral Movement
 
 - [[RunasCs]]
