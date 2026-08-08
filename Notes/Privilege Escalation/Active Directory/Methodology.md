@@ -1,6 +1,10 @@
 - Start with [[nxc spraying]] as guest user or blank to enum users.
 	- Check with --local-auth 
 	- Only Kerberos Auth? 
+	- Found Script?
+		- Credentials?
+		- What is the Script doing?
+			- Authenticating against LDAP or smth else? [Krbrelayx](Krbrelayx.md)
 - HTTPS Active in AD?
 	- Download Domain Information with rusthound-ce
 	- Certificate Attacks
@@ -57,6 +61,7 @@
 		- [DCSync](DCSync.md)
 		- [AddKeyCredentialLink](AddKeyCredentialLink.md)
 		- [WriteGPLink](WriteGPLink.md)
+		- [ReadGMSAPassword](ReadGMSAPassword.md)
 - Windows Server 2025? --> [[BadSuccessor PrivEsc]]
 - Earlier than Windows Server 2025/2026? --> [NTLM Reflection Attack](NTLM%20Reflection%20Attack.md)
 - [Clock Skew Error](Clock%20Skew%20Error.md)

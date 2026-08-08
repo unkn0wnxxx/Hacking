@@ -2,7 +2,7 @@
 - [[wafw00f firewall enum]]
 - ###### Enumerating endpoints
 	- [[Endpoint Enumeration|Fuzzing Endpoints]]
-	- [[Gobuster File Extensions|Fuzzing File Extensions]]
+	- [[Enumerating File Extensions|Fuzzing File Extensions]]
 	- ENUMERATE ALL ENDPOINTS WITH ALL TOOLS!
 - ###### [[Subdomain Enum|Enumerating subdomains]]
 - robots.txt

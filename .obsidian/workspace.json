@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTFs/HackTheBox/ActiveDirectory/Breach/Documentation.md",
+                "file": "CTFs/HackTheBox/ActiveDirectory/Intelligence/Documentation.md",
                 "mode": "source",
                 "source": false
               },
@@ -27,12 +27,40 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/General Methodologies/SigmaPotato.md",
+                "file": "Notes/General Methodologies/AllowedToDelegate.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SigmaPotato"
+              "title": "AllowedToDelegate"
+            }
+          },
+          {
+            "id": "8aa2a16864548fec",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/General Methodologies/ReadGMSAPassword.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "ReadGMSAPassword"
+            }
+          },
+          {
+            "id": "caa1deb07107c1e2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/General Methodologies/Krbrelayx.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Krbrelayx"
             }
           }
         ]
@@ -188,33 +216,34 @@
   },
   "active": "ffabebcb3d09541d",
   "lastOpenFiles": [
-    "Notes/General Methodologies/SigmaPotato.md",
-    "CTFs/HackTheBox/ActiveDirectory/Breach/Documentation.md",
-    "Notes/Privilege Escalation/Windows/Methodology.md",
-    "Notes/General Methodologies/SeImpersonatePrivilege.md",
-    "Notes/General Methodologies/xp_cmdshell activating.md",
-    "Notes/General Methodologies/Silver Ticket Attack.md",
-    "Notes/General Methodologies/MSSQL Connection.md",
-    "Notes/Services/MSSQL/Methodology.md",
-    "Notes/General Methodologies/Command Execution Linked MSSQL Servers.md",
-    "Notes/General Methodologies/Enumerate Linked MSSQL Servers.md",
-    "Notes/General Methodologies/MITM Attack with xp_dirtree.md",
-    "Notes/General Methodologies/Windows Kerberoasting.md",
-    "Notes/General Methodologies/BloodHound HowTo Internal Enum.md",
-    "Notes/General Methodologies/NTLM Theft.md",
-    "Notes/Services/SMB/Methodology.md",
-    "Notes/General Methodologies/Enumerating SMB Shares with guest access.md",
-    "Notes/General Methodologies/ASREP-Roasting.md",
-    "Notes/Services/LDAP/Methodology.md",
-    "Notes/General Methodologies/nxc spraying.md",
-    "Notes/Services/tftp/Methodology.md",
-    "CTFs/HackTheBox/ActiveDirectory/Signed/Documentation.md",
-    "CTFs/HackTheBox/ActiveDirectory/Breach",
-    "Notes/Privilege Escalation/Linux/Methodology.md",
     "Notes/Privilege Escalation/Active Directory/Methodology.md",
+    "Notes/General Methodologies/Krbrelayx.md",
+    "CTFs/HackTheBox/ActiveDirectory/Intelligence/Documentation.md",
+    "Notes/General Methodologies/ReadGMSAPassword.md",
+    "Notes/General Methodologies/AllowedToDelegate.md",
+    "Notes/General Methodologies/Clock Skew Error.md",
+    "Notes/General Methodologies/KRB5CCNAME.md",
+    "Notes/General Methodologies/BloodHound HowTo Internal Enum.md",
     "Notes/General Methodologies/S4U2self Impersonation.md",
-    "Notes/General Methodologies/Browser Credential Decryption.md",
+    "Notes/General Methodologies/ADCS Enum.md",
+    "Notes/General Methodologies/Request TGT.md",
+    "Notes/Services/LDAP/Methodology.md",
+    "Notes/General Methodologies/Windows Kerberoasting.md",
+    "Notes/General Methodologies/Domain Trust Abuse.md",
+    "Notes/Services/HTTP & HTTPS (80 & 443)/Methodology.md",
+    "CTFs/TryHackMe/Linux/Gallery/Gallery.md",
+    "Notes/General Methodologies/Bruteforcing HTTP.md",
+    "Notes/General Methodologies/WebDAV.md",
+    "Notes/General Methodologies/Enumerating File Extensions.md",
+    "Notes/General Methodologies/Extract Information out of the picture.md",
+    "Notes/General Methodologies/ASREP-Roasting.md",
+    "Notes/General Methodologies/Kerberos User Enum.md",
+    "Notes/General Methodologies/Opening Files.md",
+    "Notes/General Methodologies/Endpoint Enumeration.md",
+    "Notes/General Methodologies/SigmaPotato.md",
+    "CTFs/HackTheBox/ActiveDirectory/Intelligence",
     "CTFs/HackTheBox/Networks/Zephyr/Documentation.md",
+    "CTFs/HackTheBox/ActiveDirectory/Breach",
     "CTFs/HackTheBox/ActiveDirectory/Scrambled",
     "CTFs/HackTheBox/ActiveDirectory/Mantis",
     "Images/OSCP-Challenge.png",
@@ -230,7 +259,6 @@
     "CTFs/HackTheBox/ActiveDirectory/Checkpoint",
     "CTFs/HackTheBox/Networks/Dante",
     "CTFs/HackTheBox/Networks",
-    "CTFs/HackTheBox/ActiveDirectory/Certified",
     "Pasted image 20260724012243.png",
     "Pasted image 20260718162742.png",
     "Pasted image 20260718162736.png"
