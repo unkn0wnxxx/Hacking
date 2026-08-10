@@ -1,7 +1,7 @@
 
 ---
 
-Enumerating if an internal CA / Certificate Templates are vulnerable to ADCS Attacks.
+Enumerating if an Internal CA / Certificate Templates are vulnerable to ADCS Attacks.
 
 Plaintext Auth
 

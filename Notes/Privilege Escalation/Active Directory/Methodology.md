@@ -3,6 +3,8 @@
 	- Only Kerberos Auth? 
 	- Found Script?
 		- Credentials?
+		- Encoded Creds?
+			- [Ansible](Ansible.md)
 		- What is the Script doing?
 			- Authenticating against LDAP or smth else? [Krbrelayx](Krbrelayx.md)
 - HTTPS Active in AD?

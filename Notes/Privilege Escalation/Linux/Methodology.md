@@ -6,6 +6,11 @@
 	- lxd Group? Do [[Linux Priv Esc lxd|this.]]
 	- proxy Group? Do [[Linux PrivEsc Proxy Group|this.]]
 	- sudo Group and runnable script with root permissions? Do [[sudo group|this]]
+- Found Script?
+		- Credentials?
+		- Encoded Creds?
+			- [Ansible](Ansible.md)
+		- What is the Script doing?
 - Enumerating all directories in which usually sensitive information is stored.
 	- /opt, /mnt, /home, /var
 - Enumerating [SUID Binaries](SUID%20Binaries.md)

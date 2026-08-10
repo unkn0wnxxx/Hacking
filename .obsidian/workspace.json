@@ -13,54 +13,40 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTFs/HackTheBox/ActiveDirectory/Intelligence/Documentation.md",
+                "file": "Notes/Privilege Escalation/Windows/Methodology.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Documentation"
+              "title": "Methodology"
             }
           },
           {
-            "id": "4de0ca34eaa57366",
+            "id": "5cff098d8cfc54a3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/General Methodologies/AllowedToDelegate.md",
+                "file": "Notes/General Methodologies/ESC1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "AllowedToDelegate"
+              "title": "ESC1"
             }
           },
           {
-            "id": "8aa2a16864548fec",
+            "id": "346975106b51de1b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/General Methodologies/ReadGMSAPassword.md",
+                "file": "Notes/General Methodologies/Ansible.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ReadGMSAPassword"
-            }
-          },
-          {
-            "id": "caa1deb07107c1e2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/General Methodologies/Krbrelayx.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Krbrelayx"
+              "title": "Ansible"
             }
           }
         ]
@@ -122,7 +108,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 299.5
   },
   "right": {
     "id": "baeeaf1b01960644",
@@ -216,16 +202,26 @@
   },
   "active": "ffabebcb3d09541d",
   "lastOpenFiles": [
+    "Notes/Privilege Escalation/Linux/Methodology.md",
     "Notes/Privilege Escalation/Active Directory/Methodology.md",
-    "Notes/General Methodologies/Krbrelayx.md",
+    "Notes/General Methodologies/Ansible.md",
+    "CTFs/HackTheBox/ActiveDirectory/Authority/Documentation.md",
+    "Notes/General Methodologies/ESC1.md",
+    "Notes/General Methodologies/ADCS Enum.md",
+    "CTFs/HackTheBox/Networks/Zephyr/Documentation.md",
+    "Notes/General Methodologies/PFX Extraction.md",
+    "zabbix.md",
+    "Notes/General Methodologies/nxc spraying.md",
+    "Notes/General Methodologies/7z.md",
     "CTFs/HackTheBox/ActiveDirectory/Intelligence/Documentation.md",
+    "CTFs/HackTheBox/ActiveDirectory/Authority",
+    "Notes/General Methodologies/Krbrelayx.md",
     "Notes/General Methodologies/ReadGMSAPassword.md",
     "Notes/General Methodologies/AllowedToDelegate.md",
     "Notes/General Methodologies/Clock Skew Error.md",
     "Notes/General Methodologies/KRB5CCNAME.md",
     "Notes/General Methodologies/BloodHound HowTo Internal Enum.md",
     "Notes/General Methodologies/S4U2self Impersonation.md",
-    "Notes/General Methodologies/ADCS Enum.md",
     "Notes/General Methodologies/Request TGT.md",
     "Notes/Services/LDAP/Methodology.md",
     "Notes/General Methodologies/Windows Kerberoasting.md",
@@ -233,16 +229,7 @@
     "Notes/Services/HTTP & HTTPS (80 & 443)/Methodology.md",
     "CTFs/TryHackMe/Linux/Gallery/Gallery.md",
     "Notes/General Methodologies/Bruteforcing HTTP.md",
-    "Notes/General Methodologies/WebDAV.md",
-    "Notes/General Methodologies/Enumerating File Extensions.md",
-    "Notes/General Methodologies/Extract Information out of the picture.md",
-    "Notes/General Methodologies/ASREP-Roasting.md",
-    "Notes/General Methodologies/Kerberos User Enum.md",
-    "Notes/General Methodologies/Opening Files.md",
-    "Notes/General Methodologies/Endpoint Enumeration.md",
-    "Notes/General Methodologies/SigmaPotato.md",
     "CTFs/HackTheBox/ActiveDirectory/Intelligence",
-    "CTFs/HackTheBox/Networks/Zephyr/Documentation.md",
     "CTFs/HackTheBox/ActiveDirectory/Breach",
     "CTFs/HackTheBox/ActiveDirectory/Scrambled",
     "CTFs/HackTheBox/ActiveDirectory/Mantis",
@@ -258,7 +245,6 @@
     "CTFs/HackTheBox/Networks/Zephyr",
     "CTFs/HackTheBox/ActiveDirectory/Checkpoint",
     "CTFs/HackTheBox/Networks/Dante",
-    "CTFs/HackTheBox/Networks",
     "Pasted image 20260724012243.png",
     "Pasted image 20260718162742.png",
     "Pasted image 20260718162736.png"

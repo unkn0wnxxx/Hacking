@@ -344,7 +344,6 @@ Try "help" to get a list of possible commands.
 smb: \> recurse On
 smb: \> prompt OFF
 smb: \> mget *
-
 ```
 
 Retrieved user.txt in Users/Tiffany.Molina/Desktop.
