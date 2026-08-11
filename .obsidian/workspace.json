@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/General Methodologies/File Transfers.md",
+                "file": "Notes/General Methodologies/DnsAdmins Group.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "File Transfers"
+              "title": "DnsAdmins Group"
             }
           },
           {
@@ -202,8 +202,9 @@
   },
   "active": "ffabebcb3d09541d",
   "lastOpenFiles": [
-    "Notes/General Methodologies/File Transfers.md",
+    "Notes/General Methodologies/DnsAdmins Group.md",
     "CTFs/HackTheBox/ActiveDirectory/Resolute/Documentation.md",
+    "Notes/General Methodologies/File Transfers.md",
     "Notes/General Methodologies/Windows AutoLogon Credentials Enum.md",
     "Notes/General Methodologies/OwnerWrite & WriteOwner.md",
     "Notes/General Methodologies/nxc spraying.md",
@@ -229,7 +230,6 @@
     "Notes/General Methodologies/Clock Skew Error.md",
     "Notes/General Methodologies/KRB5CCNAME.md",
     "Notes/General Methodologies/BloodHound HowTo Internal Enum.md",
-    "Notes/General Methodologies/S4U2self Impersonation.md",
     "CTFs/HackTheBox/ActiveDirectory/Intelligence",
     "CTFs/HackTheBox/ActiveDirectory/Breach",
     "CTFs/HackTheBox/ActiveDirectory/Scrambled",
