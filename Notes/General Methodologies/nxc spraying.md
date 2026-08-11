@@ -15,6 +15,31 @@ Saved the nxc output into an users.txt file and ran the following command:
 grep "SidTypeUser" newusers.txt | cut -d '\' -f2 | cut -d ' ' -f1 > users.txt
 ```
 
+##### Local Auth
+
+```
+nxc smb megabank.local -u melanie -p Welcome123! --users > users2.txt
+```
+
+Format Wordlist
+
+```
+awk '{
+  if (NF >= 5) {
+    # 情况1：用户名直接出现在第5个字段（如 Administrator, Guest, marko 等）
+    if ($5 !~ /^[\[\-]/ && $5 !~ /^[0-9]/ && $5 != "-Username-") {
+      print $5
+    }
+    # 情况2：用户名嵌在类似 "megabank.local\melanie:Welcome123!" 的字段中
+    else if ($6 ~ /\\/) {
+      split($6, a, "\\")
+      split(a[2], b, ":")
+      print b[1]
+    }
+  }
+}' users2.txt | sort -u > users4.txt
+```
+
 Kerberos Auth
 
 ```

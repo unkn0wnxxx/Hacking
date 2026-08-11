@@ -82,7 +82,7 @@
 - Azure active?
 	- AD Sync / AD Connect as Application? Do this: [ADSync & AD Connect](ADSync%20&%20AD%20Connect.md)
 - Multiple Domains/Forests active?
-		- Check [Domain Trust Abuse](Domain%20Trust%20Abuse.md)
+	- Check [Domain Trust Abuse](Domain%20Trust%20Abuse.md)
 #### Post Exploitation & Enumeration
 
 - [Ports not blocked by firewall](Ports%20not%20blocked%20by%20firewall.md)
