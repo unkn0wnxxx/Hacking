@@ -30,6 +30,12 @@ Gained valid domain user credentials.
 Operator:operator
 ```
 
+GitHub Repo:
+
+```
+git clone git@github.com:unkn0wnxxx/Username-Generator.git
+```
+
 Script:
 
 ```

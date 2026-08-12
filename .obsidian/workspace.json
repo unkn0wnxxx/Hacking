@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Services/MSSQL/Methodology.md",
+                "file": "Notes/General Methodologies/Wordlist Generation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Methodology"
+              "title": "Wordlist Generation"
             }
           },
           {
@@ -77,7 +77,8 @@
               "title": "xp_dirtree"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -228,16 +229,16 @@
       "bases:Create new base": false
     }
   },
-  "active": "ffabebcb3d09541d",
+  "active": "ce0d657ba311f59d",
   "lastOpenFiles": [
-    "Notes/General Methodologies/ESC7.md",
+    "Notes/Services/MSSQL/Methodology.md",
     "Notes/Privilege Escalation/Windows/Methodology.md",
+    "CTFs/HackTheBox/ActiveDirectory/Manager/Documentation.md",
+    "Notes/General Methodologies/ESC7.md",
     "Notes/General Methodologies/Windows Local Service Account Priv Esc.md",
     "Notes/Privilege Escalation/Active Directory/Methodology.md",
     "Notes/General Methodologies/BloodHound Enumeration.md",
-    "CTFs/HackTheBox/ActiveDirectory/Manager/Documentation.md",
     "Notes/General Methodologies/ESC1.md",
-    "Notes/Services/MSSQL/Methodology.md",
     "Notes/General Methodologies/ADCS Enum.md",
     "Notes/General Methodologies/Wordlist Generation.md",
     "Notes/General Methodologies/xp_dirtree.md",
