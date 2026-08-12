@@ -7,6 +7,7 @@
 		- Encoded Creds?
 			- [Ansible](Ansible.md)
 		- What is the Script doing?
+- Found .exe file or .dll file --> Download them & [Decompiling](Decompiling.md) 
 - Found [DPAPI Credentials](DPAPI%20Credentials.md)?
 - [Hidden Files and Recycle Bin](Hidden%20Files%20and%20Recycle%20Bin.md)
 - Run winPEAS.exe preferred over winPEAS.bat

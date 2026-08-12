@@ -1,11 +1,6 @@
 
-
-## .Compiled
-
-Use Ghidra to decompile.
-## .exe
-In order to perform forensics on .exe files in order to potentially find passwords we can utilize the following tool:
-# ILSpy
+---
+##### ILSpy
 
 In order to decompile .Net executable we can use Avalonia ILspy, which is a cross-platform version of ILSpy that works on Linux. First let's download it from the releases page
 
@@ -13,8 +8,6 @@ In order to decompile .Net executable we can use Avalonia ILspy, which is a cros
 wget https://github.com/icsharpcode/AvaloniaILSpy/releases/download/v7.2-
 rc/Linux.x64.Release.zip
 ```
-
-
 
 ```
 unzip Linux.x64.Release.zip
@@ -38,3 +31,6 @@ After the binary has been imported, ILSpy will take care the decompilation and w
 1. Search for hardcoded encoded passwords
 2. Check application logic? Connection to LDAP or smth else?
 3. Check encoding algorithm!
+4. Add all found .exe and .dll files and paste them in AI to understand what is happening!
+
+

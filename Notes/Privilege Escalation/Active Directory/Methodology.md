@@ -6,6 +6,7 @@
 	- Encoded Creds?
 		- [Ansible](Ansible.md)
 	- What is the Script doing?
+- Found .exe file or .dll file --> Download them & [Decompiling](Decompiling.md) 
 - Authenticating against LDAP or smth else? [Krbrelayx](Krbrelayx.md)
 - HTTPS Active in AD?
 	- Download Domain Information with rusthound-ce
@@ -20,6 +21,9 @@
 		- [[ESC16]]
 - Found Credentials?
 	- Service Account? [Silver Ticket Attack](Silver%20Ticket%20Attack.md)
+- Groups?
+	- [DnsAdmins Group](DnsAdmins%20Group.md)
+	- [Ad Recycle Bin Group](Ad%20Recycle%20Bin%20Group.md)
 - [[nxc spraying]]
 	- [STATUS_NOT_SUPPORTED](STATUS_NOT_SUPPORTED.md)
 	- [STATUS_PASSWORD_MUST_CHANGE](STATUS_PASSWORD_MUST_CHANGE.md)
