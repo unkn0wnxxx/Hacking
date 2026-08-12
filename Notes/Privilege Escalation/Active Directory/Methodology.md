@@ -1,12 +1,12 @@
 - Start with [[nxc spraying]] as guest user or blank to enum users.
 	- Check with --local-auth 
 	- Only Kerberos Auth? 
-	- Found Script?
-		- Credentials?
-		- Encoded Creds?
-			- [Ansible](Ansible.md)
-		- What is the Script doing?
-			- Authenticating against LDAP or smth else? [Krbrelayx](Krbrelayx.md)
+- Found Script?
+	- Credentials?
+	- Encoded Creds?
+		- [Ansible](Ansible.md)
+	- What is the Script doing?
+- Authenticating against LDAP or smth else? [Krbrelayx](Krbrelayx.md)
 - HTTPS Active in AD?
 	- Download Domain Information with rusthound-ce
 	- Certificate Attacks
@@ -15,6 +15,7 @@
 		- [DNS Poisoning](DNS%20Poisoning.md)
 		- [[ESC1|ESC1]]
 		- [[ESC4]]
+		- [ESC7](ESC7.md)
 		- [ESC9](ESC9.md)
 		- [[ESC16]]
 - Found Credentials?
@@ -34,6 +35,8 @@
 	- Only Usernames?
 		- Create username list and verify with kerbrute
 		- Check if [[ASREP-Roasting|ASREP-Roasting]] is possible
+		- Create users wordlist, if users use password similiar to username [Wordlist Generation](Wordlist%20Generation.md)
+		- Webserver active? Create Password wordlist with cewl [Wordlist Generation](Wordlist%20Generation.md)
 - Shell on server with dual host? -->  [[Ligolo-Ng Pivoting]]
 - [Get SID](Get%20SID.md)
 - Check [Browser History](Browser%20History.md)

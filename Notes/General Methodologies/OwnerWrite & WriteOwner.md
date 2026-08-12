@@ -1,9 +1,7 @@
 
 This ACL allows a user to change the owner of an Active Directory object.
 
-
 ---
-
 ## Write on Service Account
 
 1. Becoming the owner of service account "ca_svc". Now user "ryan" (current user) owns this service account.
