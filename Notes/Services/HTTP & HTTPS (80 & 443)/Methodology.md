@@ -4,8 +4,9 @@
 	- [[Endpoint Enumeration|Fuzzing Endpoints]]
 	- [[Enumerating File Extensions|Fuzzing File Extensions]]
 	- ENUMERATE ALL ENDPOINTS WITH ALL TOOLS!
-- ###### [[Subdomain Enum|Enumerating subdomains]]
+- ###### [[Subdomain Enumeration|Enumerating subdomains]]
 - robots.txt
+- Identified an [Amazon S3 Bucket](Amazon%20S3%20Bucket.md)?
 - sitemaps.xml
 - Enumerating server side language --> php?
 - Enumerating Technologies used by the website with [[whatweb]]
@@ -27,7 +28,6 @@
 	- [[Bruteforcing HTTP|Bruteforcing GET & POST Request]]
 	- [[SQL Injection Login Bypass|Login Panel bypass possible?]]
 - ###### Found Upload Functionality
-	- [[File Upload Bypasses]]
 	- [[LFI in File Upload Bypass Network package|LFI in File Upload Package]]
 - ###### WordPress running?
 	- [[wpscan]]
@@ -37,9 +37,7 @@
 	- Exposed phpinfo.php?
 	- In CMS
 		- [[WordPress CMS Priv Esc Semantics]]
-		- [[WordPress Plugin Relay Attack]]
 		- [[WordPress Malicious Plugin|Upload Malicious Plugin]]
-		- [[Upload Malicious Webshell]]
 - ###### Source Code Analysis
 	- Any hidden subdomains or endpoints found?
 	- Any credential leaks?
@@ -59,7 +57,6 @@
 		- If Windows Box:
 			- [[SQLI NTLM Theft with xp_dirtree|SQLi NTLM Theft with xp_dirtree (mssql)]]
 		- SQLi Reverse Shell
-			- [[SQLI Reverse Shell MSSQL Database|MSSQL Reverse Shell]]
 			- [[SQLi Reverse Shell MySQL|MySQL Reverse Shell]]
 			- [[SQLi Reverse Shell PostgreSQL|PostgreSQL Reverse Shell]]
 	- LFI / RFI?
@@ -67,11 +64,8 @@
 			- [[LFI SSH Keys]]
 			- [[LFI PHP Wrappers and Code Execution|View .php files in LFI]]
 			- [[LFI PHP Wrappers and Code Execution|Get Command Execution using PHP Wrappers and LFI]]
-			- [[LFI Zip Wrappers]]
-			- [[Log Poisoning with LFI]]
 			- [[WordPress Default Paths|WordPress running? --> wp-config.php]]
 			- Windows Host? Capture NTLM Hash --> Do this: [LFI NTLM Relay](LFI%20NTLM%20Relay.md)
-		- [[RFI]]
 	- [[SSTI]]
 	- [[Command Injection]]
 		- [[Command Injection Brace Expansion]]

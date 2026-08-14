@@ -6,8 +6,11 @@
 	- Encoded Creds?
 		- [Ansible](Ansible.md)
 	- What is the Script doing?
+		- Authenticating against LDAP or smth else? [DNS Poisoning MITM Attack](DNS%20Poisoning%20MITM%20Attack.md)
+			- Can we add DNS Entries? [Enumerate Writable AD Objects](Enumerate%20Writable%20AD%20Objects.md)
 - Found .exe file or .dll file --> Download them & [Decompiling](Decompiling.md) 
-- Authenticating against LDAP or smth else? [Krbrelayx](Krbrelayx.md)
+	- Authenticating against LDAP or smth else? [DNS Poisoning MITM Attack](DNS%20Poisoning%20MITM%20Attack.md)
+		- Can we add DNS Entries? [Enumerate Writable AD Objects](Enumerate%20Writable%20AD%20Objects.md)
 - HTTPS Active in AD?
 	- Download Domain Information with rusthound-ce
 	- Certificate Attacks
@@ -19,6 +22,7 @@
 		- [ESC7](ESC7.md)
 		- [ESC9](ESC9.md)
 		- [[ESC16]]
+		- [ESC17](ESC17.md)
 - Found Credentials?
 	- Service Account? [Silver Ticket Attack](Silver%20Ticket%20Attack.md)
 - Groups?
@@ -28,6 +32,7 @@
 	- [STATUS_NOT_SUPPORTED](STATUS_NOT_SUPPORTED.md)
 	- [STATUS_PASSWORD_MUST_CHANGE](STATUS_PASSWORD_MUST_CHANGE.md)
 	- [STATUS_ACCOUNT_DISABLED](STATUS_ACCOUNT_DISABLED.md)
+	- [STATUS_ACCOUNT_RESTRICTION](STATUS_ACCOUNT_RESTRICTION.md)
 - Encoded with Salt? [Format Hash](Format%20Hash.md)
 - [[Notes/Services/RDP/Methodology|Connecting with RDP]]
 - Access SMB Shares
@@ -73,6 +78,8 @@
 		- [ReadGMSAPassword](ReadGMSAPassword.md)
 - Windows Server 2025? --> [[BadSuccessor PrivEsc]]
 - Earlier than Windows Server 2025/2026? --> [NTLM Reflection Attack](NTLM%20Reflection%20Attack.md)
+- [Enumerate Writable AD Objects](Enumerate%20Writable%20AD%20Objects.md)
+	- DNS Zones? Maybe DNS Poisoning
 - [Clock Skew Error](Clock%20Skew%20Error.md)
 - Dumped Hashes?
 	- Connect with [[evil-winrm]]

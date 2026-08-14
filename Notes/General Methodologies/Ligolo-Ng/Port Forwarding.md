@@ -56,3 +56,12 @@ sudo ip route add 240.0.0.1/32 dev ligolo
 ```
 
 Now, we should be able to access any local port by using the magic IP 240.0.0.1.
+
+---
+## SSH Port Forwarding
+
+Once we got valid credentials and can connect to SSH, we can port forward.
+
+```
+ssh -L 5432:127.0.0.1:5432 christine@10.129.228.195
+```

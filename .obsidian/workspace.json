@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTFs/HackTheBox/ActiveDirectory/Cascade/Documentation.md",
+                "file": "CTFs/HackTheBox/ActiveDirectory/Logging/Documentation.md",
                 "mode": "source",
                 "source": false
               },
@@ -27,7 +27,35 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Privilege Escalation/Windows/Methodology.md",
+                "file": "Notes/General Methodologies/Enumerate Writable AD Objects.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Enumerate Writable AD Objects"
+            }
+          },
+          {
+            "id": "fc67007cb2eaec76",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/General Methodologies/ESC17.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "ESC17"
+            }
+          },
+          {
+            "id": "19c3c039ca8f3ae6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Privilege Escalation/Active Directory/Methodology.md",
                 "mode": "source",
                 "source": false
               },
@@ -36,7 +64,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -187,47 +215,47 @@
       "bases:Create new base": false
     }
   },
-  "active": "3ad8a8f9e1fc55ae",
+  "active": "19c3c039ca8f3ae6",
   "lastOpenFiles": [
-    "Notes/General Methodologies/Decompiling.md",
-    "CTFs/HackTheBox/ActiveDirectory/Cascade/Documentation.md",
-    "Notes/Privilege Escalation/Windows/Methodology.md",
+    "Notes/General Methodologies/STATUS_ACCOUNT_RESTRICTION.md",
+    "Notes/General Methodologies/ESC17.md",
+    "Notes/General Methodologies/Enumerate Writable AD Objects.md",
     "Notes/Privilege Escalation/Active Directory/Methodology.md",
-    "Notes/General Methodologies/Ad Recycle Bin Group.md",
-    "Notes/General Methodologies/Microsoft Virtual Account.md",
-    "Notes/General Methodologies/Compiling.md",
-    "Notes/General Methodologies/Format Hash.md",
-    "Notes/Services/LDAP/Methodology.md",
-    "Notes/General Methodologies/Wordlist Generation.md",
+    "Notes/General Methodologies/DNS Poisoning.md",
+    "Notes/General Methodologies/DNS Poisoning MITM Attack.md",
+    "Notes/General Methodologies/Convert TGT.md",
+    "Notes/General Methodologies/evil-winrm.md",
+    "CTFs/HackTheBox/ActiveDirectory/Logging/Documentation.md",
+    "Notes/General Methodologies/Windows Scheduled Tasks.md",
+    "Notes/General Methodologies/Windows PrivEsc DLL Hijacking.md",
+    "Notes/General Methodologies/GenericWrite.md",
+    "Notes/General Methodologies/S4U2self Impersonation.md",
+    "Notes/General Methodologies/Request TGT.md",
+    "Notes/General Methodologies/DCSync.md",
     "Notes/General Methodologies/nxc spraying.md",
-    "Notes/General Methodologies/psexec.md",
-    "CTFs/HackTheBox/ActiveDirectory/Manager/Documentation.md",
-    "CTFs/HackTheBox/ActiveDirectory/Cascade",
-    "Notes/Services/MSSQL/Methodology.md",
-    "Notes/General Methodologies/ESC7.md",
-    "Notes/General Methodologies/xp_dirtree.md",
-    "Notes/General Methodologies/Windows Local Service Account Priv Esc.md",
-    "Notes/General Methodologies/BloodHound Enumeration.md",
-    "Notes/General Methodologies/ESC1.md",
-    "Notes/General Methodologies/ADCS Enum.md",
-    "Notes/General Methodologies/MITM Attack with xp_dirtree.md",
-    "Notes/General Methodologies/xp_cmdshell activating.md",
-    "Notes/General Methodologies/MSSQL Enum.md",
-    "Notes/General Methodologies/MSSQL Connection.md",
-    "Notes/General Methodologies/Get SID.md",
-    "Notes/General Methodologies/ASREP-Roasting.md",
-    "CTFs/HackTheBox/ActiveDirectory/Manager",
-    "CTFs/HackTheBox/ActiveDirectory/Resolute",
-    "CTFs/HackTheBox/ActiveDirectory/Authority",
-    "CTFs/HackTheBox/ActiveDirectory/Intelligence",
-    "CTFs/HackTheBox/ActiveDirectory/Breach",
-    "CTFs/HackTheBox/ActiveDirectory/Scrambled",
-    "CTFs/HackTheBox/ActiveDirectory/Mantis",
+    "Notes/General Methodologies/SSTI.md",
+    "Notes/General Methodologies/Default Credentials.md",
+    "Notes/General Methodologies/Linux Wildcard Injection 7zip.md",
+    "CTFs/HackTheBox/Windows/Tactics/Documentation.md",
+    "CTFs/HackTheBox/ActiveDirectory/Logging",
+    "CTFs/HackTheBox/Linux/Pennyworth/Documentation.md",
+    "CTFs/HackTheBox/Windows/Tactics",
+    "CTFs/HackTheBox/Linux/Ignition/Documentation.md",
+    "CTFs/HackTheBox/Linux/Pennyworth",
+    "Notes/Privilege Escalation/Linux/Methodology.md",
+    "CTFs/HackTheBox/Linux/Bike/Documentation.md",
+    "CTFs/HackTheBox/Linux/Ignition",
+    "Notes/General Methodologies/SSH Git Repo Push to Remote Target.md",
+    "Notes/Services/PostgreSQL/PostgreSQL.md",
+    "CTFs/HackTheBox/Linux/Bike",
+    "CTFs/HackTheBox/Linux/Funnel",
+    "Notes/Privilege Escalation/Cloud",
+    "CTFs/HackTheBox/Linux/Three",
+    "CTFs/HackTheBox/Windows/Responder",
+    "CTFs/HackTheBox/Linux/Crocodile",
     "Images/OSCP-Challenge.png",
     "Pasted image 20260802212501.png",
     "Pasted image 20260730223408.png",
-    "CTFs/HackTheBox/ActiveDirectory/Signed",
-    "CTFs/HackTheBox/ActiveDirectory/Puppy",
     "Pasted image 20260727193006.png",
     "Pasted image 20260727192953.png",
     "Pasted image 20260727192949.png",

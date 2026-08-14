@@ -1,8 +1,10 @@
+
 ```
-<username> 
-<username>123 
-<username>password 
-123 
-password 
-password123
+admin:password
+admin:admin
+root:root
+root:password
+admin:admin1
+admin:password1
+root:password1
 ```

@@ -50,7 +50,6 @@ x86_64-w64-mingw32-gcc malicious.c --shared -o TextShaping.dll
 ```
 
 ---
-
 ## Reverse Shell
 
 ```

