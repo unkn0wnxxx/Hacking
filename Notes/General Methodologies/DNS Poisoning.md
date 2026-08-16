@@ -4,6 +4,12 @@ Assuming we have retrieved an .pfx file and extracted the certificate and privat
 ---
 ## PoC
 
+Check if we have permissions to add DNS Entries.
+
+```
+KRB5CCNAME=jaylee.clifton.ccache bloodyad --host DC01.logging.htb -d logging.htb -k get writable
+```
+
 The capturing itself will be via "responder" and we will utilize the retrieved certificate and private key to configure our responder, so we are actually able to trick the server that we are "authenticated". So we can capture the NTLM Hash.
 
 1. We will add the key.pem and key.cert file into /usr/share/responder/certs

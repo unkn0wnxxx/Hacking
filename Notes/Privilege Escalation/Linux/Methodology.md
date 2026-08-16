@@ -30,8 +30,9 @@
 	- sudo not available? --> [[doas]]
 - Any processes running?
 	- /etc/crontab
-		- Found Script with module (import os)? Got [[Enumerating Writable Files.|write permissions]] on module? Do [[Writable Module Priv Esc|this.]]
+		- Found Script with module (import os)? Got [[Enumerating Writable Files|write permissions]] on module? Do [[Writable Module Priv Esc|this.]]
 		- Executes an script inside home folder? --> Replace the script with malicious one.
+		- Enumerate [Incron](Incron.md)
 	- ps -aux
 	- run pspy tool
 	- Wildcard Injection?
@@ -48,7 +49,7 @@
 - Writable Path in Crontab?
 	- find / -type d -user username 2>/dev/null
 		- If yes, do [[Linux Priv Esc Writable Path in Crontab|this.]]
-- [[Enumerating Writable Files.]]
+- [[Enumerating Writable Files]]
 - Writable directory in webroot? Add wolfswebshell.php and view it in browser.
 - Enumerate writable system files.
 	- [[Linux Priv Esc Sys FIles]]

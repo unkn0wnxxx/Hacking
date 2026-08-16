@@ -25,6 +25,8 @@
 		- [ESC17](ESC17.md)
 - Found Credentials?
 	- Service Account? [Silver Ticket Attack](Silver%20Ticket%20Attack.md)
+	- [Enumerate Writable AD Objects](Enumerate%20Writable%20AD%20Objects.md)
+	- Check [ADCS Enum](ADCS%20Enum.md) to find new PrivEsc.
 - Groups?
 	- [DnsAdmins Group](DnsAdmins%20Group.md)
 	- [Ad Recycle Bin Group](Ad%20Recycle%20Bin%20Group.md)

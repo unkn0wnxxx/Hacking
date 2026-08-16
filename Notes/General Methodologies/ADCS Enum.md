@@ -15,6 +15,12 @@ NTLM Auth
 certipy-ad find -username 'ca_svc@fluffy.htb' -hashes :ca0f4f9e9eb8a092addf53bb03fc98c8 -dc-ip 10.129.232.88 -vulnerable -target FLUFFY-DC01-CA
 ```
 
+Kerberos Auth
+
+```
+certipy-ad find  -dc-ip 10.129.56.45 -target DC01.logging.htb -k -vulnerable -stdout
+```
+
 We have to do the next step aswell to get the proper result:
 ## Important Step: Internal Enum
 
