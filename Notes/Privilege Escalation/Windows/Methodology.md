@@ -29,7 +29,7 @@
 	- Groups
 		- [[Server Operator Priv Esc]]
 		- [[Account Operator Priv Esc]]
-		- [LAPS_Reader Group](LAPS_Reader.md)
+		- [LAPS_Reader Group](ReadLAPSPassword.md)
 - [[Windows Enum System Enum|Enumerating System Architecture]]
 	- Outdated OS?
 		- [MS14-068](MS14-068.md)

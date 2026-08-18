@@ -50,8 +50,10 @@
 		- Webserver active? Create Password wordlist with cewl [Wordlist Generation](Wordlist%20Generation.md)
 - Shell on server with dual host? -->  [[Ligolo-Ng Pivoting]]
 - [Get SID](Get%20SID.md)
-- Check [Browser History](Browser%20History.md)
-	- Found Chrome Login Entry?  [Browser Credential Decryption](Browser%20Credential%20Decryption.md)
+- Browser (Firefox/Chrome) running?
+	- Check [Browser History](Browser%20History.md)
+	- Found Chrome Login Entry? [Chrome Browser Credential Decryption](Chrome%20Browser%20Credential%20Decryption.md)
+	- Found keys4.db file? [Firefox Browser Credential Decryption](Firefox%20Browser%20Credential%20Decryption.md)
 - Authenticated?
 	- Machine Account with NTLM Hash, but only Kerberos auth? [S4U2self Impersonation](S4U2self%20Impersonation.md)
 - Got Shell?
@@ -73,7 +75,7 @@
 		- [[AddAllowedToAct]]
 		- [[GetChangesAll]]
 		- [[OwnerWrite & WriteOwner]]
-		- [ReadLAPSPassword](LAPS_Reader.md)
+		- [ReadLAPSPassword](ReadLAPSPassword.md)
 		- [DCSync](DCSync.md)
 		- [AddKeyCredentialLink](AddKeyCredentialLink.md)
 		- [WriteGPLink](WriteGPLink.md)

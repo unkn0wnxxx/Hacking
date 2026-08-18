@@ -10,6 +10,7 @@
 - sitemaps.xml
 - Enumerating server side language --> php?
 - Enumerating Technologies used by the website with [[whatweb]]
+- Assuming there could be more interesting parameters? [Parameter Fuzzing](Parameter%20Fuzzing.md)
 - Usernames on website?
 	- [[Webpage Mail Enum Command]]
 	- [Wordlist Generation](Wordlist%20Generation.md)
@@ -25,7 +26,7 @@
 	- [[WebDAV]]
 - ###### Found Login Panel?
 	- Search for Default Credentials
-	- [[Bruteforcing HTTP|Bruteforcing GET & POST Request]]
+	- [[Bruteforcing HTTP & HTTPS|Bruteforcing GET & POST Request]]
 	- [[SQL Injection Login Bypass|Login Panel bypass possible?]]
 - ###### Found Upload Functionality
 	- [[LFI in File Upload Bypass Network package|LFI in File Upload Package]]
@@ -50,9 +51,9 @@
 - ###### Exposed Git Repository?
 	- [[Git Repo Download|Download Git Repository]]
 - ###### Analysing all fields for Web Misconfigurations
-	- SQLi
+	- Assuming there is SQLi possible?
 		- Check for Public exploits of webpage title!
-		- [[SQL Injection Union Attack]]
+		- Test if first manually with: [[SQL Injection Union Attack]]
 		- [[SQL Injection Blind SQLi]]
 		- If Windows Box:
 			- [[SQLI NTLM Theft with xp_dirtree|SQLi NTLM Theft with xp_dirtree (mssql)]]

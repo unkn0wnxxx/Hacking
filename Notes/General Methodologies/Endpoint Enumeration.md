@@ -7,9 +7,19 @@ feroxbuster -u http://<target_ip>/
 feroxbuster -u http://<target_ip>/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
 ```
 
+Authenticated
+
 ```
-feroxbuster -u http://<target_ip>/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+feroxbuster --url https://streamio.htb/admin -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -k -x php -b "PHPSESSID=h0pkknlltm6lcg94gu8uas8muh"
 ```
+
+
+
+
+
+
+
+
 
 ```
 dirsearch -u http://<target_ip>/
