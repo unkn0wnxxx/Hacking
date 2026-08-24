@@ -7,7 +7,7 @@
 An initial scan revealed the following information about running services on the target server.
 
 ```
- nmap -n -Pn -sSCV -p- -oN nmap.txt 10.129.58.13 
+nmap -n -Pn -sSCV -p- -oN nmap.txt 10.129.58.13 
 Starting Nmap 7.99 ( https://nmap.org ) at 2026-08-17 12:19 -0500
 Nmap scan report for 10.129.58.13
 Host is up (0.021s latency).

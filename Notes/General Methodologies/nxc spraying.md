@@ -14,7 +14,6 @@ Saved the nxc output into an users.txt file and ran the following command:
 ```
 grep "SidTypeUser" newusers.txt | cut -d '\' -f2 | cut -d ' ' -f1 > users.txt
 ```
-
 ##### Local Auth
 
 ```

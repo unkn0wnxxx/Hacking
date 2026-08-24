@@ -14,6 +14,7 @@
 - Usernames on website?
 	- [[Webpage Mail Enum Command]]
 	- [Wordlist Generation](Wordlist%20Generation.md)
+	- Enumerate Pictures aswell, there could be credentials on the picture.
 - ###### Vulnerability Assessment
 	- Any Services or Web Application being utilized?
 	- Any Version Information?
