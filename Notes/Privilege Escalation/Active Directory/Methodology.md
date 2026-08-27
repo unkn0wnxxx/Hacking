@@ -8,6 +8,8 @@
 	- What is the Script doing?
 		- Authenticating against LDAP or smth else? [DNS Poisoning MITM Attack](DNS%20Poisoning%20MITM%20Attack.md)
 			- Can we add DNS Entries? [Enumerate Writable AD Objects](Enumerate%20Writable%20AD%20Objects.md)
+		- .ps1 script modifiable?
+			- Invoke-Command? [PS1 Script Invoke-Command RCE](PS1%20Script%20Invoke-Command%20RCE.md)
 - Found .exe file or .dll file --> Download them & [Decompiling](Decompiling.md) 
 	- Authenticating against LDAP or smth else? [DNS Poisoning MITM Attack](DNS%20Poisoning%20MITM%20Attack.md)
 		- Can we add DNS Entries? [Enumerate Writable AD Objects](Enumerate%20Writable%20AD%20Objects.md)
@@ -27,6 +29,9 @@
 	- Service Account? [Silver Ticket Attack](Silver%20Ticket%20Attack.md)
 	- [Enumerate Writable AD Objects](Enumerate%20Writable%20AD%20Objects.md)
 	- Check [ADCS Enum](ADCS%20Enum.md) to find new PrivEsc.
+	- Get RCE as this user by creating an ps object like [[Lateral Movement Windows PowerShell|this.]]
+	- [Credential Objects PowerShell](Credential%20Objects%20PowerShell.md)
+		- [Credential Objects with Configuration](Credential%20Objects%20with%20Configuration.md)
 - Groups?
 	- [DnsAdmins Group](DnsAdmins%20Group.md)
 	- [Ad Recycle Bin Group](Ad%20Recycle%20Bin%20Group.md)
@@ -62,6 +67,11 @@
 	- Enumerate [[Windows AutoLogon Credentials Enum|AutoLogon Credentials.]]
 	- [[Enumerating internal machines]]
 	- Found [DPAPI Credentials](DPAPI%20Credentials.md)?
+	- [Enumerate Logged-On Sessions](Enumerate%20Logged-On%20Sessions.md)
+		- [Screenshotting or Screensharing Sessions](Screenshotting%20or%20Screensharing%20Sessions.md)
+- Windows Defender Active? 
+	- Enumerate [Windows Defender Exclusions](Windows%20Defender%20Exclusions.md)
+	- [Windows Defender RCE](Windows%20Defender%20RCE.md)
 - [[BloodHound Enumeration]] --> [[BloodHound HowTo Internal Enum]]
 	- When in internal server --> Download domain information: [[SharpHound]]
 	- [[Domain Policies]]

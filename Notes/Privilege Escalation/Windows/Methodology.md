@@ -7,6 +7,8 @@
 		- Encoded Creds?
 			- [Ansible](Ansible.md)
 		- What is the Script doing?
+			- .ps1 script modifiable?
+				- Invoke-Command? [PS1 Script Invoke-Command RCE](PS1%20Script%20Invoke-Command%20RCE.md)
 - Found .exe file or .dll file --> Download them & [Decompiling](Decompiling.md) 
 - Found [DPAPI Credentials](DPAPI%20Credentials.md)?
 - [Hidden Files and Recycle Bin](Hidden%20Files%20and%20Recycle%20Bin.md)
@@ -41,8 +43,13 @@
 - Check [[Windows Scheduled Tasks|Scheduled Tasks.]]
 	- Write Access? --> Abuse.
 - Enumerate [[Windows AutoLogon Credentials Enum|AutoLogon Credentials.]]
+- Windows Defender Active? 
+	- Enumerate [Windows Defender Exclusions](Windows%20Defender%20Exclusions.md)
+	- [Windows Defender RCE](Windows%20Defender%20RCE.md)
 - Found Credentials?
 	- Get RCE as this user by creating an ps object like [[Lateral Movement Windows PowerShell|this.]]
+	- [Credential Objects PowerShell](Credential%20Objects%20PowerShell.md)
+		- [Credential Objects with Configuration](Credential%20Objects%20with%20Configuration.md)
 	- Encoded with Salt? [Format Hash](Format%20Hash.md)
 - Windows Priv Esc's
 	- Run [[PowerUp.ps1]]

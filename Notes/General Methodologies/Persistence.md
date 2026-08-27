@@ -1,6 +1,6 @@
 
 ---
-##### Create DA
+##### Create Domain Admin User
 
 Let's first create an Domain Admin User
 

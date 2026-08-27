@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTFs/HackTheBox/ActiveDirectory/Search/Documentation.md",
+                "file": "CTFs/HackTheBox/ActiveDirectory/Acute/Documentation.md",
                 "mode": "source",
                 "source": false
               },
@@ -22,12 +22,40 @@
             }
           },
           {
-            "id": "df640471853ae644",
+            "id": "5e28eac7c146681f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Services/HTTP & HTTPS (80 & 443)/Methodology.md",
+                "file": "Notes/General Methodologies/SeBackupPrivilege.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "SeBackupPrivilege"
+            }
+          },
+          {
+            "id": "0fd95cd037371ced",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/General Methodologies/Credential Objects PowerShell.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Credential Objects PowerShell"
+            }
+          },
+          {
+            "id": "b71bb9eca4cca1ca",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Privilege Escalation/Windows/Methodology.md",
                 "mode": "source",
                 "source": false
               },
@@ -36,31 +64,31 @@
             }
           },
           {
-            "id": "72c30bc011d77a44",
+            "id": "b32dccedb9b06e64",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/General Methodologies/Firefox Browser Credential Decryption.md",
+                "file": "Notes/General Methodologies/Credential Objects with Configuration.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Firefox Browser Credential Decryption"
+              "title": "Credential Objects with Configuration"
             }
           },
           {
-            "id": "f887e26e4e6e5078",
+            "id": "3bb836900a7d33be",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/General Methodologies/Endpoint Enumeration.md",
+                "file": "Notes/General Methodologies/Persistence.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Endpoint Enumeration"
+              "title": "Persistence"
             }
           }
         ]
@@ -216,42 +244,43 @@
   },
   "active": "7d42972540f010bb",
   "lastOpenFiles": [
-    "Notes/Services/HTTP & HTTPS (80 & 443)/Methodology.md",
-    "Notes/General Methodologies/Firefox Browser Credential Decryption.md",
-    "Notes/General Methodologies/Endpoint Enumeration.md",
-    "CTFs/HackTheBox/ActiveDirectory/Search/Documentation.md",
-    "Notes/General Methodologies/Unprotect xlsx file.md",
-    "Notes/General Methodologies/GenericWrite.md",
-    "Notes/General Methodologies/psexec.md",
-    "Notes/General Methodologies/GenericAll.md",
-    "Notes/General Methodologies/ReadGMSAPassword.md",
-    "Notes/General Methodologies/ADCS Enum.md",
-    "Notes/General Methodologies/NTLM Theft.md",
-    "Notes/General Methodologies/nxc spraying.md",
-    "Notes/General Methodologies/PFX Extraction.md",
-    "Notes/General Methodologies/Wordlist Generation.md",
-    "Notes/General Methodologies/wafw00f firewall enum.md",
-    "CTFs/HackTheBox/Networks/Dante/Documentation.md",
-    "CTFs/HackTheBox/ActiveDirectory/StreamIO/Documentation.md",
+    "Notes/General Methodologies/Persistence.md",
+    "Notes/General Methodologies/AD Persistence.md",
+    "Notes/General Methodologies/PS1 Script Invoke-Command RCE.md",
+    "Notes/General Methodologies/Credential Objects with Configuration.md",
+    "Notes/Privilege Escalation/Windows/Methodology.md",
+    "Notes/General Methodologies/Credential Objects PowerShell.md",
+    "Notes/General Methodologies/SeBackupPrivilege.md",
+    "CTFs/HackTheBox/ActiveDirectory/Acute/Documentation.md",
+    "Notes/Privilege Escalation/Active Directory/Methodology.md",
+    "Notes/General Methodologies/Enumerate Logged-On Sessions.md",
+    "Notes/General Methodologies/Windows Privesc Binary Hijacking.md",
+    "Notes/General Methodologies/Lateral Movement Windows PowerShell.md",
+    "Notes/Services/Metasploit.md",
+    "Notes/General Methodologies/Windows Defender RCE.md",
+    "Notes/General Methodologies/Screenshotting or Screensharing Sessions.md",
+    "Notes/General Methodologies/Windows Defender Exclusions.md",
+    "Images/Pasted image 20260827134653.png",
+    "Notes/General Methodologies/nmap scans.md",
+    "Notes/General Methodologies/File Transfers.md",
+    "Notes/General Methodologies/Opening Files.md",
+    "Notes/General Methodologies/Browser History.md",
+    "Notes/General Methodologies/Windows Installed Applications.md",
+    "Notes/General Methodologies/Windows Enum System Enum.md",
+    "Notes/General Methodologies/Windows Enum Users and Groups.md",
+    "Notes/General Methodologies/Decompiling.md",
+    "Notes/General Methodologies/Windows AutoLogon Credentials Enum.md",
+    "Notes/General Methodologies/PS History.md",
+    "CTFs/HackTheBox/ActiveDirectory/Acute",
+    "CTFs/HackTheBox/Linux/Base",
+    "Notes/Services/tftp (udp 69)",
+    "CTFs/HackTheBox/Linux/Included",
     "CTFs/HackTheBox/ActiveDirectory/Search/Untitled",
     "CTFs/HackTheBox/ActiveDirectory/Search",
-    "Notes/General Methodologies/Command Injection Brace Expansion.md",
-    "Notes/General Methodologies/SQLI NTLM Theft with xp_dirtree.md",
-    "Notes/General Methodologies/LFI NTLM Relay.md",
-    "Notes/General Methodologies/Bruteforcing HTTP & HTTPS.md",
-    "Notes/General Methodologies/SQL Injection Blind SQLi.md",
-    "Notes/General Methodologies/SQL Injection Login Bypass.md",
-    "Notes/General Methodologies/SQL Injection Union Attack.md",
-    "Notes/General Methodologies/MSSQL Connection.md",
-    "Notes/General Methodologies/Parameter Fuzzing.md",
     "CTFs/HackTheBox/ActiveDirectory/StreamIO",
     "Notes/Services/MongoDB",
     "CTFs/HackTheBox/Linux/Unified",
     "CTFs/HackTheBox/Linux/Oopsie",
-    "CTFs/HackTheBox/Linux/Vaccine",
-    "CTFs/Repititions/HackTheBox/Windows",
-    "CTFs/Repititions/HackTheBox/Linux",
-    "CTFs/HackTheBox/ActiveDirectory/DanglingTree",
     "Images/Pasted image 20260814223329.png",
     "Images/OSCP-Challenge.png",
     "Pasted image 20260802212501.png",
@@ -260,7 +289,6 @@
     "Pasted image 20260727192953.png",
     "Pasted image 20260727192949.png",
     "Pasted image 20260727192946.png",
-    "Pasted image 20260724012243.png",
-    "Pasted image 20260718162742.png"
+    "Pasted image 20260724012243.png"
   ]
 }

