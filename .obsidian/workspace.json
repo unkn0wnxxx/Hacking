@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTFs/HackTheBox/ActiveDirectory/Acute/Documentation.md",
+                "file": "CTFs/HackTheBox/Linux/Base/Documentation.md",
                 "mode": "source",
                 "source": false
               },
@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/General Methodologies/SeBackupPrivilege.md",
+                "file": "Notes/General Methodologies/Enumerating File Extensions.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SeBackupPrivilege"
+              "title": "Enumerating File Extensions"
             }
           },
           {
@@ -244,14 +244,16 @@
   },
   "active": "7d42972540f010bb",
   "lastOpenFiles": [
+    "Notes/General Methodologies/Enumerating File Extensions.md",
+    "Notes/General Methodologies/SeBackupPrivilege.md",
+    "CTFs/HackTheBox/Linux/Base/Documentation.md",
+    "CTFs/HackTheBox/ActiveDirectory/Acute/Documentation.md",
     "Notes/General Methodologies/Persistence.md",
+    "Notes/Privilege Escalation/Windows/Methodology.md",
+    "Notes/General Methodologies/Credential Objects PowerShell.md",
     "Notes/General Methodologies/AD Persistence.md",
     "Notes/General Methodologies/PS1 Script Invoke-Command RCE.md",
     "Notes/General Methodologies/Credential Objects with Configuration.md",
-    "Notes/Privilege Escalation/Windows/Methodology.md",
-    "Notes/General Methodologies/Credential Objects PowerShell.md",
-    "Notes/General Methodologies/SeBackupPrivilege.md",
-    "CTFs/HackTheBox/ActiveDirectory/Acute/Documentation.md",
     "Notes/Privilege Escalation/Active Directory/Methodology.md",
     "Notes/General Methodologies/Enumerate Logged-On Sessions.md",
     "Notes/General Methodologies/Windows Privesc Binary Hijacking.md",
@@ -269,8 +271,6 @@
     "Notes/General Methodologies/Windows Enum System Enum.md",
     "Notes/General Methodologies/Windows Enum Users and Groups.md",
     "Notes/General Methodologies/Decompiling.md",
-    "Notes/General Methodologies/Windows AutoLogon Credentials Enum.md",
-    "Notes/General Methodologies/PS History.md",
     "CTFs/HackTheBox/ActiveDirectory/Acute",
     "CTFs/HackTheBox/Linux/Base",
     "Notes/Services/tftp (udp 69)",
