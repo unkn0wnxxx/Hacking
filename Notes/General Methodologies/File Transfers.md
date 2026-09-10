@@ -12,7 +12,6 @@ On target machine:
 ```
 net use m: \\192.168.45.241\test /user:saitama saitama
 ```
-
 ## Upload
 
 On target system.
