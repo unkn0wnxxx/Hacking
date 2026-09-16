@@ -1,3 +1,4 @@
+
 - LinPEAS
 - [[Creating Malicious Linux Binary]]
 - Enumerate user and groups
@@ -17,7 +18,7 @@
 	- gtfobins.github.io
 	- Unknown/Custom Binary? Do [[Unknown Custom Binary|this.]]
 		- or [Buffer Overflows](Buffer%20Overflows.md)
-- Found .zip,.kdbx files? Download them locally & bruteforce!
+- Found .zip or .kdbx files? Download them locally & bruteforce!
 - Found Credentials?
 	- Encoded with Salt? [Format Hash](Format%20Hash.md)
 - Enumerating [[Linux Binarys with Capabilities]]
@@ -51,13 +52,13 @@
 		- If yes, do [[Linux Priv Esc Writable Path in Crontab|this.]]
 - [[Enumerating Writable Files]]
 - Writable directory in webroot? Add wolfswebshell.php and view it in browser.
-- Enumerate writable system files.
+- Enumerate writable system files
 	- [[Linux Priv Esc Sys FIles]]
 - Found interesting script?
 	- Check for [[Linux Priv Esc Pattern Matching]]
 - uname -a 
 	- Found Linux Kernel Exploits?
-- Enumerating git repositories internally.
+- Enumerating git repositories internally
 	-  find / -iname ".git" 2>/dev/null
 		- git show commit code --> analyzing commits for sensitive information
 -  [[Post Exploitation Linux and FreeBSD]]

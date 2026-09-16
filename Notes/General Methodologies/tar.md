@@ -5,7 +5,6 @@
 ```
 tar -xvf filename.tar
 ```
-
 ## Compressing
 
 Create compressed archive

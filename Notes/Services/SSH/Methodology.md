@@ -5,7 +5,7 @@
 - [[SSH Git Repo Push to Remote Target|RCE using Git and SSH Private Key]]
 - Found SSH Private Key?
 	- Always use curl, wget or burpsuite's response body, to avoid formatting errors!
-
+- Enumerate encryption algorithms & ciphers with [ssh-audit](ssh-audit.md)
 If ssh complain about libcrypto or key format, normalize the file:
 
 > dos2unix ~/.ssh/id_rsa  

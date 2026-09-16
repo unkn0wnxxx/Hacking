@@ -4,7 +4,6 @@
 Steps in order to portforward with Ligolo-Ng.
 
 Assuming u have downloaded the linux agent onto the target server and got ligolo-ng downloaded on ur local machine u can use the following steps in order to portforward ports.
-
 ## Linux
 
 On Local machine

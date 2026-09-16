@@ -4,7 +4,6 @@
 ```
 nmap -n -Pn -sV --script "ldap* and not brute" 192.168.155.122
 ```
-
 # Apache Directory Studio (Authenticated)
 
 Prefered version, takes more time but is more efficient.

@@ -2,7 +2,6 @@
 Works for Redis 4.xx & 5.xx
 
 ---
-
 ## PoC
 
 Download https://github.com/Ridter/redis-rce?tab=readme-ov-file

@@ -1,6 +1,5 @@
 
 ---
-
 ## Connecting (authenticated)
 
 ```

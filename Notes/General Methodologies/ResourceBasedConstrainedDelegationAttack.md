@@ -44,7 +44,6 @@ We will need PowerMad and Rubeus, which we can upload using Evil-WinRM as shown 
 ```
 . ./Powermad.ps1
 ```
-
 # Creating a Computer Object
 
 Now, let's create a fake computer and add it to the domain. We can use PowerMad's New-MachineAccount to achieve this.

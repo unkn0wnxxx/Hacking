@@ -6,8 +6,10 @@
 	- ENUMERATE ALL ENDPOINTS WITH ALL TOOLS!
 - ###### [[Subdomain Enumeration|Enumerating subdomains]]
 - robots.txt
+- Digital Cert Enumeration with [sslyze](sslyze.md)
 - Identified an [Amazon S3 Bucket](Amazon%20S3%20Bucket.md)?
 - sitemaps.xml
+- [HTTP Requests to Web Proxy](HTTP%20Requests%20to%20Web%20Proxy.md)
 - Enumerating server side language --> php?
 - Enumerating Technologies used by the website with [[whatweb]]
 - Assuming there could be more interesting parameters? [Parameter Fuzzing](Parameter%20Fuzzing.md)

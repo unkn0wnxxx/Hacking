@@ -10,7 +10,6 @@ C:\xampp\htdocs\wordpress\wp-config.php
 C:\inetpub\wwwroot\wordpress\wp-config.php
 C:\inetpub\wwwroot\blog\wp-config.php
 ```
-
 ##### Linux
 
 ```

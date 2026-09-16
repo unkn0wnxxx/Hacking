@@ -16,6 +16,8 @@
 	- Enumerate [[Windows AutoLogon Credentials Enum|AutoLogon Credentials.]]
 	- [[Enumerating internal machines]]
 - User Privileges whoami /privs
+	- Administrator?
+		- [Enumerating PrintSpoofer Finding](Enumerating%20PrintSpoofer%20Finding.md)
 	- [[SeImpersonatePrivilege]]
 		- [[PrintSpoofer.exe]]
 		- Potatos
