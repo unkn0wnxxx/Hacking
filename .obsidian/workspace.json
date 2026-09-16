@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Privilege Escalation/Hypervisor/Methodology.md",
+                "file": "Notes/General Methodologies/Enumerating Writable Files.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Methodology"
+              "title": "Enumerating Writable Files"
             }
           },
           {
@@ -203,10 +203,11 @@
       "bases:Create new base": false
     }
   },
-  "active": "8785e0e5e33a2bc8",
+  "active": "f7d030826b1cb90b",
   "lastOpenFiles": [
-    "Notes/General Methodologies/Guest-Tools and Shared-Memory-Tunnels.md",
+    "Notes/General Methodologies/File Transfers.md",
     "Notes/Privilege Escalation/Hypervisor/Methodology.md",
+    "Notes/General Methodologies/Guest-Tools and Shared-Memory-Tunnels.md",
     "Notes/General Methodologies/dmidecode.md",
     "Notes/General Methodologies/Driver Enumeration.md",
     "Notes/General Methodologies/Emulated Legacy Devices.md",
@@ -233,7 +234,6 @@
     "Notes/General Methodologies/Windows Enum Services & Processes.md",
     "Notes/General Methodologies/Windows Installed Applications.md",
     "Notes/General Methodologies/Windows Enum System Enum.md",
-    "Notes/General Methodologies/Enumerating internal machines.md",
     "Notes/CMS/Jenkins",
     "Pasted image 20260829175129.png",
     "CTFs/HackTheBox/ActiveDirectory/Object",
