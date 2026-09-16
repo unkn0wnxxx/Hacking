@@ -13,12 +13,20 @@
             "state": {
               "type": "markdown",
               "state": {
+<<<<<<< HEAD
                 "file": "Notes/General Methodologies/sqlmap.md",
+=======
+                "file": "Notes/General Methodologies/ADCS Enum.md",
+>>>>>>> a5769df (Added methodologies.)
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
+<<<<<<< HEAD
               "title": "sqlmap"
+=======
+              "title": "ADCS Enum"
+>>>>>>> a5769df (Added methodologies.)
             }
           },
           {
@@ -124,7 +132,11 @@
             "state": {
               "type": "backlink",
               "state": {
+<<<<<<< HEAD
                 "file": "Notes/General Methodologies/tar.md",
+=======
+                "file": "Notes/General Methodologies/ADCS Enum.md",
+>>>>>>> a5769df (Added methodologies.)
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -143,7 +155,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+<<<<<<< HEAD
                 "file": "Notes/General Methodologies/tar.md",
+=======
+                "file": "Notes/General Methodologies/ADCS Enum.md",
+>>>>>>> a5769df (Added methodologies.)
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -202,6 +218,7 @@
   },
   "active": "7484556a06a57b1c",
   "lastOpenFiles": [
+<<<<<<< HEAD
     "CTFs/HackTheBox/ActiveDirectory/Analysis/Documentation.md",
     "Notes/General Methodologies/File Transfers.md",
     "Notes/General Methodologies/Enumerating File Extensions.md",
@@ -213,6 +230,17 @@
     "Notes/General Methodologies/ReadLAPSPassword.md",
     "Notes/General Methodologies/MySQL Connecting.md",
     "CTFs/HackTheBox/ActiveDirectory/Analysis",
+=======
+    "Notes/Privilege Escalation/Active Directory/Methodology.md",
+    "Notes/General Methodologies/nxc spraying.md",
+    "Notes/Services/Proxy Service/Methodology.md",
+    "Notes/Privilege Escalation/Hypervisor/Methodology.md",
+    "CTFs/ProvingGrounds/Windows/Squid/Documentation.md",
+    "Notes/Services/mountd, NFS, NFC (2049)/Methodology.md",
+    "Notes/Privilege Escalation/Windows/Methodology.md",
+    "Notes/Services/ident/Methodology.md",
+    "Notes/General Methodologies/dmidecode.md",
+>>>>>>> a5769df (Added methodologies.)
     "Notes/General Methodologies/Host Discovery & Ping Sweeps.md",
     "Notes/Privilege Escalation/Windows/Methodology.md",
     "Notes/Privilege Escalation/Linux/Methodology.md",
