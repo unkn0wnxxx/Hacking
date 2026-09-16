@@ -8,56 +8,49 @@
         "type": "tabs",
         "children": [
           {
-            "id": "7484556a06a57b1c",
+            "id": "7655efabfc6a321b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-<<<<<<< HEAD
-                "file": "Notes/General Methodologies/sqlmap.md",
-=======
-                "file": "Notes/General Methodologies/ADCS Enum.md",
->>>>>>> a5769df (Added methodologies.)
+                "file": "Notes/General Methodologies/dmidecode.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-<<<<<<< HEAD
-              "title": "sqlmap"
-=======
-              "title": "ADCS Enum"
->>>>>>> a5769df (Added methodologies.)
+              "title": "dmidecode"
             }
           },
           {
-            "id": "7d42972540f010bb",
+            "id": "f7d030826b1cb90b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/General Methodologies/Enumerating File Extensions.md",
+                "file": "Notes/Privilege Escalation/Hypervisor/Methodology.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Enumerating File Extensions"
+              "title": "Methodology"
             }
           },
           {
-            "id": "76d982c6b90370ee",
+            "id": "a8f2d9c07956db9b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/General Methodologies/File Transfers.md",
+                "file": "Notes/General Methodologies/Guest-Tools and Shared-Memory-Tunnels.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "File Transfers"
+              "title": "Guest-Tools and Shared-Memory-Tunnels"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -107,7 +100,10 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {},
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
               "icon": "lucide-bookmark",
               "title": "Bookmarks"
             }
@@ -116,7 +112,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 299.5
+    "width": 242.16668701171875
   },
   "right": {
     "id": "baeeaf1b01960644",
@@ -132,11 +128,7 @@
             "state": {
               "type": "backlink",
               "state": {
-<<<<<<< HEAD
-                "file": "Notes/General Methodologies/tar.md",
-=======
-                "file": "Notes/General Methodologies/ADCS Enum.md",
->>>>>>> a5769df (Added methodologies.)
+                "file": "Notes/Privilege Escalation/Hypervisor/Methodology.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -146,7 +138,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for tar"
+              "title": "Backlinks"
             }
           },
           {
@@ -155,16 +147,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-<<<<<<< HEAD
-                "file": "Notes/General Methodologies/tar.md",
-=======
-                "file": "Notes/General Methodologies/ADCS Enum.md",
->>>>>>> a5769df (Added methodologies.)
+                "file": "Notes/Privilege Escalation/Hypervisor/Methodology.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from tar"
+              "title": "Outgoing links"
             }
           },
           {
@@ -188,22 +176,21 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Welcome.md",
+                "file": "Notes/Privilege Escalation/Hypervisor/Methodology.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Welcome"
+              "title": "Outline"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -216,50 +203,39 @@
       "bases:Create new base": false
     }
   },
-  "active": "7484556a06a57b1c",
+  "active": "8785e0e5e33a2bc8",
   "lastOpenFiles": [
-<<<<<<< HEAD
-    "CTFs/HackTheBox/ActiveDirectory/Analysis/Documentation.md",
-    "Notes/General Methodologies/File Transfers.md",
-    "Notes/General Methodologies/Enumerating File Extensions.md",
-    "Notes/General Methodologies/nxc spraying.md",
+    "Notes/General Methodologies/Guest-Tools and Shared-Memory-Tunnels.md",
+    "Notes/Privilege Escalation/Hypervisor/Methodology.md",
+    "Notes/General Methodologies/dmidecode.md",
+    "Notes/General Methodologies/Driver Enumeration.md",
+    "Notes/General Methodologies/Emulated Legacy Devices.md",
+    "Notes/Services/mountd, NFS, NFC (2049)/Methodology.md",
+    "Notes/General Methodologies/ADCS Enum.md",
     "CTFs/Repititions/HackTheBox/ActiveDirectory/Logging/Documentation.md",
     "CTFs/Repititions/HackTheBox/ActiveDirectory/Logging",
-    "Notes/General Methodologies/Endpoint Enumeration.md",
-    "Notes/Privilege Escalation/Active Directory/Methodology.md",
-    "Notes/General Methodologies/ReadLAPSPassword.md",
-    "Notes/General Methodologies/MySQL Connecting.md",
+    "CTFs/HackTheBox/ActiveDirectory/Analysis/Documentation.md",
     "CTFs/HackTheBox/ActiveDirectory/Analysis",
-=======
     "Notes/Privilege Escalation/Active Directory/Methodology.md",
     "Notes/General Methodologies/nxc spraying.md",
     "Notes/Services/Proxy Service/Methodology.md",
-    "Notes/Privilege Escalation/Hypervisor/Methodology.md",
     "CTFs/ProvingGrounds/Windows/Squid/Documentation.md",
-    "Notes/Services/mountd, NFS, NFC (2049)/Methodology.md",
     "Notes/Privilege Escalation/Windows/Methodology.md",
     "Notes/Services/ident/Methodology.md",
-    "Notes/General Methodologies/dmidecode.md",
->>>>>>> a5769df (Added methodologies.)
     "Notes/General Methodologies/Host Discovery & Ping Sweeps.md",
-    "Notes/Privilege Escalation/Windows/Methodology.md",
+    "Notes/General Methodologies/Enumerating PrintSpoofer Finding.md",
+    "Notes/General Methodologies/DPAPI Credentials.md",
+    "Notes/Privilege Escalation/Hypervisor",
+    "Notes/General Methodologies/Windows AutoLogon Credentials Enum.md",
     "Notes/Privilege Escalation/Linux/Methodology.md",
-    "Notes/Privilege Escalation/Cloud/Methodology.md",
-    "Notes/General Methodologies/ADSync & AD Connect.md",
-    "Notes/General Methodologies/wpscan.md",
-    "Notes/Services/HTTP & HTTPS (80 & 443)/Methodology.md",
-    "Notes/General Methodologies/SSTI.md",
-    "Notes/Services/XML, XXE/Methodology.md",
-    "CTFs/HackTheBox/ActiveDirectory/Object/Documentation.md",
-    "Notes/General Methodologies/OwnerWrite & WriteOwner.md",
-    "Notes/CMS/Jenkins/Methodology.md",
-    "Notes/General Methodologies/GenericWrite.md",
-    "Notes/General Methodologies/ForceChangePassword.md",
-    "Notes/General Methodologies/Jenkins Credential Decryption.md",
-    "Notes/General Methodologies/Jenkins Command Execution and RCE.md",
+    "Notes/General Methodologies/Windows Defender Exclusions.md",
+    "Notes/General Methodologies/Identifying Scores CVE.md",
+    "Notes/General Methodologies/Windows Enum Services & Processes.md",
+    "Notes/General Methodologies/Windows Installed Applications.md",
+    "Notes/General Methodologies/Windows Enum System Enum.md",
+    "Notes/General Methodologies/Enumerating internal machines.md",
     "Notes/CMS/Jenkins",
     "Pasted image 20260829175129.png",
-    "Notes/General Methodologies/SharpHound.md",
     "CTFs/HackTheBox/ActiveDirectory/Object",
     "Images/Pasted image 20260827134653.png",
     "CTFs/HackTheBox/ActiveDirectory/Acute",
@@ -267,7 +243,6 @@
     "Notes/Services/tftp (udp 69)",
     "CTFs/HackTheBox/Linux/Included",
     "CTFs/HackTheBox/ActiveDirectory/Search/Untitled",
-    "CTFs/HackTheBox/ActiveDirectory/Search",
     "Images/Pasted image 20260814223329.png",
     "Images/OSCP-Challenge.png",
     "Pasted image 20260802212501.png",
