@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTFs/HackTheBox/Windows/Bastion/Documentation.md",
+                "file": "CTFs/HackTheBox/Linux/Valentine/Documentation.md",
                 "mode": "source",
                 "source": false
               },
@@ -27,40 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/General Methodologies/Virtual Hard Disk File Discovered.md",
+                "file": "Notes/General Methodologies/Heartbleed Exploit.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Virtual Hard Disk File Discovered"
-            }
-          },
-          {
-            "id": "44ef556045b5cc83",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/General Methodologies/mRemoteNG Privilege Escalation.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "mRemoteNG Privilege Escalation"
-            }
-          },
-          {
-            "id": "89c41211e8d63cf1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/General Methodologies/Corrupted SMB Share Download.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Corrupted SMB Share Download"
+              "title": "Heartbleed Exploit"
             }
           },
           {
@@ -69,7 +41,21 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Services/SMB/Methodology.md",
+                "file": "Notes/General Methodologies/Encoding and Decoding.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Encoding and Decoding"
+            }
+          },
+          {
+            "id": "05dcf9568624aaa2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Services/SSH/Methodology.md",
                 "mode": "source",
                 "source": false
               },
@@ -189,7 +175,7 @@
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true,
+                "useHierarchy": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
@@ -232,19 +218,27 @@
   },
   "active": "f7d030826b1cb90b",
   "lastOpenFiles": [
+    "Notes/Services/SSH/Methodology.md",
+    "Notes/General Methodologies/SSH Connection Issues.md",
+    "Notes/General Methodologies/Encoding and Decoding.md",
+    "Notes/General Methodologies/Heartbleed Exploit.md",
+    "CTFs/HackTheBox/Linux/Valentine/Documentation.md",
+    "Notes/General Methodologies/nmap scans.md",
+    "Notes/General Methodologies/Extract Information out of the picture.md",
+    "Notes/Privilege Escalation/Linux/Methodology.md",
     "Notes/Services/SMB/Methodology.md",
-    "Notes/Privilege Escalation/Windows/Methodology.md",
     "Notes/General Methodologies/Corrupted SMB Share Download.md",
+    "Notes/General Methodologies/mRemoteNG Privilege Escalation.md",
     "Notes/General Methodologies/Virtual Hard Disk File Discovered.md",
     "CTFs/HackTheBox/Windows/Bastion/Documentation.md",
+    "CTFs/HackTheBox/Linux/Valentine",
+    "Notes/Privilege Escalation/Windows/Methodology.md",
     "Notes/General Methodologies/File Transfers.md",
-    "Notes/General Methodologies/mRemoteNG Privilege Escalation.md",
     "Notes/General Methodologies/Docker Sudo Permissions.md",
     "Notes/General Methodologies/Hidden Files and Recycle Bin.md",
     "Notes/General Methodologies/Windows AutoLogon Credentials Enum.md",
     "Notes/General Methodologies/PS History.md",
     "Notes/General Methodologies/Creating Malicious Linux Binary.md",
-    "Notes/Privilege Escalation/Linux/Methodology.md",
     "CTFs/HackTheBox/Linux/Data/Documentation.md",
     "CTFs/HackTheBox/Windows/Bastion",
     "Notes/General Methodologies/Linux Priv Esc Docker Group.md",
@@ -252,14 +246,7 @@
     "Notes/Services/Grafana (3000)/Methodology.md",
     "Notes/General Methodologies/Guest-Tools and Shared-Memory-Tunnels.md",
     "Notes/General Methodologies/dmidecode.md",
-    "Notes/General Methodologies/Enumerating Writable Files.md",
     "CTFs/HackTheBox/Linux/Data",
-    "Notes/Privilege Escalation/Hypervisor/Methodology.md",
-    "Notes/General Methodologies/Driver Enumeration.md",
-    "Notes/General Methodologies/Emulated Legacy Devices.md",
-    "Notes/Services/mountd, NFS, NFC (2049)/Methodology.md",
-    "Notes/General Methodologies/ADCS Enum.md",
-    "CTFs/Repititions/HackTheBox/ActiveDirectory/Logging/Documentation.md",
     "CTFs/Repititions/HackTheBox/ActiveDirectory/Logging",
     "CTFs/HackTheBox/ActiveDirectory/Analysis",
     "Notes/Privilege Escalation/Hypervisor",
@@ -269,7 +256,6 @@
     "Images/Pasted image 20260827134653.png",
     "CTFs/HackTheBox/ActiveDirectory/Acute",
     "CTFs/HackTheBox/Linux/Base",
-    "Notes/Services/tftp (udp 69)",
     "Images/Pasted image 20260814223329.png",
     "Images/OSCP-Challenge.png",
     "Pasted image 20260802212501.png",

@@ -1,7 +1,19 @@
 
-hURL is an powerful tool, which allows decoding and encoding of strings.
+hURL & xxd are powerful tools, which allows decoding and encoding of strings.
 
+---
 ## Decoding
+
+##### xxd
+
+Hex into Binary/Original Format
+
+```
+cat hype_key | xxd -r -p 
+```
+
+---
+###### hURL
 
 Hex
 

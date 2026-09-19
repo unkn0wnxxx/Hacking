@@ -1,4 +1,6 @@
 
+- [SSH Connection Issues](SSH%20Connection%20Issues.md)
+- [SSH Connecting](SSH%20Connecting.md)
 - Bruteforce with hydra
 - [[Default Credentials]]
 - Assuming we got an private ssh key of an user from the target server, we can file transfer git repositorys like that:[[Git Repo Download]]
