@@ -2,6 +2,7 @@
 - [[Old Windows]] Sub-Directory/Backup?
 - Check [[PS History]]
 - Webpage? Check if webroot is writable and use reverse shell --> potentially elevate privs.
+- Found .vhd file? Do [Virtual Hard Disk File Discovered](Virtual%20Hard%20Disk%20File%20Discovered.md)
 - Found Script?
 	- Credentials?
 		- Encoded Creds?
@@ -39,6 +40,7 @@
 		- [MS14-068](MS14-068.md)
 		- Windows Kernel Exploits --> winPEAS tells u which kernel exploits are available.
 - [[Windows Installed Applications|Check Installed Applications]]
+	- mRemoteNG? [mRemoteNG Privilege Escalation](mRemoteNG%20Privilege%20Escalation.md)
 - [[Windows Enum Services & Processes|Check Running Services and Processes]]
 	- Incase tools are restricted, we can utilize [[Port Scan PowerShell|this]] PS Script to enumerate running services.
 - [[Windows File Enumeration|Searching for files.]]

@@ -1,4 +1,5 @@
 
+- [Corrupted SMB Share Download](Corrupted%20SMB%20Share%20Download.md)
 - Only Kerberos Auth? [SMB with Kerberos Auth](SMB%20with%20Kerberos%20Auth.md)
 - Anonymous Access
 - [[Enumerating SMB Shares with guest access]]
