@@ -35,6 +35,7 @@
 		- Found Script with module (import os)? Got [[Enumerating Writable Files|write permissions]] on module? Do [[Writable Module Priv Esc|this.]]
 		- Executes an script inside home folder? --> Replace the script with malicious one.
 		- Enumerate [Incron](Incron.md)
+		- Cronjob executing script which is able to modify binaries? [Compiling Malicious Binarys](Compiling%20Malicious%20Binarys.md)
 	- ps -aux
 	- run pspy tool
 	- Wildcard Injection?
