@@ -26,5 +26,5 @@ nmap -sU --top-ports 100 -oN nmap_udp.txt 10.129.136.40
 Vulnerability Discovery
 
 ```
-nmap -n -Pn -sSCV --script vuln -p 22,80,443 valentine.htb
+nmap -n -Pn -sSCV --script vuln -p 22,80,443 valentine.htb > vuln.txt
 ```

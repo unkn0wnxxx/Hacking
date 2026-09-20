@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTFs/HackTheBox/Linux/Valentine/Documentation.md",
+                "file": "CTFs/HackTheBox/Linux/Shocker/Documentation.md",
                 "mode": "source",
                 "source": false
               },
@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/General Methodologies/Heartbleed Exploit.md",
+                "file": "Notes/General Methodologies/Enumerating File Extensions.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Heartbleed Exploit"
+              "title": "Enumerating File Extensions"
             }
           },
           {
@@ -218,12 +218,17 @@
   },
   "active": "f7d030826b1cb90b",
   "lastOpenFiles": [
-    "Notes/Services/SSH/Methodology.md",
-    "Notes/General Methodologies/SSH Connection Issues.md",
     "Notes/General Methodologies/Encoding and Decoding.md",
+    "Notes/General Methodologies/Enumerating File Extensions.md",
+    "CTFs/HackTheBox/Linux/Shocker/Documentation.md",
+    "Notes/Services/Metasploit.md",
+    "Notes/General Methodologies/nmap scans.md",
+    "Notes/General Methodologies/Endpoint Enumeration.md",
     "Notes/General Methodologies/Heartbleed Exploit.md",
     "CTFs/HackTheBox/Linux/Valentine/Documentation.md",
-    "Notes/General Methodologies/nmap scans.md",
+    "CTFs/HackTheBox/Linux/Shocker",
+    "Notes/Services/SSH/Methodology.md",
+    "Notes/General Methodologies/SSH Connection Issues.md",
     "Notes/General Methodologies/Extract Information out of the picture.md",
     "Notes/Privilege Escalation/Linux/Methodology.md",
     "Notes/Services/SMB/Methodology.md",
@@ -242,10 +247,6 @@
     "CTFs/HackTheBox/Linux/Data/Documentation.md",
     "CTFs/HackTheBox/Windows/Bastion",
     "Notes/General Methodologies/Linux Priv Esc Docker Group.md",
-    "Notes/General Methodologies/Grafana.md",
-    "Notes/Services/Grafana (3000)/Methodology.md",
-    "Notes/General Methodologies/Guest-Tools and Shared-Memory-Tunnels.md",
-    "Notes/General Methodologies/dmidecode.md",
     "CTFs/HackTheBox/Linux/Data",
     "CTFs/Repititions/HackTheBox/ActiveDirectory/Logging",
     "CTFs/HackTheBox/ActiveDirectory/Analysis",
@@ -255,7 +256,6 @@
     "CTFs/HackTheBox/ActiveDirectory/Object",
     "Images/Pasted image 20260827134653.png",
     "CTFs/HackTheBox/ActiveDirectory/Acute",
-    "CTFs/HackTheBox/Linux/Base",
     "Images/Pasted image 20260814223329.png",
     "Images/OSCP-Challenge.png",
     "Pasted image 20260802212501.png",

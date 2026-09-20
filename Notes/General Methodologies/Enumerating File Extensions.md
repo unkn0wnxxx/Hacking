@@ -1,10 +1,10 @@
 
 ```
-feroxbuster --url http://intelligence.htb -w /usr/share/dirb/wordlists/common.txt -x txt,php,html,zip,json,docx,aspx,asp,cgi,pdf
+feroxbuster --url http://intelligence.htb -w /usr/share/dirb/wordlists/common.txt -x txt,php,html,zip,json,docx,aspx,asp,cgi,pdf,sh,py
 ```
 
 ```
-feroxbuster --url http://intelligence.htb -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x txt,php,html,zip,json,docx,aspx,asp,cgi,pdf
+feroxbuster --url http://intelligence.htb -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x txt,php,html,zip,json,docx,aspx,asp,cgi,pdf,sh,py
 ```
 
 Authenticated
@@ -14,10 +14,10 @@ feroxbuster --url https://streamio.htb/admin -w /usr/share/wordlists/dirbuster/d
 ```
 
 ```
-gobuster dir -u http://<target_ip>/ -w /usr/share/dirb/wordlists/common.txt -x txt,php,html,zip,json,docx,aspx,asp,cgi
+gobuster dir -u http://<target_ip>/ -w /usr/share/dirb/wordlists/common.txt -x txt,php,html,zip,json,docx,aspx,asp,cgi,sh,py
 ```
 ###### Redirect
 
 ```
-gobuster dir -u http://oscp:20000/ -w /usr/share/dirb/wordlists/common.txt -x txt,php,html,zip,json,docx,aspx,asp,cgi --exclude-length 201
+gobuster dir -u http://oscp:20000/ -w /usr/share/dirb/wordlists/common.txt -x txt,php,html,zip,json,docx,aspx,asp,cgi,sh,py --exclude-length 201
 ```
