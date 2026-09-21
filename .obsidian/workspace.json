@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTFs/HackTheBox/Windows/Grandpa/Documentation.md",
+                "file": "CTFs/HackTheBox/Windows/Granny/Documentation.md",
                 "mode": "source",
                 "source": false
               },
@@ -204,9 +204,11 @@
   },
   "active": "f7d030826b1cb90b",
   "lastOpenFiles": [
-    "Notes/Privilege Escalation/Linux/Methodology.md",
     "Notes/Services/Metasploit/Exploiting.md",
+    "CTFs/HackTheBox/Windows/Granny/Documentation.md",
     "CTFs/HackTheBox/Windows/Grandpa/Documentation.md",
+    "CTFs/HackTheBox/Windows/Granny",
+    "Notes/Privilege Escalation/Linux/Methodology.md",
     "Notes/Services/Metasploit/Basic Stuff.md",
     "Notes/Services/Metasploit",
     "Notes/General Methodologies/Unpacking bzip2, gzip2 and POSIX tar archives.md",
@@ -234,12 +236,10 @@
     "CTFs/HackTheBox/Linux/Valentine/Documentation.md",
     "CTFs/HackTheBox/Linux/Shocker",
     "Notes/General Methodologies/SSH Connection Issues.md",
-    "Notes/General Methodologies/Extract Information out of the picture.md",
     "CTFs/HackTheBox/Linux/Valentine",
     "CTFs/HackTheBox/Windows/Bastion",
     "CTFs/HackTheBox/Linux/Data",
     "CTFs/Repititions/HackTheBox/ActiveDirectory/Logging",
-    "CTFs/HackTheBox/ActiveDirectory/Analysis",
     "Pasted image 20260829175129.png",
     "Images/Pasted image 20260827134653.png",
     "Images/Pasted image 20260814223329.png",
