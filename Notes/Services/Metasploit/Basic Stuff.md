@@ -7,7 +7,6 @@ msfconsole -q
 ```
 use exploit/multi/handler
 ```
-
 ###### Windows Payload
 
 x64 
