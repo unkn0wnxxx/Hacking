@@ -1,13 +1,10 @@
-<<<<<<< HEAD
+
 - Start with [[nxc spraying]] as guest user or blank to enum users
 	- Check with --local-auth 
 	- Only Kerberos Auth? 
-=======
-
 - Start with [[nxc spraying]] as guest user or blank to enum users
 	- Check with --local-auth
 	- Only Kerberos Auth?
->>>>>>> 297bce8 (Added some more methodologies)
 - Found Script?
 	- Credentials?
 	- Encoded Creds?
