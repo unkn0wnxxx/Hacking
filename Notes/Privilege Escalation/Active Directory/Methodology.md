@@ -2,9 +2,6 @@
 - Start with [[nxc spraying]] as guest user or blank to enum users
 	- Check with --local-auth 
 	- Only Kerberos Auth? 
-- Start with [[nxc spraying]] as guest user or blank to enum users
-	- Check with --local-auth
-	- Only Kerberos Auth?
 - Found Script?
 	- Credentials?
 	- Encoded Creds?
@@ -17,6 +14,7 @@
 - Found .exe file or .dll file --> Download them & [Decompiling](Decompiling.md) 
 	- Authenticating against LDAP or smth else? [DNS Poisoning MITM Attack](DNS%20Poisoning%20MITM%20Attack.md)
 		- Can we add DNS Entries? [Enumerate Writable AD Objects](Enumerate%20Writable%20AD%20Objects.md)
+- Get RCE with [Domain User Logonscripts](Domain%20User%20Logonscripts.md)
 - HTTPS Active in AD?
 	- Download Domain Information with rusthound-ce
 	- Certificate Attacks

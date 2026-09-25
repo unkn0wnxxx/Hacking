@@ -43,6 +43,7 @@ ldapsearch -x -H ldap://10.10.161.74 -b "dc=thm,dc=local" > ldapsearch.txt
 ```
 cat ldapsearch.txt | grep description
 cat ldapsearch.txt | grep info
+cat ldapsearch.txt | grep -i -B 20 scriptPath
 ```
 
 Enumerate users
