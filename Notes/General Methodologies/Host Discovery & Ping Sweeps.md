@@ -27,7 +27,7 @@ Linux
 ##### Linux
 
 Hosts
-domain.
+
 ```
 for i in {1..254} ;do (ping -c 1 10.66.2.$i | grep "bytes from" &) ;done
 ```

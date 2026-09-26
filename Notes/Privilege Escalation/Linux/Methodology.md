@@ -27,6 +27,7 @@
 	- Unknown/Custom Binary? Do [[Unknown Custom Binary|this.]]
 	- Any runnable script with sudo permissions and writable directory? Do [[Runnable Script with sudo permissions|this.]]
 	- docker binary? Do this: [Docker Sudo Permissions](Docker%20Sudo%20Permissions.md)
+	- fail2ban binary? Do this: [fail2ban sudo Privilege Escalation](fail2ban%20sudo%20Privilege%20Escalation.md)
 - Sudo Version (sudo -V)
 	- Below Version 1.8.28? Do this --> sudo -u#-1 /bin/bash
 	- sudo not available? --> [[doas]]

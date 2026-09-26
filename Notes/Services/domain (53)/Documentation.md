@@ -1,2 +1,2 @@
 
-- [dnsrecon](dnsrecon.md)
+- [dns](dns.md)

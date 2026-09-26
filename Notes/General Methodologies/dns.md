@@ -1,4 +1,18 @@
 
+##### dns reverse lookup
+
+```
+dig +noall +answer @10.129.227.180 -x 10.129.227.180
+```
+
+or the same with nslookup:
+
+```
+nslookup 10.129.227.180 10.129.227.180
+```
+
+---
+
 1. Find out NS
 
 ```
